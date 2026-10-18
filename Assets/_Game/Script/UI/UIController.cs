@@ -3,11 +3,13 @@ using UnityEngine;
 public class UIController : MonoBehaviour
 {
     public GameObject SettingUI;
+    public GameObject LeaderboardUI;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         SettingUI.SetActive(false);
+        LeaderboardUI.SetActive(false);
     }
 
     // Update is called once per frame
@@ -20,8 +22,21 @@ public class UIController : MonoBehaviour
     {
         SettingUI.SetActive(true); 
     }
-    public void PressBackTitleBT()
+    public void PressLeaderboardgBT()
+    {
+        LeaderboardUI.SetActive(true);
+    }
+    public void PressBackTitleBT_Setting()
     {
         SettingUI.SetActive(false);
+    }
+    public void PressBackTitleBT_Leaderboard()
+    {
+        LeaderboardUI.SetActive(false);
+    }
+    public void PressExitBT()
+    {
+        Application.Quit();
+        UnityEditor.EditorApplication.isPlaying = false;
     }
 }

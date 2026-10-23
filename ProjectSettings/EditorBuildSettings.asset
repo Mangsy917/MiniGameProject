@@ -6,8 +6,32 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
+    path: Assets/Scenes/Title.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
+  - enabled: 1
+    path: Assets/Scenes/Loading.unity
+    guid: 54f29b558b3056a4faaa66638338d3e7
+  - enabled: 1
+    path: Assets/Scenes/SelectStage.unity
+    guid: 9c4224ffbbdf15e47aae74791f1c5668
+  - enabled: 1
+    path: Assets/Scenes/Stage/Desert.unity
+    guid: ec2e73f302ecac94a9820bcc4bf6c96a
+  - enabled: 1
+    path: Assets/Scenes/Stage/Jungle.unity
+    guid: 1b6bf19850d518f4fb7648aed8a6801e
+  - enabled: 1
+    path: Assets/Scenes/Stage/Forest.unity
+    guid: edde1b777f3870d4a8b8a8131318093f
+  - enabled: 1
+    path: Assets/Scenes/Stage/Cave.unity
+    guid: d6197524d3e4e1c4fa15fe1a60f4601a
+  - enabled: 1
+    path: Assets/Scenes/Stage/Precipice.unity
+    guid: fc83ff6ef81f4fc48ae482934f249254
+  - enabled: 1
+    path: Assets/Scenes/Stage/Laboratory.unity
+    guid: 0ee8cace22063b348935df98d42471a1
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

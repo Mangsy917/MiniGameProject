@@ -46,6 +46,7 @@ public class StageMapCamera : MonoBehaviour
 
     Vector3 returnPos;
     float returnSize;
+    bool zoomed;
     Coroutine moveRoutine;
 
     static readonly List<RaycastResult> uiHits = new List<RaycastResult>();
@@ -207,13 +208,19 @@ public class StageMapCamera : MonoBehaviour
 
     void TryClickStage(Vector2 screenPos)
     {
-        Collider2D hit = Physics2D.OverlapPoint(ScreenToWorld(screenPos));
-        if (hit == null)
-            return;
-
-        StageNode stage = hit.GetComponentInParent<StageNode>();
+        StageNode stage = GetStageAt(screenPos);
         if (stage != null && OnStageClicked != null)
             OnStageClicked(stage);
+    }
+
+    // 화면 좌표 아래에 있는 스테이지 아이콘. 없으면 null
+    public StageNode GetStageAt(Vector2 screenPos)
+    {
+        Collider2D hit = Physics2D.OverlapPoint(ScreenToWorld(screenPos));
+        if (hit == null)
+            return null;
+
+        return hit.GetComponentInParent<StageNode>();
     }
 
     // 맵 화면에서 해당 위치를 가운데로 (맵 밖으로는 나가지 않음)
@@ -223,11 +230,29 @@ public class StageMapCamera : MonoBehaviour
         ClampToMap();
     }
 
+    // 해당 위치를 가운데에 두고 size로 바로 맞춘다 (연출 시작 화면용)
+    public void SetView(Vector3 worldPos, float size)
+    {
+        cam.orthographicSize = size;
+        LookAt(worldPos);
+    }
+
+    // 해당 위치와 size로 부드럽게 이동
+    public void MoveView(Vector3 worldPos, float size, Action onDone)
+    {
+        MoveTo(new Vector3(worldPos.x, worldPos.y, transform.position.z), size, onDone);
+    }
+
     // 스테이지가 화면 왼쪽 절반의 가운데에 오도록 확대
     public void ZoomIn(Vector3 stagePos, Action onDone)
     {
-        returnPos = transform.position;
-        returnSize = cam.orthographicSize;
+        // 확대된 상태에서 다른 스테이지로 옮겨갈 때는 처음 맵 위치로 돌아가도록 복귀 위치를 유지
+        if (!zoomed)
+        {
+            returnPos = transform.position;
+            returnSize = cam.orthographicSize;
+        }
+        zoomed = true;
 
         float halfWidth = ZoomSize * cam.aspect;
         Vector3 target = new Vector3(stagePos.x + halfWidth * 0.5f, stagePos.y, transform.position.z);
@@ -236,6 +261,7 @@ public class StageMapCamera : MonoBehaviour
 
     public void ZoomOut(Action onDone)
     {
+        zoomed = false;
         MoveTo(returnPos, returnSize, onDone);
     }
 
@@ -291,7 +317,7 @@ public class StageMapCamera : MonoBehaviour
         return world;
     }
 
-    bool IsOverUI(Vector2 screenPos)
+    public bool IsOverUI(Vector2 screenPos)
     {
         if (EventSystem.current == null)
             return false;

@@ -10,6 +10,7 @@ public class StageNode : MonoBehaviour
     public string SceneName;
 
     public GameObject LockedMark;
+    public GameObject ClearedMark;   // 클리어한 스테이지에 표시
 
     // 맵을 넓게 볼 때 숨길 텍스트 (스테이지 이름 등)
     public GameObject[] Labels;
@@ -29,6 +30,8 @@ public class StageNode : MonoBehaviour
     {
         if (LockedMark != null)
             LockedMark.SetActive(IsLocked);
+        if (ClearedMark != null)
+            ClearedMark.SetActive(StageProgress.IsCleared(StageNumber));
     }
 
     public void SetLabelsVisible(bool visible)

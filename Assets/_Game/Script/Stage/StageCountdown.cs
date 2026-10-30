@@ -22,6 +22,9 @@ public class StageCountdown : MonoBehaviour
 
     public bool IsFinished { get; private set; }
 
+    // Start! 메시지까지 사라져 카운트다운 연출이 완전히 끝났는지
+    public bool IsEnded { get; private set; }
+
     void Start()
     {
         StartCoroutine(Countdown());
@@ -43,6 +46,7 @@ public class StageCountdown : MonoBehaviour
         yield return Pop(StartMessageTime);
 
         CountdownTXT.gameObject.SetActive(false);
+        IsEnded = true;
     }
 
     // duration 동안 표시. Time.timeScale의 영향을 받지 않고,

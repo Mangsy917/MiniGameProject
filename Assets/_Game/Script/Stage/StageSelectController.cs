@@ -37,6 +37,7 @@ public class StageSelectController : MonoBehaviour
     public float UnlockHoldTime = 0.6f;   // 연출이 끝나고 맵으로 돌아가기 전까지
 
     StageNode selectedStage;
+    StageNode hoveredStage;
     bool labelsVisible = true;
 
     void Start()
@@ -68,7 +69,44 @@ public class StageSelectController : MonoBehaviour
     void Update()
     {
         UpdateLabels();
+        UpdateIconFeedback();
         HandleDetailOutsideClick();
+    }
+
+    // 아이콘 위에 마우스를 올리면 확대, 클릭/터치하면 순간적으로 더 커진다
+    void UpdateIconFeedback()
+    {
+        // 맵을 조작할 수 있거나 스테이지 설명이 열려 있을 때만 (클리어 연출, 카메라 이동 중에는 반응하지 않음)
+        bool active = MapCamera.InputEnabled || DetailUI.activeSelf;
+        Pointer pointer = Pointer.current;
+
+        StageNode hover = null;
+        if (active && pointer is Mouse)
+        {
+            Vector2 mousePos = pointer.position.ReadValue();
+            if (!MapCamera.IsOverUI(mousePos))
+                hover = MapCamera.GetStageAt(mousePos);
+        }
+
+        if (hover != hoveredStage)
+        {
+            if (hoveredStage != null)
+                hoveredStage.SetHovered(false);
+            if (hover != null)
+                hover.SetHovered(true);
+            hoveredStage = hover;
+        }
+
+        if (!active || pointer == null || !pointer.press.wasPressedThisFrame)
+            return;
+
+        Vector2 pressPos = pointer.position.ReadValue();
+        if (MapCamera.IsOverUI(pressPos))
+            return;
+
+        StageNode pressed = MapCamera.GetStageAt(pressPos);
+        if (pressed != null)
+            pressed.PressIcon();
     }
 
     void UpdateLabels()
@@ -161,8 +199,12 @@ public class StageSelectController : MonoBehaviour
         GameObject mark = stage.ClearedMark;
         if (mark != null)
             mark.SetActive(false);
-        if (labStage != null && labStage.LockedMark != null)
-            labStage.LockedMark.SetActive(true);
+        if (labStage != null)
+        {
+            if (labStage.LockedMark != null)
+                labStage.LockedMark.SetActive(true);
+            labStage.SetLockedVisual(true);
+        }
 
         yield return new WaitForSecondsRealtime(ClearDelay);
 
@@ -194,6 +236,7 @@ public class StageSelectController : MonoBehaviour
             yield return MoveCamera(labStage.transform.position, ClearZoomSize);
             yield return new WaitForSecondsRealtime(UnlockDelay);
             yield return Unlock(labStage.LockedMark);
+            labStage.SetLockedVisual(false);   // 자물쇠가 사라지면 아이콘에 색이 돌아온다
             yield return Punch(labStage.transform);
             yield return new WaitForSecondsRealtime(UnlockHoldTime);
         }

@@ -415,6 +415,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 664980478}
     - target: {fileID: 1674631101401930034, guid: baf3976d5ef8e3e46894d321597c8362, type: 3}
+      propertyPath: MenuSprite
+      value: 
+      objectReference: {fileID: 4730228616918933449, guid: ccd1f9b9589353b499b52e39b6d6cc58, type: 3}
+    - target: {fileID: 1674631101401930034, guid: baf3976d5ef8e3e46894d321597c8362, type: 3}
       propertyPath: StageNumber
       value: 1
       objectReference: {fileID: 0}

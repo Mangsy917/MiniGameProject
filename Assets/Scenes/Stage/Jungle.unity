@@ -307,6 +307,10 @@ PrefabInstance:
       propertyPath: m_sharedMaterial
       value: 
       objectReference: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+    - target: {fileID: 5970466073897506512, guid: e664be108e774dc4a910f460762d5c29, type: 3}
+      propertyPath: m_AdditionalShaderChannelsFlag
+      value: 25
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -336,12 +340,20 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 664980478}
     - target: {fileID: 1674631101401930034, guid: baf3976d5ef8e3e46894d321597c8362, type: 3}
+      propertyPath: MenuSprite
+      value: 
+      objectReference: {fileID: 5668507470176694581, guid: fa931bc9430c7e240ac17c034105eb37, type: 3}
+    - target: {fileID: 1674631101401930034, guid: baf3976d5ef8e3e46894d321597c8362, type: 3}
       propertyPath: StageNumber
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4143840701146708396, guid: baf3976d5ef8e3e46894d321597c8362, type: 3}
       propertyPath: m_Name
       value: StageFlowUI
+      objectReference: {fileID: 0}
+    - target: {fileID: 7228281552959089721, guid: baf3976d5ef8e3e46894d321597c8362, type: 3}
+      propertyPath: m_AdditionalShaderChannelsFlag
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 7960587220114352139, guid: baf3976d5ef8e3e46894d321597c8362, type: 3}
       propertyPath: m_Pivot.x

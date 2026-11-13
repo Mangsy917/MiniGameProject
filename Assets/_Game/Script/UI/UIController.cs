@@ -62,9 +62,23 @@ public class UIController : MonoBehaviour
 
         yield return new WaitForSecondsRealtime(UnlockDelay);
 
+        float startTime;
+        float t;
+
+        // 사슬 잠금이면 사슬이 한 줄씩 끊어지며 사라진 뒤 버튼이 통통 튄다
+        ChainLock chainLock = InfinityLockMark.GetComponent<ChainLock>();
+        if (chainLock != null)
+        {
+            yield return chainLock.PlayUnlock();
+            yield return PunchButton();
+            yield return new WaitForSecondsRealtime(UnlockHoldTime);
+            SetMenuInteractable(true);
+            yield break;
+        }
+
         // 흔들림 (점점 약해짐)
-        float startTime = Time.realtimeSinceStartup;
-        float t = 0f;
+        startTime = Time.realtimeSinceStartup;
+        t = 0f;
         while (t < 1f)
         {
             t = Mathf.Clamp01((Time.realtimeSinceStartup - startTime) / UnlockShakeTime);
@@ -88,10 +102,17 @@ public class UIController : MonoBehaviour
         mark.localScale = scale;
         InfinityLockMark.alpha = 1f;
 
-        // 버튼이 통통 튄다
+        yield return PunchButton();
+        yield return new WaitForSecondsRealtime(UnlockHoldTime);
+        SetMenuInteractable(true);
+    }
+
+    // 버튼이 통통 튄다
+    IEnumerator PunchButton()
+    {
         Vector3 buttonScale = InfinityModeBT.localScale;
-        startTime = Time.realtimeSinceStartup;
-        t = 0f;
+        float startTime = Time.realtimeSinceStartup;
+        float t = 0f;
         while (t < 1f)
         {
             t = Mathf.Clamp01((Time.realtimeSinceStartup - startTime) / UnlockPunchTime);
@@ -99,9 +120,6 @@ public class UIController : MonoBehaviour
             yield return null;
         }
         InfinityModeBT.localScale = buttonScale;
-
-        yield return new WaitForSecondsRealtime(UnlockHoldTime);
-        SetMenuInteractable(true);
     }
 
     // interactable을 끄면 버튼이 비활성 색으로 바뀌므로, 클릭과 키보드/패드 입력만 막는다

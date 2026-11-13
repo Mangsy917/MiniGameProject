@@ -277,6 +277,14 @@ public class StageSelectController : MonoBehaviour
         if (lockedMark == null)
             yield break;
 
+        // 사슬 잠금이면 사슬이 한 줄씩 끊어지며 사라진다
+        ChainLock chainLock = lockedMark.GetComponent<ChainLock>();
+        if (chainLock != null)
+        {
+            yield return chainLock.PlayUnlock();
+            yield break;
+        }
+
         Transform mark = lockedMark.transform;
         Vector3 scale = mark.localScale;
         Quaternion rotation = mark.localRotation;

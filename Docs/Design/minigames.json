@@ -1,0 +1,4198 @@
+{
+  "source": "구글 시트 '스테이지별 미니게임 배치' > 스테이지 배치 탭 (2026-11-20 기준)",
+  "count": 120,
+  "minigames": [
+    {
+      "id": "DES_01",
+      "theme": "사막",
+      "theme_en": "Desert",
+      "index": 1,
+      "name": "피라미드의 함정을 피해라",
+      "command": "피해라!",
+      "end_condition": "버티기",
+      "succeed_on_time_up": true,
+      "mechanics": [
+        "F",
+        "G"
+      ],
+      "mechanics_raw": "F 스와이프, G 드래그",
+      "how_to_play": "캐릭터를 드래그해서 창이 튀어나오는 바닥을 피해 출구까지 가라. 창에 찔리면 실패. (참고: 감옥탈출)",
+      "assets_raw": "캐릭터, 함정 바닥(평상/창 튀어나옴), 출구",
+      "asset_slots": [
+        {
+          "slot": "DES_01_01",
+          "name": "캐릭터",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Desert/DES_01/DES_01_01.png"
+        },
+        {
+          "slot": "DES_01_02",
+          "name": "함정 바닥",
+          "note": "평상/창 튀어나옴",
+          "file": "Assets/_Game/Sprite/Desert/DES_01/DES_01_02.png"
+        },
+        {
+          "slot": "DES_01_03",
+          "name": "출구",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Desert/DES_01/DES_01_03.png"
+        }
+      ],
+      "sprite_folder": "Assets/_Game/Sprite/Desert/DES_01/"
+    },
+    {
+      "id": "DES_02",
+      "theme": "사막",
+      "theme_en": "Desert",
+      "index": 2,
+      "name": "피라미드의 문이 닫히기 전에 들어가라",
+      "command": "들어가라!",
+      "end_condition": "빨리깨기",
+      "succeed_on_time_up": false,
+      "mechanics": [
+        "A"
+      ],
+      "mechanics_raw": "A 연타",
+      "how_to_play": "연타해서 캐릭터를 달리게 하고, 문이 닫히기 전에 출구까지 가라.",
+      "assets_raw": "달리는 캐릭터, 문(열림/닫힘)",
+      "asset_slots": [
+        {
+          "slot": "DES_02_01",
+          "name": "달리는 캐릭터",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Desert/DES_02/DES_02_01.png"
+        },
+        {
+          "slot": "DES_02_02",
+          "name": "문",
+          "note": "열림/닫힘",
+          "file": "Assets/_Game/Sprite/Desert/DES_02/DES_02_02.png"
+        }
+      ],
+      "sprite_folder": "Assets/_Game/Sprite/Desert/DES_02/"
+    },
+    {
+      "id": "DES_03",
+      "theme": "사막",
+      "theme_en": "Desert",
+      "index": 3,
+      "name": "전갈을 잡아라",
+      "command": "잡아라!",
+      "end_condition": "빨리깨기",
+      "succeed_on_time_up": false,
+      "mechanics": [
+        "C"
+      ],
+      "mechanics_raw": "C 대상 탭",
+      "how_to_play": "랜덤한 위치에서 나오는 전갈을 탭해서 모두 잡아라. (총 10마리)",
+      "assets_raw": "전갈(움직임/잡힘: 눈 X)",
+      "asset_slots": [
+        {
+          "slot": "DES_03_01",
+          "name": "전갈",
+          "note": "움직임/잡힘: 눈 X",
+          "file": "Assets/_Game/Sprite/Desert/DES_03/DES_03_01.png"
+        }
+      ],
+      "sprite_folder": "Assets/_Game/Sprite/Desert/DES_03/"
+    },
+    {
+      "id": "DES_04",
+      "theme": "사막",
+      "theme_en": "Desert",
+      "index": 4,
+      "name": "벽화의 틀린 부분을 찾아라",
+      "command": "찾아라!",
+      "end_condition": "빨리깨기",
+      "succeed_on_time_up": false,
+      "mechanics": [
+        "H"
+      ],
+      "mechanics_raw": "H 틀린그림 찾기",
+      "how_to_play": "원본 벽화와 비교해서 틀린 부분 3곳을 모두 찾아 탭해라.",
+      "assets_raw": "벽화 4종(원본/틀린 그림, 틀린 부분 각 3곳)",
+      "asset_slots": [
+        {
+          "slot": "DES_04_01",
+          "name": "벽화 4종",
+          "note": "원본/틀린 그림, 틀린 부분 각 3곳",
+          "file": "Assets/_Game/Sprite/Desert/DES_04/DES_04_01.png"
+        }
+      ],
+      "sprite_folder": "Assets/_Game/Sprite/Desert/DES_04/"
+    },
+    {
+      "id": "DES_05",
+      "theme": "사막",
+      "theme_en": "Desert",
+      "index": 5,
+      "name": "유물 위의 모래를 털어내라",
+      "command": "털어라!",
+      "end_condition": "빨리깨기",
+      "succeed_on_time_up": false,
+      "mechanics": [
+        "G"
+      ],
+      "mechanics_raw": "G 드래그",
+      "how_to_play": "모종삽을 이용해, 유물이 부서지지 않도록 모래를 걷어내라",
+      "assets_raw": "모종삽, 모래, 항아리",
+      "asset_slots": [
+        {
+          "slot": "DES_05_01",
+          "name": "모종삽",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Desert/DES_05/DES_05_01.png"
+        },
+        {
+          "slot": "DES_05_02",
+          "name": "모래",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Desert/DES_05/DES_05_02.png"
+        },
+        {
+          "slot": "DES_05_03",
+          "name": "항아리",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Desert/DES_05/DES_05_03.png"
+        }
+      ],
+      "sprite_folder": "Assets/_Game/Sprite/Desert/DES_05/"
+    },
+    {
+      "id": "DES_06",
+      "theme": "사막",
+      "theme_en": "Desert",
+      "index": 6,
+      "name": "버튼을 순서에 맞게 눌러라",
+      "command": "순서대로!",
+      "end_condition": "빨리깨기",
+      "succeed_on_time_up": false,
+      "mechanics": [
+        "I"
+      ],
+      "mechanics_raw": "I 순서대로 누르기",
+      "how_to_play": "문을 열기 위해, 옆에 있는 버튼을 벽화에 적혀있는 문양 순서대로 눌러라",
+      "assets_raw": "문양 4종류, 버튼",
+      "asset_slots": [
+        {
+          "slot": "DES_06_01",
+          "name": "문양 4종류",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Desert/DES_06/DES_06_01.png"
+        },
+        {
+          "slot": "DES_06_02",
+          "name": "버튼",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Desert/DES_06/DES_06_02.png"
+        }
+      ],
+      "sprite_folder": "Assets/_Game/Sprite/Desert/DES_06/"
+    },
+    {
+      "id": "DES_07",
+      "theme": "사막",
+      "theme_en": "Desert",
+      "index": 7,
+      "name": "오아시스에서 물통을 채워라",
+      "command": "채워라!",
+      "end_condition": "빨리깨기",
+      "succeed_on_time_up": false,
+      "mechanics": [
+        "D",
+        "E"
+      ],
+      "mechanics_raw": "D 타이밍 탭, E 홀드",
+      "how_to_play": "누르고 있으면 물통에 물이 차오른다. 물이 눈금선에 닿았을 때 손을 떼라. 넘치거나 모자라면 실패.",
+      "assets_raw": "물통(눈금선), 차오르는 물, 오아시스",
+      "asset_slots": [
+        {
+          "slot": "DES_07_01",
+          "name": "물통",
+          "note": "눈금선",
+          "file": "Assets/_Game/Sprite/Desert/DES_07/DES_07_01.png"
+        },
+        {
+          "slot": "DES_07_02",
+          "name": "차오르는 물",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Desert/DES_07/DES_07_02.png"
+        },
+        {
+          "slot": "DES_07_03",
+          "name": "오아시스",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Desert/DES_07/DES_07_03.png"
+        }
+      ],
+      "sprite_folder": "Assets/_Game/Sprite/Desert/DES_07/"
+    },
+    {
+      "id": "DES_08",
+      "theme": "사막",
+      "theme_en": "Desert",
+      "index": 8,
+      "name": "벽화의 그림을 순서대로 눌러라",
+      "command": "같은 그림!",
+      "end_condition": "빨리깨기",
+      "succeed_on_time_up": false,
+      "mechanics": [
+        "C",
+        "D",
+        "I"
+      ],
+      "mechanics_raw": "C 대상 탭, D 타이밍 탭, I 순서대로 누르기",
+      "how_to_play": "랜덤으로 그림이 주어지고, 주어진 그림에 해당되는 버튼을 연속으로 3번 누르면 성공",
+      "assets_raw": "벽화 그림 5종, 버튼",
+      "asset_slots": [
+        {
+          "slot": "DES_08_01",
+          "name": "벽화 그림 5종",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Desert/DES_08/DES_08_01.png"
+        },
+        {
+          "slot": "DES_08_02",
+          "name": "버튼",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Desert/DES_08/DES_08_02.png"
+        }
+      ],
+      "sprite_folder": "Assets/_Game/Sprite/Desert/DES_08/"
+    },
+    {
+      "id": "DES_09",
+      "theme": "사막",
+      "theme_en": "Desert",
+      "index": 9,
+      "name": "관의 먼지를 털어내라",
+      "command": "닦아라!",
+      "end_condition": "빨리깨기",
+      "succeed_on_time_up": false,
+      "mechanics": [
+        "F"
+      ],
+      "mechanics_raw": "F 스와이프",
+      "how_to_play": "좌우로 스와이프하여 관에 기스없이 먼지를 털어내면 성공",
+      "assets_raw": "파라오 관, 먼지, 발굴용 붓",
+      "asset_slots": [
+        {
+          "slot": "DES_09_01",
+          "name": "파라오 관",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Desert/DES_09/DES_09_01.png"
+        },
+        {
+          "slot": "DES_09_02",
+          "name": "먼지",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Desert/DES_09/DES_09_02.png"
+        },
+        {
+          "slot": "DES_09_03",
+          "name": "발굴용 붓",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Desert/DES_09/DES_09_03.png"
+        }
+      ],
+      "sprite_folder": "Assets/_Game/Sprite/Desert/DES_09/"
+    },
+    {
+      "id": "DES_10",
+      "theme": "사막",
+      "theme_en": "Desert",
+      "index": 10,
+      "name": "레버를 돌려라",
+      "command": "돌려라!",
+      "end_condition": "빨리깨기",
+      "succeed_on_time_up": false,
+      "mechanics": [
+        "G"
+      ],
+      "mechanics_raw": "G 드래그",
+      "how_to_play": "레버를 돌려서 문을 열면 성공(레버를 안돌리면 문이 닫힘)",
+      "assets_raw": "횃불, 레버(커피 그라인더같은 돌리는형식의 레버), 좌우로 열리는 문(벽화가 그려져있으면 됨)",
+      "asset_slots": [
+        {
+          "slot": "DES_10_01",
+          "name": "횃불",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Desert/DES_10/DES_10_01.png"
+        },
+        {
+          "slot": "DES_10_02",
+          "name": "레버",
+          "note": "커피 그라인더같은 돌리는형식의 레버",
+          "file": "Assets/_Game/Sprite/Desert/DES_10/DES_10_02.png"
+        },
+        {
+          "slot": "DES_10_03",
+          "name": "좌우로 열리는 문",
+          "note": "벽화가 그려져있으면 됨",
+          "file": "Assets/_Game/Sprite/Desert/DES_10/DES_10_03.png"
+        }
+      ],
+      "sprite_folder": "Assets/_Game/Sprite/Desert/DES_10/"
+    },
+    {
+      "id": "DES_11",
+      "theme": "사막",
+      "theme_en": "Desert",
+      "index": 11,
+      "name": "야자수에서 코코넛을 따라",
+      "command": "흔들어라!",
+      "end_condition": "빨리깨기",
+      "succeed_on_time_up": false,
+      "mechanics": [
+        "A"
+      ],
+      "mechanics_raw": "A 연타",
+      "how_to_play": "야자수를 연타해 좌우로 흔들어 코코넛을 떨어뜨려라",
+      "assets_raw": "야자수, 코코넛",
+      "asset_slots": [
+        {
+          "slot": "DES_11_01",
+          "name": "야자수",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Desert/DES_11/DES_11_01.png"
+        },
+        {
+          "slot": "DES_11_02",
+          "name": "코코넛",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Desert/DES_11/DES_11_02.png"
+        }
+      ],
+      "sprite_folder": "Assets/_Game/Sprite/Desert/DES_11/"
+    },
+    {
+      "id": "DES_12",
+      "theme": "사막",
+      "theme_en": "Desert",
+      "index": 12,
+      "name": "오아시스에서 물을 담아라",
+      "command": "담아라!",
+      "end_condition": "빨리깨기",
+      "succeed_on_time_up": false,
+      "mechanics": [
+        "G"
+      ],
+      "mechanics_raw": "G 드래그",
+      "how_to_play": "오아시스에서 물을 퍼서 통에 일정 이상의 물을 담아라",
+      "assets_raw": "오아시스(이겜 쉬워요 짤처럼 옆에서 본 오아시스), 물을 담을 통, 물을 풀 통",
+      "asset_slots": [
+        {
+          "slot": "DES_12_01",
+          "name": "오아시스",
+          "note": "이겜 쉬워요 짤처럼 옆에서 본 오아시스",
+          "file": "Assets/_Game/Sprite/Desert/DES_12/DES_12_01.png"
+        },
+        {
+          "slot": "DES_12_02",
+          "name": "물을 담을 통",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Desert/DES_12/DES_12_02.png"
+        },
+        {
+          "slot": "DES_12_03",
+          "name": "물을 풀 통",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Desert/DES_12/DES_12_03.png"
+        }
+      ],
+      "sprite_folder": "Assets/_Game/Sprite/Desert/DES_12/"
+    },
+    {
+      "id": "DES_13",
+      "theme": "사막",
+      "theme_en": "Desert",
+      "index": 13,
+      "name": "동물의 수를 맞춰라",
+      "command": "세어라!",
+      "end_condition": "빨리깨기",
+      "succeed_on_time_up": false,
+      "mechanics": [
+        "C"
+      ],
+      "mechanics_raw": "C 대상 탭",
+      "how_to_play": "화면의 3종의 동물 중 1종의 동물의 수를 맞춰라",
+      "assets_raw": "오아시스 배경, 낙타, 사막여우, 미어캣, 프레리독",
+      "asset_slots": [
+        {
+          "slot": "DES_13_01",
+          "name": "오아시스 배경",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Desert/DES_13/DES_13_01.png"
+        },
+        {
+          "slot": "DES_13_02",
+          "name": "낙타",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Desert/DES_13/DES_13_02.png"
+        },
+        {
+          "slot": "DES_13_03",
+          "name": "사막여우",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Desert/DES_13/DES_13_03.png"
+        },
+        {
+          "slot": "DES_13_04",
+          "name": "미어캣",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Desert/DES_13/DES_13_04.png"
+        },
+        {
+          "slot": "DES_13_05",
+          "name": "프레리독",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Desert/DES_13/DES_13_05.png"
+        }
+      ],
+      "sprite_folder": "Assets/_Game/Sprite/Desert/DES_13/"
+    },
+    {
+      "id": "DES_14",
+      "theme": "사막",
+      "theme_en": "Desert",
+      "index": 14,
+      "name": "밤의 뱀을 피해 나무위에서 버텨라",
+      "command": "버텨라!",
+      "end_condition": "버티기",
+      "succeed_on_time_up": true,
+      "mechanics": [
+        "A",
+        "E"
+      ],
+      "mechanics_raw": "A 연타, E 홀드",
+      "how_to_play": "밑의 방울뱀을 피해 야자수 위에서 홀드를 눌러 천천히 떨어지고, 연타로 올라가라\n일정수치 위로 올라가거나 일정수치 밑으로 내려가면 떨어짐",
+      "assets_raw": "야자수, 달, 방울뱀, 위에서 버티는 캐릭터",
+      "asset_slots": [
+        {
+          "slot": "DES_14_01",
+          "name": "야자수",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Desert/DES_14/DES_14_01.png"
+        },
+        {
+          "slot": "DES_14_02",
+          "name": "달",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Desert/DES_14/DES_14_02.png"
+        },
+        {
+          "slot": "DES_14_03",
+          "name": "방울뱀",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Desert/DES_14/DES_14_03.png"
+        },
+        {
+          "slot": "DES_14_04",
+          "name": "위에서 버티는 캐릭터",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Desert/DES_14/DES_14_04.png"
+        }
+      ],
+      "sprite_folder": "Assets/_Game/Sprite/Desert/DES_14/"
+    },
+    {
+      "id": "DES_15",
+      "theme": "사막",
+      "theme_en": "Desert",
+      "index": 15,
+      "name": "박쥐를 잡아라",
+      "command": "가둬라!",
+      "end_condition": "빨리깨기",
+      "succeed_on_time_up": false,
+      "mechanics": [
+        "G"
+      ],
+      "mechanics_raw": "G 드래그",
+      "how_to_play": "날라다니는 박쥐 주변으로 드래그해서 잡아라",
+      "assets_raw": "날개짓하는 박쥐 스프라이트 2개, 새 철장",
+      "asset_slots": [
+        {
+          "slot": "DES_15_01",
+          "name": "날개짓하는 박쥐 스프라이트 2개",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Desert/DES_15/DES_15_01.png"
+        },
+        {
+          "slot": "DES_15_02",
+          "name": "새 철장",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Desert/DES_15/DES_15_02.png"
+        }
+      ],
+      "sprite_folder": "Assets/_Game/Sprite/Desert/DES_15/"
+    },
+    {
+      "id": "DES_16",
+      "theme": "사막",
+      "theme_en": "Desert",
+      "index": 16,
+      "name": "미라한테 들키지 마라",
+      "command": "숨어라!",
+      "end_condition": "버티기",
+      "succeed_on_time_up": true,
+      "mechanics": [
+        "J"
+      ],
+      "mechanics_raw": "J 터치X",
+      "how_to_play": "기둥 뒤에 숨어서 돌아다니는 미라를 피해라",
+      "assets_raw": "돌아다니는 미라, 기둥, 기둥뒤에 숨은 캐릭터",
+      "asset_slots": [
+        {
+          "slot": "DES_16_01",
+          "name": "돌아다니는 미라",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Desert/DES_16/DES_16_01.png"
+        },
+        {
+          "slot": "DES_16_02",
+          "name": "기둥",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Desert/DES_16/DES_16_02.png"
+        },
+        {
+          "slot": "DES_16_03",
+          "name": "기둥뒤에 숨은 캐릭터",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Desert/DES_16/DES_16_03.png"
+        }
+      ],
+      "sprite_folder": "Assets/_Game/Sprite/Desert/DES_16/"
+    },
+    {
+      "id": "DES_17",
+      "theme": "사막",
+      "theme_en": "Desert",
+      "index": 17,
+      "name": "용과를 잘라라",
+      "command": "잘라라!",
+      "end_condition": "빨리깨기",
+      "succeed_on_time_up": false,
+      "mechanics": [
+        "G"
+      ],
+      "mechanics_raw": "G 드래그",
+      "how_to_play": "용과에 있는 점선을 깔끔하게 드래그해서 6등분 해라",
+      "assets_raw": "용과(안잘린 윗부분, 6등분되서 접시에 담긴 모습)",
+      "asset_slots": [
+        {
+          "slot": "DES_17_01",
+          "name": "용과",
+          "note": "안잘린 윗부분, 6등분되서 접시에 담긴 모습",
+          "file": "Assets/_Game/Sprite/Desert/DES_17/DES_17_01.png"
+        }
+      ],
+      "sprite_folder": "Assets/_Game/Sprite/Desert/DES_17/"
+    },
+    {
+      "id": "DES_18",
+      "theme": "사막",
+      "theme_en": "Desert",
+      "index": 18,
+      "name": "사막여우를 쓰다듬어라",
+      "command": "쓰다듬어라!",
+      "end_condition": "빨리깨기",
+      "succeed_on_time_up": false,
+      "mechanics": [
+        "F"
+      ],
+      "mechanics_raw": "F 스와이프",
+      "how_to_play": "사막여우의 배를 쓰다듬어서 만족 시켜라",
+      "assets_raw": "배까고 있는 사막여우(기본 & 만족한 얼굴), 얼굴, 하트",
+      "asset_slots": [
+        {
+          "slot": "DES_18_01",
+          "name": "배까고 있는 사막여우",
+          "note": "기본 & 만족한 얼굴",
+          "file": "Assets/_Game/Sprite/Desert/DES_18/DES_18_01.png"
+        },
+        {
+          "slot": "DES_18_02",
+          "name": "얼굴",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Desert/DES_18/DES_18_02.png"
+        },
+        {
+          "slot": "DES_18_03",
+          "name": "하트",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Desert/DES_18/DES_18_03.png"
+        }
+      ],
+      "sprite_folder": "Assets/_Game/Sprite/Desert/DES_18/"
+    },
+    {
+      "id": "DES_19",
+      "theme": "사막",
+      "theme_en": "Desert",
+      "index": 19,
+      "name": "스핑크스의 문제를 맞춰라",
+      "command": "풀어라!",
+      "end_condition": "빨리깨기",
+      "succeed_on_time_up": false,
+      "mechanics": [
+        "C",
+        "H"
+      ],
+      "mechanics_raw": "C 대상 탭, H 틀린그림 찾기",
+      "how_to_play": "스핑크스가 낸 문제에 해당하는 카드를 16장 중에서 모두 찾아 탭해라.",
+      "assets_raw": "스핑크스, 카드 4종(총 16장 배치)",
+      "asset_slots": [
+        {
+          "slot": "DES_19_01",
+          "name": "스핑크스",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Desert/DES_19/DES_19_01.png"
+        },
+        {
+          "slot": "DES_19_02",
+          "name": "카드 4종",
+          "note": "총 16장 배치",
+          "file": "Assets/_Game/Sprite/Desert/DES_19/DES_19_02.png"
+        }
+      ],
+      "sprite_folder": "Assets/_Game/Sprite/Desert/DES_19/"
+    },
+    {
+      "id": "DES_20",
+      "theme": "사막",
+      "theme_en": "Desert",
+      "index": 20,
+      "name": "미라로부터 도망쳐라",
+      "command": "도망쳐라!",
+      "end_condition": "버티기",
+      "succeed_on_time_up": true,
+      "mechanics": [
+        "A"
+      ],
+      "mechanics_raw": "A 연타",
+      "how_to_play": "연타해서 캐릭터를 달리게 하고, 미라에게 잡히지 않게 끝까지 도망쳐라. 잡히면 실패.",
+      "assets_raw": "미라(추격), 달리는 캐릭터",
+      "asset_slots": [
+        {
+          "slot": "DES_20_01",
+          "name": "미라",
+          "note": "추격",
+          "file": "Assets/_Game/Sprite/Desert/DES_20/DES_20_01.png"
+        },
+        {
+          "slot": "DES_20_02",
+          "name": "달리는 캐릭터",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Desert/DES_20/DES_20_02.png"
+        }
+      ],
+      "sprite_folder": "Assets/_Game/Sprite/Desert/DES_20/"
+    },
+    {
+      "id": "JUN_01",
+      "theme": "정글",
+      "theme_en": "Jungle",
+      "index": 1,
+      "name": "덩굴을 잘라내라",
+      "command": "잘라라!",
+      "end_condition": "빨리깨기",
+      "succeed_on_time_up": false,
+      "mechanics": [
+        "F"
+      ],
+      "mechanics_raw": "F 스와이프",
+      "how_to_play": "화면의 덩굴을 스와이프해서 모두 잘라라.",
+      "assets_raw": "덩굴(정상/잘림), 마체테",
+      "asset_slots": [
+        {
+          "slot": "JUN_01_01",
+          "name": "덩굴",
+          "note": "정상/잘림",
+          "file": "Assets/_Game/Sprite/Jungle/JUN_01/JUN_01_01.png"
+        },
+        {
+          "slot": "JUN_01_02",
+          "name": "마체테",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Jungle/JUN_01/JUN_01_02.png"
+        }
+      ],
+      "sprite_folder": "Assets/_Game/Sprite/Jungle/JUN_01/"
+    },
+    {
+      "id": "JUN_02",
+      "theme": "정글",
+      "theme_en": "Jungle",
+      "index": 2,
+      "name": "보트를 타고 악어로부터 도망쳐라",
+      "command": "저어라!",
+      "end_condition": "버티기",
+      "succeed_on_time_up": true,
+      "mechanics": [
+        "A"
+      ],
+      "mechanics_raw": "A 연타",
+      "how_to_play": "연타해서 노를 젓고, 악어에게 잡히지 않게 끝까지 도망쳐라. 잡히면 실패.",
+      "assets_raw": "보트 탄 캐릭터, 노, 악어(추격)",
+      "asset_slots": [
+        {
+          "slot": "JUN_02_01",
+          "name": "보트 탄 캐릭터",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Jungle/JUN_02/JUN_02_01.png"
+        },
+        {
+          "slot": "JUN_02_02",
+          "name": "노",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Jungle/JUN_02/JUN_02_02.png"
+        },
+        {
+          "slot": "JUN_02_03",
+          "name": "악어",
+          "note": "추격",
+          "file": "Assets/_Game/Sprite/Jungle/JUN_02/JUN_02_03.png"
+        }
+      ],
+      "sprite_folder": "Assets/_Game/Sprite/Jungle/JUN_02/"
+    },
+    {
+      "id": "JUN_03",
+      "theme": "정글",
+      "theme_en": "Jungle",
+      "index": 3,
+      "name": "보트로 달려드는 피라냐를 피해라",
+      "command": "피해라!",
+      "end_condition": "버티기",
+      "succeed_on_time_up": true,
+      "mechanics": [
+        "B"
+      ],
+      "mechanics_raw": "B 좌우 회피",
+      "how_to_play": "좌·중·우 중 피라냐가 오지 않는 칸을 골라 캐릭터를 옮기고, 보트 위로 달려드는 피라냐를 끝까지 피해라. 부딪히면 실패.",
+      "assets_raw": "보트 탄 캐릭터(좌/중/우 위치), 피라냐(점프)",
+      "asset_slots": [
+        {
+          "slot": "JUN_03_01",
+          "name": "보트 탄 캐릭터",
+          "note": "좌/중/우 위치",
+          "file": "Assets/_Game/Sprite/Jungle/JUN_03/JUN_03_01.png"
+        },
+        {
+          "slot": "JUN_03_02",
+          "name": "피라냐",
+          "note": "점프",
+          "file": "Assets/_Game/Sprite/Jungle/JUN_03/JUN_03_02.png"
+        }
+      ],
+      "sprite_folder": "Assets/_Game/Sprite/Jungle/JUN_03/"
+    },
+    {
+      "id": "JUN_04",
+      "theme": "정글",
+      "theme_en": "Jungle",
+      "index": 4,
+      "name": "떨어지는 코코넛을 잡아라",
+      "command": "받아라!",
+      "end_condition": "버티기",
+      "succeed_on_time_up": true,
+      "mechanics": [
+        "G"
+      ],
+      "mechanics_raw": "G 드래그",
+      "how_to_play": "바구니를 드래그해서 떨어지는 바나나를 끝까지 받아라. 놓치면 실패.",
+      "assets_raw": "바구니, 바나나, 바나나 나무",
+      "asset_slots": [
+        {
+          "slot": "JUN_04_01",
+          "name": "바구니",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Jungle/JUN_04/JUN_04_01.png"
+        },
+        {
+          "slot": "JUN_04_02",
+          "name": "바나나",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Jungle/JUN_04/JUN_04_02.png"
+        },
+        {
+          "slot": "JUN_04_03",
+          "name": "바나나 나무",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Jungle/JUN_04/JUN_04_03.png"
+        }
+      ],
+      "sprite_folder": "Assets/_Game/Sprite/Jungle/JUN_04/"
+    },
+    {
+      "id": "JUN_05",
+      "theme": "정글",
+      "theme_en": "Jungle",
+      "index": 5,
+      "name": "앵무새가 보여주는 순서대로 눌러라",
+      "command": "순서에 맞게 눌러라!",
+      "end_condition": "빨리깨기",
+      "succeed_on_time_up": false,
+      "mechanics": [
+        "I"
+      ],
+      "mechanics_raw": "I 순서대로 누르기",
+      "how_to_play": "앵무새가 문양 4개를 한 번에 계속 보여준다. 아래에 섞여 있는 문양 버튼을 앵무새가 보여주는 순서대로 탭해라. 순서가 틀리면 실패.",
+      "assets_raw": "앵무새, 문양 4종(앵무새 말풍선용), 문양 버튼 4개(위치 랜덤)",
+      "asset_slots": [
+        {
+          "slot": "JUN_05_01",
+          "name": "앵무새",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Jungle/JUN_05/JUN_05_01.png"
+        },
+        {
+          "slot": "JUN_05_02",
+          "name": "문양 4종",
+          "note": "앵무새 말풍선용",
+          "file": "Assets/_Game/Sprite/Jungle/JUN_05/JUN_05_02.png"
+        },
+        {
+          "slot": "JUN_05_03",
+          "name": "문양 버튼 4개",
+          "note": "위치 랜덤",
+          "file": "Assets/_Game/Sprite/Jungle/JUN_05/JUN_05_03.png"
+        }
+      ],
+      "sprite_folder": "Assets/_Game/Sprite/Jungle/JUN_05/"
+    },
+    {
+      "id": "JUN_06",
+      "theme": "정글",
+      "theme_en": "Jungle",
+      "index": 6,
+      "name": "희귀 식물을 채집해라",
+      "command": "채집해라!",
+      "end_condition": "빨리깨기",
+      "succeed_on_time_up": false,
+      "mechanics": [
+        "C"
+      ],
+      "mechanics_raw": "C 대상 탭",
+      "how_to_play": "도감에 보이는 식물을 수풀 속에서 찾아 탭해라. 다른 식물을 탭하면 실패.",
+      "assets_raw": "도감 카드, 희귀 식물, 다른 식물 3종, 채집통",
+      "asset_slots": [
+        {
+          "slot": "JUN_06_01",
+          "name": "도감 카드",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Jungle/JUN_06/JUN_06_01.png"
+        },
+        {
+          "slot": "JUN_06_02",
+          "name": "희귀 식물",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Jungle/JUN_06/JUN_06_02.png"
+        },
+        {
+          "slot": "JUN_06_03",
+          "name": "다른 식물 3종",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Jungle/JUN_06/JUN_06_03.png"
+        },
+        {
+          "slot": "JUN_06_04",
+          "name": "채집통",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Jungle/JUN_06/JUN_06_04.png"
+        }
+      ],
+      "sprite_folder": "Assets/_Game/Sprite/Jungle/JUN_06/"
+    },
+    {
+      "id": "JUN_07",
+      "theme": "정글",
+      "theme_en": "Jungle",
+      "index": 7,
+      "name": "나무를 피해서 달려라",
+      "command": "달려라!",
+      "end_condition": "버티기",
+      "succeed_on_time_up": true,
+      "mechanics": [
+        "B"
+      ],
+      "mechanics_raw": "B 좌우 터치",
+      "how_to_play": "좌·중·우 세 길 중 나무가 없는 길을 선택해 달려가라",
+      "assets_raw": "나무, 달리는 캐릭터, 세 갈래 길",
+      "asset_slots": [
+        {
+          "slot": "JUN_07_01",
+          "name": "나무",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Jungle/JUN_07/JUN_07_01.png"
+        },
+        {
+          "slot": "JUN_07_02",
+          "name": "달리는 캐릭터",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Jungle/JUN_07/JUN_07_02.png"
+        },
+        {
+          "slot": "JUN_07_03",
+          "name": "세 갈래 길",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Jungle/JUN_07/JUN_07_03.png"
+        }
+      ],
+      "sprite_folder": "Assets/_Game/Sprite/Jungle/JUN_07/"
+    },
+    {
+      "id": "JUN_08",
+      "theme": "정글",
+      "theme_en": "Jungle",
+      "index": 8,
+      "name": "물고기를 낚아라",
+      "command": "낚아라!",
+      "end_condition": "빨리깨기",
+      "succeed_on_time_up": false,
+      "mechanics": [
+        "A"
+      ],
+      "mechanics_raw": "A 연타",
+      "how_to_play": "연타해서 낚싯대로 물고기를 낚아라",
+      "assets_raw": "낚싯대, 찌를물고있는 물고기",
+      "asset_slots": [
+        {
+          "slot": "JUN_08_01",
+          "name": "낚싯대",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Jungle/JUN_08/JUN_08_01.png"
+        },
+        {
+          "slot": "JUN_08_02",
+          "name": "찌를물고있는 물고기",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Jungle/JUN_08/JUN_08_02.png"
+        }
+      ],
+      "sprite_folder": "Assets/_Game/Sprite/Jungle/JUN_08/"
+    },
+    {
+      "id": "JUN_09",
+      "theme": "정글",
+      "theme_en": "Jungle",
+      "index": 9,
+      "name": "과일의 개수를 맞춰라",
+      "command": "(과일 이름)에 수는?",
+      "end_condition": "빨리깨기",
+      "succeed_on_time_up": false,
+      "mechanics": [
+        "C"
+      ],
+      "mechanics_raw": "C 대상 탭",
+      "how_to_play": "랜덤한 숫자의 과일들이 무작위로 움직이는걸 보고 특정 과일의 개수를 맞춰라",
+      "assets_raw": "과일 3종류(바나나, 두리안, 파인애플)",
+      "asset_slots": [
+        {
+          "slot": "JUN_09_01",
+          "name": "과일 3종류",
+          "note": "바나나, 두리안, 파인애플",
+          "file": "Assets/_Game/Sprite/Jungle/JUN_09/JUN_09_01.png"
+        }
+      ],
+      "sprite_folder": "Assets/_Game/Sprite/Jungle/JUN_09/"
+    },
+    {
+      "id": "JUN_10",
+      "theme": "정글",
+      "theme_en": "Jungle",
+      "index": 10,
+      "name": "파인애플을 썰어라",
+      "command": "썰어라!",
+      "end_condition": "빨리깨기",
+      "succeed_on_time_up": false,
+      "mechanics": [
+        "G"
+      ],
+      "mechanics_raw": "G 드래그",
+      "how_to_play": "파인애플에 그려진 점선을 따라 드래그해서 깔끔하게 잘라라.",
+      "assets_raw": "파인애플(통째/썰어서 접시에 담긴 모습)",
+      "asset_slots": [
+        {
+          "slot": "JUN_10_01",
+          "name": "파인애플",
+          "note": "통째/썰어서 접시에 담긴 모습",
+          "file": "Assets/_Game/Sprite/Jungle/JUN_10/JUN_10_01.png"
+        }
+      ],
+      "sprite_folder": "Assets/_Game/Sprite/Jungle/JUN_10/"
+    },
+    {
+      "id": "JUN_11",
+      "theme": "정글",
+      "theme_en": "Jungle",
+      "index": 11,
+      "name": "석상의 이끼를 닦아라",
+      "command": "닦아라!",
+      "end_condition": "빨리깨기",
+      "succeed_on_time_up": false,
+      "mechanics": [
+        "F"
+      ],
+      "mechanics_raw": "F 스와이프",
+      "how_to_play": "정글 유적 석상에 낀 이끼를 좌우로 스와이프해서 닦아내라.",
+      "assets_raw": "석상(이끼 낀 모습/깨끗한 모습), 이끼, 솔",
+      "asset_slots": [
+        {
+          "slot": "JUN_11_01",
+          "name": "석상",
+          "note": "이끼 낀 모습/깨끗한 모습",
+          "file": "Assets/_Game/Sprite/Jungle/JUN_11/JUN_11_01.png"
+        },
+        {
+          "slot": "JUN_11_02",
+          "name": "이끼",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Jungle/JUN_11/JUN_11_02.png"
+        },
+        {
+          "slot": "JUN_11_03",
+          "name": "솔",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Jungle/JUN_11/JUN_11_03.png"
+        }
+      ],
+      "sprite_folder": "Assets/_Game/Sprite/Jungle/JUN_11/"
+    },
+    {
+      "id": "JUN_12",
+      "theme": "정글",
+      "theme_en": "Jungle",
+      "index": 12,
+      "name": "정글 사원의 문을 열기 위해 도르래를 돌려라",
+      "command": "돌려라!",
+      "end_condition": "빨리깨기",
+      "succeed_on_time_up": false,
+      "mechanics": [
+        "G"
+      ],
+      "mechanics_raw": "G 드래그",
+      "how_to_play": "도르래 손잡이를 돌려서 정글 사원의 문을 끝까지 열어라. 멈추면 문이 다시 닫힌다.",
+      "assets_raw": "도르래(돌리는 손잡이), 사원 문(닫힘/열림), 정글 사원",
+      "asset_slots": [
+        {
+          "slot": "JUN_12_01",
+          "name": "도르래",
+          "note": "돌리는 손잡이",
+          "file": "Assets/_Game/Sprite/Jungle/JUN_12/JUN_12_01.png"
+        },
+        {
+          "slot": "JUN_12_02",
+          "name": "사원 문",
+          "note": "닫힘/열림",
+          "file": "Assets/_Game/Sprite/Jungle/JUN_12/JUN_12_02.png"
+        },
+        {
+          "slot": "JUN_12_03",
+          "name": "정글 사원",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Jungle/JUN_12/JUN_12_03.png"
+        }
+      ],
+      "sprite_folder": "Assets/_Game/Sprite/Jungle/JUN_12/"
+    },
+    {
+      "id": "JUN_13",
+      "theme": "정글",
+      "theme_en": "Jungle",
+      "index": 13,
+      "name": "원숭이에게 바나나를 나눠줘라",
+      "command": "나눠줘라!",
+      "end_condition": "빨리깨기",
+      "succeed_on_time_up": false,
+      "mechanics": [
+        "G"
+      ],
+      "mechanics_raw": "G 드래그",
+      "how_to_play": "바나나를 끌어다 원숭이 3마리 손에 하나씩 쥐여 줘라.",
+      "assets_raw": "원숭이(기다림/기뻐함), 바나나 송이",
+      "asset_slots": [
+        {
+          "slot": "JUN_13_01",
+          "name": "원숭이",
+          "note": "기다림/기뻐함",
+          "file": "Assets/_Game/Sprite/Jungle/JUN_13/JUN_13_01.png"
+        },
+        {
+          "slot": "JUN_13_02",
+          "name": "바나나 송이",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Jungle/JUN_13/JUN_13_02.png"
+        }
+      ],
+      "sprite_folder": "Assets/_Game/Sprite/Jungle/JUN_13/"
+    },
+    {
+      "id": "JUN_14",
+      "theme": "정글",
+      "theme_en": "Jungle",
+      "index": 14,
+      "name": "보트의 구멍을 막아라",
+      "command": "막아라!",
+      "end_condition": "빨리깨기",
+      "succeed_on_time_up": false,
+      "mechanics": [
+        "C"
+      ],
+      "mechanics_raw": "C 대상 탭",
+      "how_to_play": "보트에 난 구멍 3개를 모두 탭해서 막아라.",
+      "assets_raw": "보트(구멍 3개), 마개, 물 새는 이펙트",
+      "asset_slots": [
+        {
+          "slot": "JUN_14_01",
+          "name": "보트",
+          "note": "구멍 3개",
+          "file": "Assets/_Game/Sprite/Jungle/JUN_14/JUN_14_01.png"
+        },
+        {
+          "slot": "JUN_14_02",
+          "name": "마개",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Jungle/JUN_14/JUN_14_02.png"
+        },
+        {
+          "slot": "JUN_14_03",
+          "name": "물 새는 이펙트",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Jungle/JUN_14/JUN_14_03.png"
+        }
+      ],
+      "sprite_folder": "Assets/_Game/Sprite/Jungle/JUN_14/"
+    },
+    {
+      "id": "JUN_15",
+      "theme": "정글",
+      "theme_en": "Jungle",
+      "index": 15,
+      "name": "신전의 문을 열어라",
+      "command": "끼워라!",
+      "end_condition": "빨리깨기",
+      "succeed_on_time_up": false,
+      "mechanics": [
+        "G"
+      ],
+      "mechanics_raw": "G 드래그",
+      "how_to_play": "문에 새겨진 구멍 3개에 같은 모양의 석판을 끌어다 끼워라. 틀린 석판을 끼우면 실패.",
+      "assets_raw": "신전 문(구멍 3개), 석판 5종(모양 다름), 문 열림 이펙트",
+      "asset_slots": [
+        {
+          "slot": "JUN_15_01",
+          "name": "신전 문",
+          "note": "구멍 3개",
+          "file": "Assets/_Game/Sprite/Jungle/JUN_15/JUN_15_01.png"
+        },
+        {
+          "slot": "JUN_15_02",
+          "name": "석판 5종",
+          "note": "모양 다름",
+          "file": "Assets/_Game/Sprite/Jungle/JUN_15/JUN_15_02.png"
+        },
+        {
+          "slot": "JUN_15_03",
+          "name": "문 열림 이펙트",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Jungle/JUN_15/JUN_15_03.png"
+        }
+      ],
+      "sprite_folder": "Assets/_Game/Sprite/Jungle/JUN_15/"
+    },
+    {
+      "id": "JUN_16",
+      "theme": "정글",
+      "theme_en": "Jungle",
+      "index": 16,
+      "name": "코코넛을 쪼개라",
+      "command": "쪼개라!",
+      "end_condition": "빨리깨기",
+      "succeed_on_time_up": false,
+      "mechanics": [
+        "A"
+      ],
+      "mechanics_raw": "A 연타",
+      "how_to_play": "바위 위의 코코넛을 연타해서 반으로 쪼개라.",
+      "assets_raw": "코코넛(단계별 금 감/쪼개짐), 바위",
+      "asset_slots": [
+        {
+          "slot": "JUN_16_01",
+          "name": "코코넛",
+          "note": "단계별 금 감/쪼개짐",
+          "file": "Assets/_Game/Sprite/Jungle/JUN_16/JUN_16_01.png"
+        },
+        {
+          "slot": "JUN_16_02",
+          "name": "바위",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Jungle/JUN_16/JUN_16_02.png"
+        }
+      ],
+      "sprite_folder": "Assets/_Game/Sprite/Jungle/JUN_16/"
+    },
+    {
+      "id": "JUN_17",
+      "theme": "정글",
+      "theme_en": "Jungle",
+      "index": 17,
+      "name": "지도를 맞춰라",
+      "command": "맞춰라!",
+      "end_condition": "빨리깨기",
+      "succeed_on_time_up": false,
+      "mechanics": [
+        "G"
+      ],
+      "mechanics_raw": "G 드래그",
+      "how_to_play": "찢어진 지도의 조각을 알맞은 자리에 둬서 지도를 완성해라.",
+      "assets_raw": "지도 조각 3개",
+      "asset_slots": [
+        {
+          "slot": "JUN_17_01",
+          "name": "지도 조각 3개",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Jungle/JUN_17/JUN_17_01.png"
+        }
+      ],
+      "sprite_folder": "Assets/_Game/Sprite/Jungle/JUN_17/"
+    },
+    {
+      "id": "JUN_18",
+      "theme": "정글",
+      "theme_en": "Jungle",
+      "index": 18,
+      "name": "보트에 시동을 걸어라",
+      "command": "당겨라!",
+      "end_condition": "빨리깨기",
+      "succeed_on_time_up": false,
+      "mechanics": [
+        "G"
+      ],
+      "mechanics_raw": "G 드래그",
+      "how_to_play": "보트 엔진의 시동 줄을 빠른 속도로 잡아당겨라. 시동이 걸릴 때까지 반복해라.",
+      "assets_raw": "보트 엔진(꺼짐/시동 걸림), 시동 줄(손잡이), 손, 연기 이펙트",
+      "asset_slots": [
+        {
+          "slot": "JUN_18_01",
+          "name": "보트 엔진",
+          "note": "꺼짐/시동 걸림",
+          "file": "Assets/_Game/Sprite/Jungle/JUN_18/JUN_18_01.png"
+        },
+        {
+          "slot": "JUN_18_02",
+          "name": "시동 줄",
+          "note": "손잡이",
+          "file": "Assets/_Game/Sprite/Jungle/JUN_18/JUN_18_02.png"
+        },
+        {
+          "slot": "JUN_18_03",
+          "name": "손",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Jungle/JUN_18/JUN_18_03.png"
+        },
+        {
+          "slot": "JUN_18_04",
+          "name": "연기 이펙트",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Jungle/JUN_18/JUN_18_04.png"
+        }
+      ],
+      "sprite_folder": "Assets/_Game/Sprite/Jungle/JUN_18/"
+    },
+    {
+      "id": "JUN_19",
+      "theme": "정글",
+      "theme_en": "Jungle",
+      "index": 19,
+      "name": "밤에 야생동물이 오지 못하게 막아라",
+      "command": "쫓아내라!",
+      "end_condition": "버티기",
+      "succeed_on_time_up": true,
+      "mechanics": [
+        "G"
+      ],
+      "mechanics_raw": "G 드래그",
+      "how_to_play": "어둠 속에서 빛나는 눈이 보이면 횃불을 그쪽으로 드래그해서 끝까지 쫓아내라. 야생동물이 다가오면 실패.",
+      "assets_raw": "야생동물 눈(어둠 속 빛남), 횃불, 밤 배경",
+      "asset_slots": [
+        {
+          "slot": "JUN_19_01",
+          "name": "야생동물 눈",
+          "note": "어둠 속 빛남",
+          "file": "Assets/_Game/Sprite/Jungle/JUN_19/JUN_19_01.png"
+        },
+        {
+          "slot": "JUN_19_02",
+          "name": "횃불",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Jungle/JUN_19/JUN_19_02.png"
+        },
+        {
+          "slot": "JUN_19_03",
+          "name": "밤 배경",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Jungle/JUN_19/JUN_19_03.png"
+        }
+      ],
+      "sprite_folder": "Assets/_Game/Sprite/Jungle/JUN_19/"
+    },
+    {
+      "id": "JUN_20",
+      "theme": "정글",
+      "theme_en": "Jungle",
+      "index": 20,
+      "name": "정글 동물을 촬영해라",
+      "command": "찍어라!",
+      "end_condition": "빨리깨기",
+      "succeed_on_time_up": false,
+      "mechanics": [
+        "G",
+        "C"
+      ],
+      "mechanics_raw": "G 드래그, C 대상 탭",
+      "how_to_play": "카메라 프레임을 드래그해서 동물에 맞추고, 촬영 버튼을 눌러 찍어라. 동물 3마리를 모두 찍으면 성공. (참고: 덕 헌트)",
+      "assets_raw": "동물 4종(원숭이, 앵무새, 나무늘보, 투칸), 카메라 프레임, 촬영 버튼, 플래시 이펙트",
+      "asset_slots": [
+        {
+          "slot": "JUN_20_01",
+          "name": "동물 4종",
+          "note": "원숭이, 앵무새, 나무늘보, 투칸",
+          "file": "Assets/_Game/Sprite/Jungle/JUN_20/JUN_20_01.png"
+        },
+        {
+          "slot": "JUN_20_02",
+          "name": "카메라 프레임",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Jungle/JUN_20/JUN_20_02.png"
+        },
+        {
+          "slot": "JUN_20_03",
+          "name": "촬영 버튼",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Jungle/JUN_20/JUN_20_03.png"
+        },
+        {
+          "slot": "JUN_20_04",
+          "name": "플래시 이펙트",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Jungle/JUN_20/JUN_20_04.png"
+        }
+      ],
+      "sprite_folder": "Assets/_Game/Sprite/Jungle/JUN_20/"
+    },
+    {
+      "id": "CAV_01",
+      "theme": "동굴",
+      "theme_en": "Cave",
+      "index": 1,
+      "name": "부싯돌로 불을 붙여라",
+      "command": "불을 붙여라!",
+      "end_condition": "빨리깨기",
+      "succeed_on_time_up": false,
+      "mechanics": [
+        "G"
+      ],
+      "mechanics_raw": "G 드래그",
+      "how_to_play": "부싯돌을 적당한 속도로 드래그해서 장작에 불을 붙여라. 너무 빨리 긁으면 부싯돌이 부서져 실패. (참고: 어몽어스 카드 긁기)",
+      "assets_raw": "부싯돌(정상/부서짐), 장작(꺼짐/불붙음), 불꽃 이펙트",
+      "asset_slots": [
+        {
+          "slot": "CAV_01_01",
+          "name": "부싯돌",
+          "note": "정상/부서짐",
+          "file": "Assets/_Game/Sprite/Cave/CAV_01/CAV_01_01.png"
+        },
+        {
+          "slot": "CAV_01_02",
+          "name": "장작",
+          "note": "꺼짐/불붙음",
+          "file": "Assets/_Game/Sprite/Cave/CAV_01/CAV_01_02.png"
+        },
+        {
+          "slot": "CAV_01_03",
+          "name": "불꽃 이펙트",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Cave/CAV_01/CAV_01_03.png"
+        }
+      ],
+      "sprite_folder": "Assets/_Game/Sprite/Cave/CAV_01/"
+    },
+    {
+      "id": "CAV_02",
+      "theme": "동굴",
+      "theme_en": "Cave",
+      "index": 2,
+      "name": "박쥐를 쫓아내라",
+      "command": "휘둘러라!",
+      "end_condition": "빨리깨기",
+      "succeed_on_time_up": false,
+      "mechanics": [
+        "G"
+      ],
+      "mechanics_raw": "G 드래그",
+      "how_to_play": "횃불을 드래그해서 달려드는 박쥐들을 모두 쫓아내라.",
+      "assets_raw": "박쥐, 횃불",
+      "asset_slots": [
+        {
+          "slot": "CAV_02_01",
+          "name": "박쥐",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Cave/CAV_02/CAV_02_01.png"
+        },
+        {
+          "slot": "CAV_02_02",
+          "name": "횃불",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Cave/CAV_02/CAV_02_02.png"
+        }
+      ],
+      "sprite_folder": "Assets/_Game/Sprite/Cave/CAV_02/"
+    },
+    {
+      "id": "CAV_03",
+      "theme": "동굴",
+      "theme_en": "Cave",
+      "index": 3,
+      "name": "동굴의 출구를 찾아라",
+      "command": "비춰라!",
+      "end_condition": "빨리깨기",
+      "succeed_on_time_up": false,
+      "mechanics": [
+        "G"
+      ],
+      "mechanics_raw": "G 드래그",
+      "how_to_play": "횃불을 드래그해서 어두운 동굴을 비추고, 출구를 찾아 탭해라.",
+      "assets_raw": "횃불, 어둠 마스크, 동굴 출구",
+      "asset_slots": [
+        {
+          "slot": "CAV_03_01",
+          "name": "횃불",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Cave/CAV_03/CAV_03_01.png"
+        },
+        {
+          "slot": "CAV_03_02",
+          "name": "어둠 마스크",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Cave/CAV_03/CAV_03_02.png"
+        },
+        {
+          "slot": "CAV_03_03",
+          "name": "동굴 출구",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Cave/CAV_03/CAV_03_03.png"
+        }
+      ],
+      "sprite_folder": "Assets/_Game/Sprite/Cave/CAV_03/"
+    },
+    {
+      "id": "CAV_04",
+      "theme": "동굴",
+      "theme_en": "Cave",
+      "index": 4,
+      "name": "횃불이 꺼지지 않게 버텨라",
+      "command": "막아라!",
+      "end_condition": "버티기",
+      "succeed_on_time_up": true,
+      "mechanics": [
+        "G"
+      ],
+      "mechanics_raw": "G 드래그",
+      "how_to_play": "횃불을 향해 바라오는 바람을 손으로 막아서 꺼지지 않게 해라",
+      "assets_raw": "횃불, 바람 이펙트, 손",
+      "asset_slots": [
+        {
+          "slot": "CAV_04_01",
+          "name": "횃불",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Cave/CAV_04/CAV_04_01.png"
+        },
+        {
+          "slot": "CAV_04_02",
+          "name": "바람 이펙트",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Cave/CAV_04/CAV_04_02.png"
+        },
+        {
+          "slot": "CAV_04_03",
+          "name": "손",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Cave/CAV_04/CAV_04_03.png"
+        }
+      ],
+      "sprite_folder": "Assets/_Game/Sprite/Cave/CAV_04/"
+    },
+    {
+      "id": "CAV_05",
+      "theme": "동굴",
+      "theme_en": "Cave",
+      "index": 5,
+      "name": "진짜 통로를 찾아라",
+      "command": "골라라!",
+      "end_condition": "빨리깨기",
+      "succeed_on_time_up": false,
+      "mechanics": [
+        "H"
+      ],
+      "mechanics_raw": "H 틀린그림 찾기",
+      "how_to_play": "문양 2개가 플레이어에게 랜덤으로 주어지고, 2개의 통로에 랜덤한 2개의 문양이 주어진다.\n그중 플레이어에게 주어진 랜덤 문양 2개와 순서가 동일한 문양이 있는 통로를 선택하면 된다",
+      "assets_raw": "문양, 동굴 입구, 지도",
+      "asset_slots": [
+        {
+          "slot": "CAV_05_01",
+          "name": "문양",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Cave/CAV_05/CAV_05_01.png"
+        },
+        {
+          "slot": "CAV_05_02",
+          "name": "동굴 입구",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Cave/CAV_05/CAV_05_02.png"
+        },
+        {
+          "slot": "CAV_05_03",
+          "name": "지도",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Cave/CAV_05/CAV_05_03.png"
+        }
+      ],
+      "sprite_folder": "Assets/_Game/Sprite/Cave/CAV_05/"
+    },
+    {
+      "id": "CAV_06",
+      "theme": "동굴",
+      "theme_en": "Cave",
+      "index": 6,
+      "name": "보물상자를 찾아라",
+      "command": "찾아라!",
+      "end_condition": "빨리깨기",
+      "succeed_on_time_up": false,
+      "mechanics": [
+        "G",
+        "C"
+      ],
+      "mechanics_raw": "G 드래그, C 대상 탭",
+      "how_to_play": "어둠속에서 손전등을 비춰, 숨겨진 보물상자를 찾아라",
+      "assets_raw": "동굴 뒷배경, 보물상자(닫힘, 열림)",
+      "asset_slots": [
+        {
+          "slot": "CAV_06_01",
+          "name": "동굴 뒷배경",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Cave/CAV_06/CAV_06_01.png"
+        },
+        {
+          "slot": "CAV_06_02",
+          "name": "보물상자",
+          "note": "닫힘, 열림",
+          "file": "Assets/_Game/Sprite/Cave/CAV_06/CAV_06_02.png"
+        }
+      ],
+      "sprite_folder": "Assets/_Game/Sprite/Cave/CAV_06/"
+    },
+    {
+      "id": "CAV_07",
+      "theme": "동굴",
+      "theme_en": "Cave",
+      "index": 7,
+      "name": "레일 앞의 바위를 부셔라",
+      "command": "터뜨려라!",
+      "end_condition": "버티기",
+      "succeed_on_time_up": true,
+      "mechanics": [
+        "C"
+      ],
+      "mechanics_raw": "C 대상 탭",
+      "how_to_play": "레일을 달리는 카트 앞을 막고 있는 바위를 터치해 폭파시켜라\n너무 빨리 터치하면 레일이 터진다",
+      "assets_raw": "레일, 카트, 카트를 타고있는 캐릭터, 바위, 폭발 이펙트, 끊어진 레일",
+      "asset_slots": [
+        {
+          "slot": "CAV_07_01",
+          "name": "레일",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Cave/CAV_07/CAV_07_01.png"
+        },
+        {
+          "slot": "CAV_07_02",
+          "name": "카트",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Cave/CAV_07/CAV_07_02.png"
+        },
+        {
+          "slot": "CAV_07_03",
+          "name": "카트를 타고있는 캐릭터",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Cave/CAV_07/CAV_07_03.png"
+        },
+        {
+          "slot": "CAV_07_04",
+          "name": "바위",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Cave/CAV_07/CAV_07_04.png"
+        },
+        {
+          "slot": "CAV_07_05",
+          "name": "폭발 이펙트",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Cave/CAV_07/CAV_07_05.png"
+        },
+        {
+          "slot": "CAV_07_06",
+          "name": "끊어진 레일",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Cave/CAV_07/CAV_07_06.png"
+        }
+      ],
+      "sprite_folder": "Assets/_Game/Sprite/Cave/CAV_07/"
+    },
+    {
+      "id": "CAV_08",
+      "theme": "동굴",
+      "theme_en": "Cave",
+      "index": 8,
+      "name": "화석을 발굴해라",
+      "command": "캐내라!",
+      "end_condition": "빨리깨기",
+      "succeed_on_time_up": false,
+      "mechanics": [
+        "A",
+        "D"
+      ],
+      "mechanics_raw": "A 연타, D 타이밍 탭",
+      "how_to_play": "벽에 박힌 화석을 탭해서 정해진 횟수(랜덤, ±1 허용)만큼 두드려 꺼내라. 횟수를 넘기면 화석이 부서져 실패.",
+      "assets_raw": "뼈 화석(묻힘/발굴/부서짐), 곡괭이",
+      "asset_slots": [
+        {
+          "slot": "CAV_08_01",
+          "name": "뼈 화석",
+          "note": "묻힘/발굴/부서짐",
+          "file": "Assets/_Game/Sprite/Cave/CAV_08/CAV_08_01.png"
+        },
+        {
+          "slot": "CAV_08_02",
+          "name": "곡괭이",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Cave/CAV_08/CAV_08_02.png"
+        }
+      ],
+      "sprite_folder": "Assets/_Game/Sprite/Cave/CAV_08/"
+    },
+    {
+      "id": "CAV_09",
+      "theme": "동굴",
+      "theme_en": "Cave",
+      "index": 9,
+      "name": "굴러오는 돌들을 피해라",
+      "command": "피해라!",
+      "end_condition": "버티기",
+      "succeed_on_time_up": true,
+      "mechanics": [
+        "F"
+      ],
+      "mechanics_raw": "F 스와이프",
+      "how_to_play": "좌우로 스와이프해서 위에서 굴러오는 돌을 끝까지 피해라. 부딪히면 실패.",
+      "assets_raw": "바위(구르기), 도망치는 캐릭터",
+      "asset_slots": [
+        {
+          "slot": "CAV_09_01",
+          "name": "바위",
+          "note": "구르기",
+          "file": "Assets/_Game/Sprite/Cave/CAV_09/CAV_09_01.png"
+        },
+        {
+          "slot": "CAV_09_02",
+          "name": "도망치는 캐릭터",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Cave/CAV_09/CAV_09_02.png"
+        }
+      ],
+      "sprite_folder": "Assets/_Game/Sprite/Cave/CAV_09/"
+    },
+    {
+      "id": "CAV_10",
+      "theme": "동굴",
+      "theme_en": "Cave",
+      "index": 10,
+      "name": "종유석 사이로 빠져나가라",
+      "command": "빠져나가라!",
+      "end_condition": "빨리깨기",
+      "succeed_on_time_up": false,
+      "mechanics": [
+        "G"
+      ],
+      "mechanics_raw": "G 드래그",
+      "how_to_play": "캐릭터를 드래그해서 종유석에 닿지 않게 출구까지 데려가라. 닿으면 실패.",
+      "assets_raw": "캐릭터, 종유석, 동굴 출구",
+      "asset_slots": [
+        {
+          "slot": "CAV_10_01",
+          "name": "캐릭터",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Cave/CAV_10/CAV_10_01.png"
+        },
+        {
+          "slot": "CAV_10_02",
+          "name": "종유석",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Cave/CAV_10/CAV_10_02.png"
+        },
+        {
+          "slot": "CAV_10_03",
+          "name": "동굴 출구",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Cave/CAV_10/CAV_10_03.png"
+        }
+      ],
+      "sprite_folder": "Assets/_Game/Sprite/Cave/CAV_10/"
+    },
+    {
+      "id": "CAV_11",
+      "theme": "동굴",
+      "theme_en": "Cave",
+      "index": 11,
+      "name": "랜턴에 기름을 부어라",
+      "command": "부어라!",
+      "end_condition": "빨리깨기",
+      "succeed_on_time_up": false,
+      "mechanics": [
+        "G"
+      ],
+      "mechanics_raw": "G 드래그",
+      "how_to_play": "기름통을 끌어다 기울여서 랜턴에 눈금까지 기름을 채워라.",
+      "assets_raw": "기름통, 랜턴(눈금), 기름",
+      "asset_slots": [
+        {
+          "slot": "CAV_11_01",
+          "name": "기름통",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Cave/CAV_11/CAV_11_01.png"
+        },
+        {
+          "slot": "CAV_11_02",
+          "name": "랜턴",
+          "note": "눈금",
+          "file": "Assets/_Game/Sprite/Cave/CAV_11/CAV_11_02.png"
+        },
+        {
+          "slot": "CAV_11_03",
+          "name": "기름",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Cave/CAV_11/CAV_11_03.png"
+        }
+      ],
+      "sprite_folder": "Assets/_Game/Sprite/Cave/CAV_11/"
+    },
+    {
+      "id": "CAV_12",
+      "theme": "동굴",
+      "theme_en": "Cave",
+      "index": 12,
+      "name": "흙을 파서 보물을 꺼내라",
+      "command": "파내라!",
+      "end_condition": "빨리깨기",
+      "succeed_on_time_up": false,
+      "mechanics": [
+        "F"
+      ],
+      "mechanics_raw": "F 스와이프",
+      "how_to_play": "좌우로 스와이프해서 흙을 파내고 묻힌 보물을 드러내라.",
+      "assets_raw": "흙더미(단계별), 삽, 보물상자",
+      "asset_slots": [
+        {
+          "slot": "CAV_12_01",
+          "name": "흙더미",
+          "note": "단계별",
+          "file": "Assets/_Game/Sprite/Cave/CAV_12/CAV_12_01.png"
+        },
+        {
+          "slot": "CAV_12_02",
+          "name": "삽",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Cave/CAV_12/CAV_12_02.png"
+        },
+        {
+          "slot": "CAV_12_03",
+          "name": "보물상자",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Cave/CAV_12/CAV_12_03.png"
+        }
+      ],
+      "sprite_folder": "Assets/_Game/Sprite/Cave/CAV_12/"
+    },
+    {
+      "id": "CAV_13",
+      "theme": "동굴",
+      "theme_en": "Cave",
+      "index": 13,
+      "name": "얇은 벽을 부숴라",
+      "command": "부숴라!",
+      "end_condition": "빨리깨기",
+      "succeed_on_time_up": false,
+      "mechanics": [
+        "A"
+      ],
+      "mechanics_raw": "A 연타",
+      "how_to_play": "금 간 벽을 연타해서 부수고 숨은 방을 열어라.",
+      "assets_raw": "금 간 벽(단계별), 곡괭이, 숨은 방",
+      "asset_slots": [
+        {
+          "slot": "CAV_13_01",
+          "name": "금 간 벽",
+          "note": "단계별",
+          "file": "Assets/_Game/Sprite/Cave/CAV_13/CAV_13_01.png"
+        },
+        {
+          "slot": "CAV_13_02",
+          "name": "곡괭이",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Cave/CAV_13/CAV_13_02.png"
+        },
+        {
+          "slot": "CAV_13_03",
+          "name": "숨은 방",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Cave/CAV_13/CAV_13_03.png"
+        }
+      ],
+      "sprite_folder": "Assets/_Game/Sprite/Cave/CAV_13/"
+    },
+    {
+      "id": "CAV_14",
+      "theme": "동굴",
+      "theme_en": "Cave",
+      "index": 14,
+      "name": "광부에게 도구를 찾아줘라",
+      "command": "찾아줘라!",
+      "end_condition": "빨리깨기",
+      "succeed_on_time_up": false,
+      "mechanics": [
+        "C"
+      ],
+      "mechanics_raw": "C 대상 탭",
+      "how_to_play": "광부 말풍선에 그려진 도구를 바닥에 흩어진 도구 4개 중에서 탭해라. 틀리면 실패.",
+      "assets_raw": "광부(기다림/기뻐함), 말풍선, 도구 4종(곡괭이·삽·랜턴·로프)",
+      "asset_slots": [
+        {
+          "slot": "CAV_14_01",
+          "name": "광부",
+          "note": "기다림/기뻐함",
+          "file": "Assets/_Game/Sprite/Cave/CAV_14/CAV_14_01.png"
+        },
+        {
+          "slot": "CAV_14_02",
+          "name": "말풍선",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Cave/CAV_14/CAV_14_02.png"
+        },
+        {
+          "slot": "CAV_14_03",
+          "name": "도구 4종",
+          "note": "곡괭이·삽·랜턴·로프",
+          "file": "Assets/_Game/Sprite/Cave/CAV_14/CAV_14_03.png"
+        }
+      ],
+      "sprite_folder": "Assets/_Game/Sprite/Cave/CAV_14/"
+    },
+    {
+      "id": "CAV_15",
+      "theme": "동굴",
+      "theme_en": "Cave",
+      "index": 15,
+      "name": "횃불에 불을 붙여라",
+      "command": "밝혀라!",
+      "end_condition": "빨리깨기",
+      "succeed_on_time_up": false,
+      "mechanics": [
+        "C"
+      ],
+      "mechanics_raw": "C 대상 탭",
+      "how_to_play": "동굴 벽에 걸린 꺼진 횃불 4개를 모두 탭해서 불을 붙여라.",
+      "assets_raw": "횃불(꺼짐/켜짐), 동굴 벽",
+      "asset_slots": [
+        {
+          "slot": "CAV_15_01",
+          "name": "횃불",
+          "note": "꺼짐/켜짐",
+          "file": "Assets/_Game/Sprite/Cave/CAV_15/CAV_15_01.png"
+        },
+        {
+          "slot": "CAV_15_02",
+          "name": "동굴 벽",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Cave/CAV_15/CAV_15_02.png"
+        }
+      ],
+      "sprite_folder": "Assets/_Game/Sprite/Cave/CAV_15/"
+    },
+    {
+      "id": "CAV_16",
+      "theme": "동굴",
+      "theme_en": "Cave",
+      "index": 16,
+      "name": "펌프로 물을 퍼내라",
+      "command": "퍼내라!",
+      "end_condition": "빨리깨기",
+      "succeed_on_time_up": false,
+      "mechanics": [
+        "A"
+      ],
+      "mechanics_raw": "A 연타",
+      "how_to_play": "물이 찬 통로를 펌프 연타로 퍼내서 길을 열어라.",
+      "assets_raw": "펌프, 물 찬 통로(단계별 수위)",
+      "asset_slots": [
+        {
+          "slot": "CAV_16_01",
+          "name": "펌프",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Cave/CAV_16/CAV_16_01.png"
+        },
+        {
+          "slot": "CAV_16_02",
+          "name": "물 찬 통로",
+          "note": "단계별 수위",
+          "file": "Assets/_Game/Sprite/Cave/CAV_16/CAV_16_02.png"
+        }
+      ],
+      "sprite_folder": "Assets/_Game/Sprite/Cave/CAV_16/"
+    },
+    {
+      "id": "CAV_17",
+      "theme": "동굴",
+      "theme_en": "Cave",
+      "index": 17,
+      "name": "지하 호수에서 뗏목을 저어라",
+      "command": "저어라!",
+      "end_condition": "빨리깨기",
+      "succeed_on_time_up": false,
+      "mechanics": [
+        "A"
+      ],
+      "mechanics_raw": "A 연타",
+      "how_to_play": "연타해서 노를 저어 지하 호수 건너편 출구까지 가라.",
+      "assets_raw": "뗏목 탄 캐릭터, 노, 지하 호수, 출구",
+      "asset_slots": [
+        {
+          "slot": "CAV_17_01",
+          "name": "뗏목 탄 캐릭터",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Cave/CAV_17/CAV_17_01.png"
+        },
+        {
+          "slot": "CAV_17_02",
+          "name": "노",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Cave/CAV_17/CAV_17_02.png"
+        },
+        {
+          "slot": "CAV_17_03",
+          "name": "지하 호수",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Cave/CAV_17/CAV_17_03.png"
+        },
+        {
+          "slot": "CAV_17_04",
+          "name": "출구",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Cave/CAV_17/CAV_17_04.png"
+        }
+      ],
+      "sprite_folder": "Assets/_Game/Sprite/Cave/CAV_17/"
+    },
+    {
+      "id": "CAV_18",
+      "theme": "동굴",
+      "theme_en": "Cave",
+      "index": 18,
+      "name": "부서지지 않은 레일로 광차를 몰아라",
+      "command": "꺾어라!",
+      "end_condition": "빨리깨기",
+      "succeed_on_time_up": false,
+      "mechanics": [
+        "F"
+      ],
+      "mechanics_raw": "F 스와이프",
+      "how_to_play": "광차를 타고 달리다 두 갈래로 나뉘는 레일에서 좌우로 스와이프해서 부서지지 않은 쪽으로 가라. 선택하지 않으면 두 레일 중 랜덤한 쪽으로 간다. 부서진 레일로 가면 실패. (참고: 템플런2 광차)",
+      "assets_raw": "광차 탄 캐릭터, 갈림길 레일(정상/부서짐), 충돌 이펙트",
+      "asset_slots": [
+        {
+          "slot": "CAV_18_01",
+          "name": "광차 탄 캐릭터",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Cave/CAV_18/CAV_18_01.png"
+        },
+        {
+          "slot": "CAV_18_02",
+          "name": "갈림길 레일",
+          "note": "정상/부서짐",
+          "file": "Assets/_Game/Sprite/Cave/CAV_18/CAV_18_02.png"
+        },
+        {
+          "slot": "CAV_18_03",
+          "name": "충돌 이펙트",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Cave/CAV_18/CAV_18_03.png"
+        }
+      ],
+      "sprite_folder": "Assets/_Game/Sprite/Cave/CAV_18/"
+    },
+    {
+      "id": "CAV_19",
+      "theme": "동굴",
+      "theme_en": "Cave",
+      "index": 19,
+      "name": "야광 버섯을 빛나게 해라",
+      "command": "빛나라!",
+      "end_condition": "빨리깨기",
+      "succeed_on_time_up": false,
+      "mechanics": [
+        "C"
+      ],
+      "mechanics_raw": "C 대상 탭",
+      "how_to_play": "동굴 바닥의 야광 버섯 4개를 모두 탭해서 빛나게 해라.",
+      "assets_raw": "야광 버섯(어두움/빛남), 동굴 바닥",
+      "asset_slots": [
+        {
+          "slot": "CAV_19_01",
+          "name": "야광 버섯",
+          "note": "어두움/빛남",
+          "file": "Assets/_Game/Sprite/Cave/CAV_19/CAV_19_01.png"
+        },
+        {
+          "slot": "CAV_19_02",
+          "name": "동굴 바닥",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Cave/CAV_19/CAV_19_02.png"
+        }
+      ],
+      "sprite_folder": "Assets/_Game/Sprite/Cave/CAV_19/"
+    },
+    {
+      "id": "CAV_20",
+      "theme": "동굴",
+      "theme_en": "Cave",
+      "index": 20,
+      "name": "녹슨 레버를 계속 당겨서 열어라",
+      "command": "당겨라!",
+      "end_condition": "빨리깨기",
+      "succeed_on_time_up": false,
+      "mechanics": [
+        "G"
+      ],
+      "mechanics_raw": "G 드래그",
+      "how_to_play": "레버가 녹슬어서 한 번에 열리지 않는다. 레버가 완전히 젖혀질 때까지 계속 당겨라.",
+      "assets_raw": "녹슨 레버(단계별 젖혀짐), 광산 문(닫힘/열림)",
+      "asset_slots": [
+        {
+          "slot": "CAV_20_01",
+          "name": "녹슨 레버",
+          "note": "단계별 젖혀짐",
+          "file": "Assets/_Game/Sprite/Cave/CAV_20/CAV_20_01.png"
+        },
+        {
+          "slot": "CAV_20_02",
+          "name": "광산 문",
+          "note": "닫힘/열림",
+          "file": "Assets/_Game/Sprite/Cave/CAV_20/CAV_20_02.png"
+        }
+      ],
+      "sprite_folder": "Assets/_Game/Sprite/Cave/CAV_20/"
+    },
+    {
+      "id": "PRE_01",
+      "theme": "절벽",
+      "theme_en": "Precipice",
+      "index": 1,
+      "name": "로프를 고리에 걸어라",
+      "command": "걸어라!",
+      "end_condition": "빨리깨기",
+      "succeed_on_time_up": false,
+      "mechanics": [
+        "G"
+      ],
+      "mechanics_raw": "G 드래그",
+      "how_to_play": "흔들리는 고리에 로프 끝을 끌어다 놓는다",
+      "assets_raw": "로프, 흔들리는 바위 고리",
+      "asset_slots": [
+        {
+          "slot": "PRE_01_01",
+          "name": "로프",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Precipice/PRE_01/PRE_01_01.png"
+        },
+        {
+          "slot": "PRE_01_02",
+          "name": "흔들리는 바위 고리",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Precipice/PRE_01/PRE_01_02.png"
+        }
+      ],
+      "sprite_folder": "Assets/_Game/Sprite/Precipice/PRE_01/"
+    },
+    {
+      "id": "PRE_02",
+      "theme": "절벽",
+      "theme_en": "Precipice",
+      "index": 2,
+      "name": "쌍안경 초점을 맞춰라",
+      "command": "맞춰라!",
+      "end_condition": "빨리깨기",
+      "succeed_on_time_up": false,
+      "mechanics": [
+        "G"
+      ],
+      "mechanics_raw": "G 드래그",
+      "how_to_play": "슬라이더를 끌어 화면이 선명해지는 위치에 놓는다",
+      "assets_raw": "쌍안경 프레임, 초점 슬라이더, 둥지(흐림/선명)",
+      "asset_slots": [
+        {
+          "slot": "PRE_02_01",
+          "name": "쌍안경 프레임",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Precipice/PRE_02/PRE_02_01.png"
+        },
+        {
+          "slot": "PRE_02_02",
+          "name": "초점 슬라이더",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Precipice/PRE_02/PRE_02_02.png"
+        },
+        {
+          "slot": "PRE_02_03",
+          "name": "둥지",
+          "note": "흐림/선명",
+          "file": "Assets/_Game/Sprite/Precipice/PRE_02/PRE_02_03.png"
+        }
+      ],
+      "sprite_folder": "Assets/_Game/Sprite/Precipice/PRE_02/"
+    },
+    {
+      "id": "PRE_03",
+      "theme": "절벽",
+      "theme_en": "Precipice",
+      "index": 3,
+      "name": "암모나이트 화석(묻힘/발굴/부서짐), 곡괭이",
+      "command": "두드려라!",
+      "end_condition": "빨리깨기",
+      "succeed_on_time_up": false,
+      "mechanics": [
+        "C"
+      ],
+      "mechanics_raw": "C 대상 탭",
+      "how_to_play": "벽에 박힌 화석을 탭해서 정해진 횟수(랜덤, ±1 허용)만큼 두드려 꺼내라. 횟수를 넘기면 화석이 부서져 실패.",
+      "assets_raw": "화석(묻힘/발굴/부서짐), 곡괭이",
+      "asset_slots": [
+        {
+          "slot": "PRE_03_01",
+          "name": "화석",
+          "note": "묻힘/발굴/부서짐",
+          "file": "Assets/_Game/Sprite/Precipice/PRE_03/PRE_03_01.png"
+        },
+        {
+          "slot": "PRE_03_02",
+          "name": "곡괭이",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Precipice/PRE_03/PRE_03_02.png"
+        }
+      ],
+      "sprite_folder": "Assets/_Game/Sprite/Precipice/PRE_03/"
+    },
+    {
+      "id": "PRE_04",
+      "theme": "절벽",
+      "theme_en": "Precipice",
+      "index": 4,
+      "name": "로프를 잘라라",
+      "command": "잘라라!",
+      "end_condition": "빨리깨기",
+      "succeed_on_time_up": false,
+      "mechanics": [
+        "A"
+      ],
+      "mechanics_raw": "A 연타",
+      "how_to_play": "몸에 묶여있는 로프를 연타해서 칼로 잘라라",
+      "assets_raw": "로프, 칼",
+      "asset_slots": [
+        {
+          "slot": "PRE_04_01",
+          "name": "로프",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Precipice/PRE_04/PRE_04_01.png"
+        },
+        {
+          "slot": "PRE_04_02",
+          "name": "칼",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Precipice/PRE_04/PRE_04_02.png"
+        }
+      ],
+      "sprite_folder": "Assets/_Game/Sprite/Precipice/PRE_04/"
+    },
+    {
+      "id": "PRE_05",
+      "theme": "절벽",
+      "theme_en": "Precipice",
+      "index": 5,
+      "name": "번호 순서대로 잡고 올라라",
+      "command": "올라라!",
+      "end_condition": "빨리깨기",
+      "succeed_on_time_up": false,
+      "mechanics": [
+        "I"
+      ],
+      "mechanics_raw": "I 순서대로 누르기",
+      "how_to_play": "암벽 손잡이 1~4를 순서대로 탭해서 정상까지 올라라. 틀리면 실패.",
+      "assets_raw": "암벽, 번호 손잡이 4개, 등반 캐릭터",
+      "asset_slots": [
+        {
+          "slot": "PRE_05_01",
+          "name": "암벽",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Precipice/PRE_05/PRE_05_01.png"
+        },
+        {
+          "slot": "PRE_05_02",
+          "name": "번호 손잡이 4개",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Precipice/PRE_05/PRE_05_02.png"
+        },
+        {
+          "slot": "PRE_05_03",
+          "name": "등반 캐릭터",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Precipice/PRE_05/PRE_05_03.png"
+        }
+      ],
+      "sprite_folder": "Assets/_Game/Sprite/Precipice/PRE_05/"
+    },
+    {
+      "id": "PRE_06",
+      "theme": "절벽",
+      "theme_en": "Precipice",
+      "index": 6,
+      "name": "떨어진 새알을 둥지로 옮겨라",
+      "command": "옮겨라!",
+      "end_condition": "빨리깨기",
+      "succeed_on_time_up": false,
+      "mechanics": [
+        "G"
+      ],
+      "mechanics_raw": "G 드래그",
+      "how_to_play": "바위 틈의 새알을 드래그해서 둥지까지 옮겨라. 바위에 부딪히면 깨져 실패.",
+      "assets_raw": "새알(정상/깨짐), 둥지, 바위 장애물",
+      "asset_slots": [
+        {
+          "slot": "PRE_06_01",
+          "name": "새알",
+          "note": "정상/깨짐",
+          "file": "Assets/_Game/Sprite/Precipice/PRE_06/PRE_06_01.png"
+        },
+        {
+          "slot": "PRE_06_02",
+          "name": "둥지",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Precipice/PRE_06/PRE_06_02.png"
+        },
+        {
+          "slot": "PRE_06_03",
+          "name": "바위 장애물",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Precipice/PRE_06/PRE_06_03.png"
+        }
+      ],
+      "sprite_folder": "Assets/_Game/Sprite/Precipice/PRE_06/"
+    },
+    {
+      "id": "PRE_07",
+      "theme": "절벽",
+      "theme_en": "Precipice",
+      "index": 7,
+      "name": "절벽의 새를 촬영해라",
+      "command": "찍어라!",
+      "end_condition": "빨리깨기",
+      "succeed_on_time_up": false,
+      "mechanics": [
+        "G",
+        "C"
+      ],
+      "mechanics_raw": "G 드래그, C 대상 탭",
+      "how_to_play": "카메라 프레임을 드래그해서 새에 맞추고 촬영 버튼을 눌러 찍어라. 새 3마리를 모두 찍으면 성공. (참고: 덕 헌트)",
+      "assets_raw": "절벽 새 3~4종(갈매기·매·퍼핀 등), 카메라 프레임, 촬영 버튼, 플래시 이펙트",
+      "asset_slots": [
+        {
+          "slot": "PRE_07_01",
+          "name": "절벽 새 3~4종",
+          "note": "갈매기·매·퍼핀 등",
+          "file": "Assets/_Game/Sprite/Precipice/PRE_07/PRE_07_01.png"
+        },
+        {
+          "slot": "PRE_07_02",
+          "name": "카메라 프레임",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Precipice/PRE_07/PRE_07_02.png"
+        },
+        {
+          "slot": "PRE_07_03",
+          "name": "촬영 버튼",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Precipice/PRE_07/PRE_07_03.png"
+        },
+        {
+          "slot": "PRE_07_04",
+          "name": "플래시 이펙트",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Precipice/PRE_07/PRE_07_04.png"
+        }
+      ],
+      "sprite_folder": "Assets/_Game/Sprite/Precipice/PRE_07/"
+    },
+    {
+      "id": "PRE_08",
+      "theme": "절벽",
+      "theme_en": "Precipice",
+      "index": 8,
+      "name": "피켈을 박아라",
+      "command": "박아라!",
+      "end_condition": "빨리깨기",
+      "succeed_on_time_up": false,
+      "mechanics": [
+        "A"
+      ],
+      "mechanics_raw": "A 연타",
+      "how_to_play": "바위 틈에 꽂힌 피켈을 연타해서 끝까지 박아라.",
+      "assets_raw": "피켈(단계별 박힘), 바위 틈",
+      "asset_slots": [
+        {
+          "slot": "PRE_08_01",
+          "name": "피켈",
+          "note": "단계별 박힘",
+          "file": "Assets/_Game/Sprite/Precipice/PRE_08/PRE_08_01.png"
+        },
+        {
+          "slot": "PRE_08_02",
+          "name": "바위 틈",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Precipice/PRE_08/PRE_08_02.png"
+        }
+      ],
+      "sprite_folder": "Assets/_Game/Sprite/Precipice/PRE_08/"
+    },
+    {
+      "id": "PRE_09",
+      "theme": "절벽",
+      "theme_en": "Precipice",
+      "index": 9,
+      "name": "아기 새에게 먹이를 줘라",
+      "command": "먹여라!",
+      "end_condition": "빨리깨기",
+      "succeed_on_time_up": false,
+      "mechanics": [
+        "G"
+      ],
+      "mechanics_raw": "G 드래그",
+      "how_to_play": "먹이를 끌어다 둥지 속 아기 새 3마리 입에 하나씩 넣어라.",
+      "assets_raw": "아기 새(입 벌림/만족), 둥지, 먹이",
+      "asset_slots": [
+        {
+          "slot": "PRE_09_01",
+          "name": "아기 새",
+          "note": "입 벌림/만족",
+          "file": "Assets/_Game/Sprite/Precipice/PRE_09/PRE_09_01.png"
+        },
+        {
+          "slot": "PRE_09_02",
+          "name": "둥지",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Precipice/PRE_09/PRE_09_02.png"
+        },
+        {
+          "slot": "PRE_09_03",
+          "name": "먹이",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Precipice/PRE_09/PRE_09_03.png"
+        }
+      ],
+      "sprite_folder": "Assets/_Game/Sprite/Precipice/PRE_09/"
+    },
+    {
+      "id": "PRE_10",
+      "theme": "절벽",
+      "theme_en": "Precipice",
+      "index": 10,
+      "name": "망원경 렌즈를 닦아라",
+      "command": "닦아라!",
+      "end_condition": "빨리깨기",
+      "succeed_on_time_up": false,
+      "mechanics": [
+        "F"
+      ],
+      "mechanics_raw": "F 스와이프",
+      "how_to_play": "뿌옇게 된 망원경 렌즈를 좌우로 스와이프해서 닦아라.",
+      "assets_raw": "망원경 렌즈(뿌연 모습/깨끗한 모습), 천",
+      "asset_slots": [
+        {
+          "slot": "PRE_10_01",
+          "name": "망원경 렌즈",
+          "note": "뿌연 모습/깨끗한 모습",
+          "file": "Assets/_Game/Sprite/Precipice/PRE_10/PRE_10_01.png"
+        },
+        {
+          "slot": "PRE_10_02",
+          "name": "천",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Precipice/PRE_10/PRE_10_02.png"
+        }
+      ],
+      "sprite_folder": "Assets/_Game/Sprite/Precipice/PRE_10/"
+    },
+    {
+      "id": "PRE_11",
+      "theme": "절벽",
+      "theme_en": "Precipice",
+      "index": 11,
+      "name": "등반 장비를 챙겨라",
+      "command": "챙겨라!",
+      "end_condition": "빨리깨기",
+      "succeed_on_time_up": false,
+      "mechanics": [
+        "C"
+      ],
+      "mechanics_raw": "C 대상 탭",
+      "how_to_play": "바닥에 흩어진 등반 장비 4개(헬멧·로프·카라비너·장갑)만 모두 탭해서 챙겨라. 돌멩이를 탭하면 실패.",
+      "assets_raw": "등반 장비 4종, 돌멩이, 배낭",
+      "asset_slots": [
+        {
+          "slot": "PRE_11_01",
+          "name": "등반 장비 4종",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Precipice/PRE_11/PRE_11_01.png"
+        },
+        {
+          "slot": "PRE_11_02",
+          "name": "돌멩이",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Precipice/PRE_11/PRE_11_02.png"
+        },
+        {
+          "slot": "PRE_11_03",
+          "name": "배낭",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Precipice/PRE_11/PRE_11_03.png"
+        }
+      ],
+      "sprite_folder": "Assets/_Game/Sprite/Precipice/PRE_11/"
+    },
+    {
+      "id": "PRE_12",
+      "theme": "절벽",
+      "theme_en": "Precipice",
+      "index": 12,
+      "name": "도르래로 짐을 끌어올려라",
+      "command": "끌어올려라!",
+      "end_condition": "빨리깨기",
+      "succeed_on_time_up": false,
+      "mechanics": [
+        "A"
+      ],
+      "mechanics_raw": "A 연타",
+      "how_to_play": "연타해서 도르래를 돌려 절벽 아래의 짐을 끝까지 끌어올려라.",
+      "assets_raw": "도르래, 로프, 짐 상자",
+      "asset_slots": [
+        {
+          "slot": "PRE_12_01",
+          "name": "도르래",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Precipice/PRE_12/PRE_12_01.png"
+        },
+        {
+          "slot": "PRE_12_02",
+          "name": "로프",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Precipice/PRE_12/PRE_12_02.png"
+        },
+        {
+          "slot": "PRE_12_03",
+          "name": "짐 상자",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Precipice/PRE_12/PRE_12_03.png"
+        }
+      ],
+      "sprite_folder": "Assets/_Game/Sprite/Precipice/PRE_12/"
+    },
+    {
+      "id": "PRE_13",
+      "theme": "절벽",
+      "theme_en": "Precipice",
+      "index": 13,
+      "name": "안전벨트 버클을 잠가라",
+      "command": "잠가라!",
+      "end_condition": "빨리깨기",
+      "succeed_on_time_up": false,
+      "mechanics": [
+        "I"
+      ],
+      "mechanics_raw": "I 순서대로 누르기",
+      "how_to_play": "안전벨트 버클에 적힌 번호 1~3을 순서대로 탭해서 잠가라. 틀리면 실패.",
+      "assets_raw": "안전벨트(버클 3개, 번호, 풀림/잠김), 등반가",
+      "asset_slots": [
+        {
+          "slot": "PRE_13_01",
+          "name": "안전벨트",
+          "note": "버클 3개, 번호, 풀림/잠김",
+          "file": "Assets/_Game/Sprite/Precipice/PRE_13/PRE_13_01.png"
+        },
+        {
+          "slot": "PRE_13_02",
+          "name": "등반가",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Precipice/PRE_13/PRE_13_02.png"
+        }
+      ],
+      "sprite_folder": "Assets/_Game/Sprite/Precipice/PRE_13/"
+    },
+    {
+      "id": "PRE_14",
+      "theme": "절벽",
+      "theme_en": "Precipice",
+      "index": 14,
+      "name": "청기 백기로 신호를 보내라",
+      "command": "신호해라!",
+      "end_condition": "빨리깨기",
+      "succeed_on_time_up": false,
+      "mechanics": [
+        "I",
+        "G"
+      ],
+      "mechanics_raw": "I 순서대로 누르기, G 드래그",
+      "how_to_play": "신호 카드에 적힌 지시 3개(예: 청기 올려 → 백기 올려 → 청기 내려)를 순서대로 따라 해라. 왼쪽 청기, 오른쪽 백기를 위아래로 드래그해서 올리고 내려라. 틀리면 실패. (참고: 청기백기)",
+      "assets_raw": "청기, 백기, 깃발 든 등반가(청기·백기 각각 올림/내림), 신호 카드",
+      "asset_slots": [
+        {
+          "slot": "PRE_14_01",
+          "name": "청기",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Precipice/PRE_14/PRE_14_01.png"
+        },
+        {
+          "slot": "PRE_14_02",
+          "name": "백기",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Precipice/PRE_14/PRE_14_02.png"
+        },
+        {
+          "slot": "PRE_14_03",
+          "name": "깃발 든 등반가",
+          "note": "청기·백기 각각 올림/내림",
+          "file": "Assets/_Game/Sprite/Precipice/PRE_14/PRE_14_03.png"
+        },
+        {
+          "slot": "PRE_14_04",
+          "name": "신호 카드",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Precipice/PRE_14/PRE_14_04.png"
+        }
+      ],
+      "sprite_folder": "Assets/_Game/Sprite/Precipice/PRE_14/"
+    },
+    {
+      "id": "PRE_15",
+      "theme": "절벽",
+      "theme_en": "Precipice",
+      "index": 15,
+      "name": "흔들다리를 건너라",
+      "command": "건너라!",
+      "end_condition": "빨리깨기",
+      "succeed_on_time_up": false,
+      "mechanics": [
+        "C",
+        "I"
+      ],
+      "mechanics_raw": "C 대상 탭, I 순서대로 누르기",
+      "how_to_play": "흔들다리의 판자 10개 중 멀쩡한 판자만 앞에서부터 순서대로 탭해서 밟고, 부서진 판자는 건너뛰어라. 부서진 판자를 밟으면 떨어져 실패. 부서진 판자는 2개 연속으로 나오지 않는다.",
+      "assets_raw": "흔들다리(판자 10칸), 판자(멀쩡함/부서짐), 걷는 캐릭터, 추락 이펙트",
+      "asset_slots": [
+        {
+          "slot": "PRE_15_01",
+          "name": "흔들다리",
+          "note": "판자 10칸",
+          "file": "Assets/_Game/Sprite/Precipice/PRE_15/PRE_15_01.png"
+        },
+        {
+          "slot": "PRE_15_02",
+          "name": "판자",
+          "note": "멀쩡함/부서짐",
+          "file": "Assets/_Game/Sprite/Precipice/PRE_15/PRE_15_02.png"
+        },
+        {
+          "slot": "PRE_15_03",
+          "name": "걷는 캐릭터",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Precipice/PRE_15/PRE_15_03.png"
+        },
+        {
+          "slot": "PRE_15_04",
+          "name": "추락 이펙트",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Precipice/PRE_15/PRE_15_04.png"
+        }
+      ],
+      "sprite_folder": "Assets/_Game/Sprite/Precipice/PRE_15/"
+    },
+    {
+      "id": "PRE_16",
+      "theme": "절벽",
+      "theme_en": "Precipice",
+      "index": 16,
+      "name": "손을 비벼 초크를 발라라",
+      "command": "비벼라!",
+      "end_condition": "빨리깨기",
+      "succeed_on_time_up": false,
+      "mechanics": [
+        "F"
+      ],
+      "mechanics_raw": "F 스와이프",
+      "how_to_play": "초크 가루가 묻은 두 손을 좌우로 스와이프해서 비벼라. 손에 초크가 고루 발리면 성공.",
+      "assets_raw": "등반가 두 손(맨손/초크 바름), 초크 가루 이펙트",
+      "asset_slots": [
+        {
+          "slot": "PRE_16_01",
+          "name": "등반가 두 손",
+          "note": "맨손/초크 바름",
+          "file": "Assets/_Game/Sprite/Precipice/PRE_16/PRE_16_01.png"
+        },
+        {
+          "slot": "PRE_16_02",
+          "name": "초크 가루 이펙트",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Precipice/PRE_16/PRE_16_02.png"
+        }
+      ],
+      "sprite_folder": "Assets/_Game/Sprite/Precipice/PRE_16/"
+    },
+    {
+      "id": "PRE_17",
+      "theme": "절벽",
+      "theme_en": "Precipice",
+      "index": 17,
+      "name": "바람에 날리는 지도 조각을 잡아라",
+      "command": "잡아라!",
+      "end_condition": "빨리깨기",
+      "succeed_on_time_up": false,
+      "mechanics": [
+        "C"
+      ],
+      "mechanics_raw": "C 대상 탭",
+      "how_to_play": "바람에 흩날리는 지도 조각 4개를 모두 탭해서 잡아라.",
+      "assets_raw": "지도 조각 4개, 바람 이펙트",
+      "asset_slots": [
+        {
+          "slot": "PRE_17_01",
+          "name": "지도 조각 4개",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Precipice/PRE_17/PRE_17_01.png"
+        },
+        {
+          "slot": "PRE_17_02",
+          "name": "바람 이펙트",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Precipice/PRE_17/PRE_17_02.png"
+        }
+      ],
+      "sprite_folder": "Assets/_Game/Sprite/Precipice/PRE_17/"
+    },
+    {
+      "id": "PRE_18",
+      "theme": "절벽",
+      "theme_en": "Precipice",
+      "index": 18,
+      "name": "멀쩡한 헬멧을 골라 써라",
+      "command": "써라!",
+      "end_condition": "빨리깨기",
+      "succeed_on_time_up": false,
+      "mechanics": [
+        "C"
+      ],
+      "mechanics_raw": "C 대상 탭",
+      "how_to_play": "헬멧 4개 중 금 가지 않은 헬멧 하나를 탭해서 써라. 금 간 헬멧을 고르면 실패.",
+      "assets_raw": "헬멧(멀쩡함/금 감), 등반가",
+      "asset_slots": [
+        {
+          "slot": "PRE_18_01",
+          "name": "헬멧",
+          "note": "멀쩡함/금 감",
+          "file": "Assets/_Game/Sprite/Precipice/PRE_18/PRE_18_01.png"
+        },
+        {
+          "slot": "PRE_18_02",
+          "name": "등반가",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Precipice/PRE_18/PRE_18_02.png"
+        }
+      ],
+      "sprite_folder": "Assets/_Game/Sprite/Precipice/PRE_18/"
+    },
+    {
+      "id": "PRE_19",
+      "theme": "절벽",
+      "theme_en": "Precipice",
+      "index": 19,
+      "name": "구조 헬기 로프를 연결해라",
+      "command": "연결해라!",
+      "end_condition": "빨리깨기",
+      "succeed_on_time_up": false,
+      "mechanics": [
+        "G"
+      ],
+      "mechanics_raw": "G 드래그",
+      "how_to_play": "헬기에서 내려온 로프 고리를 끌어다 등반가의 벨트에 걸어라.",
+      "assets_raw": "구조 헬기, 로프 고리, 등반가(벨트)",
+      "asset_slots": [
+        {
+          "slot": "PRE_19_01",
+          "name": "구조 헬기",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Precipice/PRE_19/PRE_19_01.png"
+        },
+        {
+          "slot": "PRE_19_02",
+          "name": "로프 고리",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Precipice/PRE_19/PRE_19_02.png"
+        },
+        {
+          "slot": "PRE_19_03",
+          "name": "등반가",
+          "note": "벨트",
+          "file": "Assets/_Game/Sprite/Precipice/PRE_19/PRE_19_03.png"
+        }
+      ],
+      "sprite_folder": "Assets/_Game/Sprite/Precipice/PRE_19/"
+    },
+    {
+      "id": "PRE_20",
+      "theme": "절벽",
+      "theme_en": "Precipice",
+      "index": 20,
+      "name": "초록 손잡이만 밟고 올라라",
+      "command": "초록만!",
+      "end_condition": "빨리깨기",
+      "succeed_on_time_up": false,
+      "mechanics": [
+        "C",
+        "I"
+      ],
+      "mechanics_raw": "C 대상 탭, I 순서대로 누르기",
+      "how_to_play": "여러 색 손잡이 중 초록색 손잡이만 아래에서부터 순서대로 탭해서 올라라. 다른 색을 탭하면 실패.",
+      "assets_raw": "손잡이 3색, 암벽, 등반 캐릭터",
+      "asset_slots": [
+        {
+          "slot": "PRE_20_01",
+          "name": "손잡이 3색",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Precipice/PRE_20/PRE_20_01.png"
+        },
+        {
+          "slot": "PRE_20_02",
+          "name": "암벽",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Precipice/PRE_20/PRE_20_02.png"
+        },
+        {
+          "slot": "PRE_20_03",
+          "name": "등반 캐릭터",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Precipice/PRE_20/PRE_20_03.png"
+        }
+      ],
+      "sprite_folder": "Assets/_Game/Sprite/Precipice/PRE_20/"
+    },
+    {
+      "id": "FOR_01",
+      "theme": "숲",
+      "theme_en": "Forest",
+      "index": 1,
+      "name": "텐트의 못을 박아라",
+      "command": "못을 박아라!",
+      "end_condition": "빨리깨기",
+      "succeed_on_time_up": false,
+      "mechanics": [
+        "A"
+      ],
+      "mechanics_raw": "A 연타",
+      "how_to_play": "망치를 연타해서 텐트 지주못을 끝까지 박아라.",
+      "assets_raw": "지주못(박힘 단계), 망치, 텐트",
+      "asset_slots": [
+        {
+          "slot": "FOR_01_01",
+          "name": "지주못",
+          "note": "박힘 단계",
+          "file": "Assets/_Game/Sprite/Forest/FOR_01/FOR_01_01.png"
+        },
+        {
+          "slot": "FOR_01_02",
+          "name": "망치",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Forest/FOR_01/FOR_01_02.png"
+        },
+        {
+          "slot": "FOR_01_03",
+          "name": "텐트",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Forest/FOR_01/FOR_01_03.png"
+        }
+      ],
+      "sprite_folder": "Assets/_Game/Sprite/Forest/FOR_01/"
+    },
+    {
+      "id": "FOR_02",
+      "theme": "숲",
+      "theme_en": "Forest",
+      "index": 2,
+      "name": "벌레를 잡아라",
+      "command": "뿌려라!",
+      "end_condition": "빨리깨기",
+      "succeed_on_time_up": false,
+      "mechanics": [
+        "C"
+      ],
+      "mechanics_raw": "C 대상 탭",
+      "how_to_play": "움직이는 벌레를 스프레이로 탭해서 모두 잡아라. (총 10마리)",
+      "assets_raw": "날파리, 모기, 스프레이",
+      "asset_slots": [
+        {
+          "slot": "FOR_02_01",
+          "name": "날파리",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Forest/FOR_02/FOR_02_01.png"
+        },
+        {
+          "slot": "FOR_02_02",
+          "name": "모기",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Forest/FOR_02/FOR_02_02.png"
+        },
+        {
+          "slot": "FOR_02_03",
+          "name": "스프레이",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Forest/FOR_02/FOR_02_03.png"
+        }
+      ],
+      "sprite_folder": "Assets/_Game/Sprite/Forest/FOR_02/"
+    },
+    {
+      "id": "FOR_03",
+      "theme": "숲",
+      "theme_en": "Forest",
+      "index": 3,
+      "name": "텐트 주변에 가루를 뿌려라",
+      "command": "뿌려라!",
+      "end_condition": "빨리깨기",
+      "succeed_on_time_up": false,
+      "mechanics": [
+        "G"
+      ],
+      "mechanics_raw": "G 드래그",
+      "how_to_play": "텐트 주변을 드래그해서 야생동물 퇴치 가루를 빈틈없이 뿌려라.",
+      "assets_raw": "텐트, 퇴치 가루(뿌린 자국)",
+      "asset_slots": [
+        {
+          "slot": "FOR_03_01",
+          "name": "텐트",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Forest/FOR_03/FOR_03_01.png"
+        },
+        {
+          "slot": "FOR_03_02",
+          "name": "퇴치 가루",
+          "note": "뿌린 자국",
+          "file": "Assets/_Game/Sprite/Forest/FOR_03/FOR_03_02.png"
+        }
+      ],
+      "sprite_folder": "Assets/_Game/Sprite/Forest/FOR_03/"
+    },
+    {
+      "id": "FOR_04",
+      "theme": "숲",
+      "theme_en": "Forest",
+      "index": 4,
+      "name": "발자국의 주인을 찾아라",
+      "command": "발자국의 주인은?",
+      "end_condition": "빨리깨기",
+      "succeed_on_time_up": false,
+      "mechanics": [
+        "C"
+      ],
+      "mechanics_raw": "C 대상 탭",
+      "how_to_play": "바닥에 랜덤한 동물의 발자국이 있고, 그중 해당되는 발자국의 주인을 찾아라(동물 4개)",
+      "assets_raw": "발자국 스프라이트4개, 동물 4개(곰, 사슴, 토끼, 늑대)",
+      "asset_slots": [
+        {
+          "slot": "FOR_04_01",
+          "name": "발자국 스프라이트4개",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Forest/FOR_04/FOR_04_01.png"
+        },
+        {
+          "slot": "FOR_04_02",
+          "name": "동물 4개",
+          "note": "곰, 사슴, 토끼, 늑대",
+          "file": "Assets/_Game/Sprite/Forest/FOR_04/FOR_04_02.png"
+        }
+      ],
+      "sprite_folder": "Assets/_Game/Sprite/Forest/FOR_04/"
+    },
+    {
+      "id": "FOR_05",
+      "theme": "숲",
+      "theme_en": "Forest",
+      "index": 5,
+      "name": "곰앞에서 죽은척 해라",
+      "command": "숨을 참아라!",
+      "end_condition": "버티기",
+      "succeed_on_time_up": true,
+      "mechanics": [
+        "E"
+      ],
+      "mechanics_raw": "E 홀드",
+      "how_to_play": "곰이 냄새를 맡는 동안 화면을 건드리지 마라. 터치하면 실패, 곰이 떠나면 성공.",
+      "assets_raw": "곰(킁킁/떠남), 누운 캐릭터",
+      "asset_slots": [
+        {
+          "slot": "FOR_05_01",
+          "name": "곰",
+          "note": "킁킁/떠남",
+          "file": "Assets/_Game/Sprite/Forest/FOR_05/FOR_05_01.png"
+        },
+        {
+          "slot": "FOR_05_02",
+          "name": "누운 캐릭터",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Forest/FOR_05/FOR_05_02.png"
+        }
+      ],
+      "sprite_folder": "Assets/_Game/Sprite/Forest/FOR_05/"
+    },
+    {
+      "id": "FOR_06",
+      "theme": "숲",
+      "theme_en": "Forest",
+      "index": 6,
+      "name": "보석을 찾아라",
+      "command": "깨라!",
+      "end_condition": "빨리깨기",
+      "succeed_on_time_up": false,
+      "mechanics": [
+        "A"
+      ],
+      "mechanics_raw": "A 연타",
+      "how_to_play": "돌을 연타해서 깨고, 안에 든 호박 보석을 꺼내라.",
+      "assets_raw": "호박(보석), 돌(깨짐 단계)",
+      "asset_slots": [
+        {
+          "slot": "FOR_06_01",
+          "name": "호박",
+          "note": "보석",
+          "file": "Assets/_Game/Sprite/Forest/FOR_06/FOR_06_01.png"
+        },
+        {
+          "slot": "FOR_06_02",
+          "name": "돌",
+          "note": "깨짐 단계",
+          "file": "Assets/_Game/Sprite/Forest/FOR_06/FOR_06_02.png"
+        }
+      ],
+      "sprite_folder": "Assets/_Game/Sprite/Forest/FOR_06/"
+    },
+    {
+      "id": "FOR_07",
+      "theme": "숲",
+      "theme_en": "Forest",
+      "index": 7,
+      "name": "숲 동물을 촬영해라",
+      "command": "찍어라!",
+      "end_condition": "빨리깨기",
+      "succeed_on_time_up": false,
+      "mechanics": [
+        "G",
+        "C"
+      ],
+      "mechanics_raw": "G 드래그, C 대상 탭",
+      "how_to_play": "카메라 프레임을 드래그해서 동물에 맞추고 촬영 버튼을 눌러 찍어라. 동물 3마리를 모두 찍으면 성공. (참고: 덕 헌트)",
+      "assets_raw": "숲 동물 4종(사슴·토끼·부엉이·다람쥐), 카메라 프레임, 촬영 버튼, 플래시 이펙트",
+      "asset_slots": [
+        {
+          "slot": "FOR_07_01",
+          "name": "숲 동물 4종",
+          "note": "사슴·토끼·부엉이·다람쥐",
+          "file": "Assets/_Game/Sprite/Forest/FOR_07/FOR_07_01.png"
+        },
+        {
+          "slot": "FOR_07_02",
+          "name": "카메라 프레임",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Forest/FOR_07/FOR_07_02.png"
+        },
+        {
+          "slot": "FOR_07_03",
+          "name": "촬영 버튼",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Forest/FOR_07/FOR_07_03.png"
+        },
+        {
+          "slot": "FOR_07_04",
+          "name": "플래시 이펙트",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Forest/FOR_07/FOR_07_04.png"
+        }
+      ],
+      "sprite_folder": "Assets/_Game/Sprite/Forest/FOR_07/"
+    },
+    {
+      "id": "FOR_08",
+      "theme": "숲",
+      "theme_en": "Forest",
+      "index": 8,
+      "name": "쓰러진 나무를 톱질해라",
+      "command": "톱질해라!",
+      "end_condition": "빨리깨기",
+      "succeed_on_time_up": false,
+      "mechanics": [
+        "F"
+      ],
+      "mechanics_raw": "F 스와이프",
+      "how_to_play": "길을 막은 통나무를 좌우로 스와이프해서 톱질해 잘라라.",
+      "assets_raw": "통나무(단계별 잘림), 톱",
+      "asset_slots": [
+        {
+          "slot": "FOR_08_01",
+          "name": "통나무",
+          "note": "단계별 잘림",
+          "file": "Assets/_Game/Sprite/Forest/FOR_08/FOR_08_01.png"
+        },
+        {
+          "slot": "FOR_08_02",
+          "name": "톱",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Forest/FOR_08/FOR_08_02.png"
+        }
+      ],
+      "sprite_folder": "Assets/_Game/Sprite/Forest/FOR_08/"
+    },
+    {
+      "id": "FOR_09",
+      "theme": "숲",
+      "theme_en": "Forest",
+      "index": 9,
+      "name": "도끼로 장작을 패라",
+      "command": "패라!",
+      "end_condition": "빨리깨기",
+      "succeed_on_time_up": false,
+      "mechanics": [
+        "A"
+      ],
+      "mechanics_raw": "A 연타",
+      "how_to_play": "그루터기 위 장작을 연타해서 반으로 쪼개라.",
+      "assets_raw": "장작(통째/쪼개짐), 도끼, 그루터기",
+      "asset_slots": [
+        {
+          "slot": "FOR_09_01",
+          "name": "장작",
+          "note": "통째/쪼개짐",
+          "file": "Assets/_Game/Sprite/Forest/FOR_09/FOR_09_01.png"
+        },
+        {
+          "slot": "FOR_09_02",
+          "name": "도끼",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Forest/FOR_09/FOR_09_02.png"
+        },
+        {
+          "slot": "FOR_09_03",
+          "name": "그루터기",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Forest/FOR_09/FOR_09_03.png"
+        }
+      ],
+      "sprite_folder": "Assets/_Game/Sprite/Forest/FOR_09/"
+    },
+    {
+      "id": "FOR_10",
+      "theme": "숲",
+      "theme_en": "Forest",
+      "index": 10,
+      "name": "텐트를 쳐라",
+      "command": "펼쳐라!",
+      "end_condition": "빨리깨기",
+      "succeed_on_time_up": false,
+      "mechanics": [
+        "G"
+      ],
+      "mechanics_raw": "G 드래그",
+      "how_to_play": "텐트 천의 모서리 4곳을 끌어다 말뚝에 걸어서 텐트를 펼쳐라.",
+      "assets_raw": "텐트 천(접힘/펼쳐짐), 말뚝 4개",
+      "asset_slots": [
+        {
+          "slot": "FOR_10_01",
+          "name": "텐트 천",
+          "note": "접힘/펼쳐짐",
+          "file": "Assets/_Game/Sprite/Forest/FOR_10/FOR_10_01.png"
+        },
+        {
+          "slot": "FOR_10_02",
+          "name": "말뚝 4개",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Forest/FOR_10/FOR_10_02.png"
+        }
+      ],
+      "sprite_folder": "Assets/_Game/Sprite/Forest/FOR_10/"
+    },
+    {
+      "id": "FOR_11",
+      "theme": "숲",
+      "theme_en": "Forest",
+      "index": 11,
+      "name": "사과를 따라",
+      "command": "따라!",
+      "end_condition": "빨리깨기",
+      "succeed_on_time_up": false,
+      "mechanics": [
+        "C"
+      ],
+      "mechanics_raw": "C 대상 탭",
+      "how_to_play": "나무에 달린 사과 5개를 모두 탭해서 바구니에 떨어뜨려라.",
+      "assets_raw": "사과나무, 사과(달림/떨어짐), 바구니",
+      "asset_slots": [
+        {
+          "slot": "FOR_11_01",
+          "name": "사과나무",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Forest/FOR_11/FOR_11_01.png"
+        },
+        {
+          "slot": "FOR_11_02",
+          "name": "사과",
+          "note": "달림/떨어짐",
+          "file": "Assets/_Game/Sprite/Forest/FOR_11/FOR_11_02.png"
+        },
+        {
+          "slot": "FOR_11_03",
+          "name": "바구니",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Forest/FOR_11/FOR_11_03.png"
+        }
+      ],
+      "sprite_folder": "Assets/_Game/Sprite/Forest/FOR_11/"
+    },
+    {
+      "id": "FOR_12",
+      "theme": "숲",
+      "theme_en": "Forest",
+      "index": 12,
+      "name": "밤에 숨어있는 부엉이들을 찾아라",
+      "command": "찾아라!",
+      "end_condition": "빨리깨기",
+      "succeed_on_time_up": false,
+      "mechanics": [
+        "G"
+      ],
+      "mechanics_raw": "G 드래그",
+      "how_to_play": "어두운 숲에서 깜빡이는 눈빛을 보고 손전등을 드래그해서 비춰라. 손전등에 비친 부엉이 3마리를 모두 찾으면 성공.",
+      "assets_raw": "점멸하는 눈빛, 손전등 빛, 손전등을 비추면 보이는 부엉이, 밤 숲 배경",
+      "asset_slots": [
+        {
+          "slot": "FOR_12_01",
+          "name": "점멸하는 눈빛",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Forest/FOR_12/FOR_12_01.png"
+        },
+        {
+          "slot": "FOR_12_02",
+          "name": "손전등 빛",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Forest/FOR_12/FOR_12_02.png"
+        },
+        {
+          "slot": "FOR_12_03",
+          "name": "손전등을 비추면 보이는 부엉이",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Forest/FOR_12/FOR_12_03.png"
+        },
+        {
+          "slot": "FOR_12_04",
+          "name": "밤 숲 배경",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Forest/FOR_12/FOR_12_04.png"
+        }
+      ],
+      "sprite_folder": "Assets/_Game/Sprite/Forest/FOR_12/"
+    },
+    {
+      "id": "FOR_13",
+      "theme": "숲",
+      "theme_en": "Forest",
+      "index": 13,
+      "name": "낙엽을 쓸어라",
+      "command": "쓸어라!",
+      "end_condition": "빨리깨기",
+      "succeed_on_time_up": false,
+      "mechanics": [
+        "F"
+      ],
+      "mechanics_raw": "F 스와이프",
+      "how_to_play": "텐트 앞에 쌓인 낙엽을 좌우로 스와이프해서 모두 쓸어내라.",
+      "assets_raw": "낙엽 더미(단계별), 빗자루, 텐트",
+      "asset_slots": [
+        {
+          "slot": "FOR_13_01",
+          "name": "낙엽 더미",
+          "note": "단계별",
+          "file": "Assets/_Game/Sprite/Forest/FOR_13/FOR_13_01.png"
+        },
+        {
+          "slot": "FOR_13_02",
+          "name": "빗자루",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Forest/FOR_13/FOR_13_02.png"
+        },
+        {
+          "slot": "FOR_13_03",
+          "name": "텐트",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Forest/FOR_13/FOR_13_03.png"
+        }
+      ],
+      "sprite_folder": "Assets/_Game/Sprite/Forest/FOR_13/"
+    },
+    {
+      "id": "FOR_14",
+      "theme": "숲",
+      "theme_en": "Forest",
+      "index": 14,
+      "name": "냄비가 눌어붙지 않게 저어라",
+      "command": "저어라!",
+      "end_condition": "버티기",
+      "succeed_on_time_up": true,
+      "mechanics": [
+        "G"
+      ],
+      "mechanics_raw": "G 드래그",
+      "how_to_play": "국자를 원을 그리듯 드래그해서 끝까지 계속 저어라. 너무 느리면 냄비가 눌어붙고, 너무 빠르면 넘쳐서 실패. 적정 속도를 유지해라.",
+      "assets_raw": "냄비, 국자, 음식(정상/눌어붙음/넘침), 적정 속도 게이지",
+      "asset_slots": [
+        {
+          "slot": "FOR_14_01",
+          "name": "냄비",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Forest/FOR_14/FOR_14_01.png"
+        },
+        {
+          "slot": "FOR_14_02",
+          "name": "국자",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Forest/FOR_14/FOR_14_02.png"
+        },
+        {
+          "slot": "FOR_14_03",
+          "name": "음식",
+          "note": "정상/눌어붙음/넘침",
+          "file": "Assets/_Game/Sprite/Forest/FOR_14/FOR_14_03.png"
+        },
+        {
+          "slot": "FOR_14_04",
+          "name": "적정 속도 게이지",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Forest/FOR_14/FOR_14_04.png"
+        }
+      ],
+      "sprite_folder": "Assets/_Game/Sprite/Forest/FOR_14/"
+    },
+    {
+      "id": "FOR_15",
+      "theme": "숲",
+      "theme_en": "Forest",
+      "index": 15,
+      "name": "노란 꽃만 꺾어라",
+      "command": "꺾어라!",
+      "end_condition": "빨리깨기",
+      "succeed_on_time_up": false,
+      "mechanics": [
+        "C"
+      ],
+      "mechanics_raw": "C 대상 탭",
+      "how_to_play": "꽃밭에서 노란 꽃만 모두 탭해서 꺾어라. 다른 색 꽃을 탭하면 실패.",
+      "assets_raw": "꽃 3색, 꽃밭",
+      "asset_slots": [
+        {
+          "slot": "FOR_15_01",
+          "name": "꽃 3색",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Forest/FOR_15/FOR_15_01.png"
+        },
+        {
+          "slot": "FOR_15_02",
+          "name": "꽃밭",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Forest/FOR_15/FOR_15_02.png"
+        }
+      ],
+      "sprite_folder": "Assets/_Game/Sprite/Forest/FOR_15/"
+    },
+    {
+      "id": "FOR_16",
+      "theme": "숲",
+      "theme_en": "Forest",
+      "index": 16,
+      "name": "모닥불에 부채질해라",
+      "command": "부쳐라!",
+      "end_condition": "빨리깨기",
+      "succeed_on_time_up": false,
+      "mechanics": [
+        "F"
+      ],
+      "mechanics_raw": "F 스와이프",
+      "how_to_play": "부채를 좌우로 스와이프해서 꺼져 가는 모닥불을 크게 살려라.",
+      "assets_raw": "부채, 모닥불(단계별 불 크기)",
+      "asset_slots": [
+        {
+          "slot": "FOR_16_01",
+          "name": "부채",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Forest/FOR_16/FOR_16_01.png"
+        },
+        {
+          "slot": "FOR_16_02",
+          "name": "모닥불",
+          "note": "단계별 불 크기",
+          "file": "Assets/_Game/Sprite/Forest/FOR_16/FOR_16_02.png"
+        }
+      ],
+      "sprite_folder": "Assets/_Game/Sprite/Forest/FOR_16/"
+    },
+    {
+      "id": "FOR_17",
+      "theme": "숲",
+      "theme_en": "Forest",
+      "index": 17,
+      "name": "손전등 배터리를 갈아라",
+      "command": "갈아라!",
+      "end_condition": "빨리깨기",
+      "succeed_on_time_up": false,
+      "mechanics": [
+        "G"
+      ],
+      "mechanics_raw": "G 드래그",
+      "how_to_play": "손전등의 캡을 끌어서 빼고, 오래된 배터리를 꺼낸 뒤, 준비된 새 배터리를 끌어다 넣어라. 새 배터리를 넣으면 손전등이 켜지며 성공.",
+      "assets_raw": "손전등(캡 닫힘/열림, 꺼짐/켜짐), 캡, 오래된 배터리, 새 배터리",
+      "asset_slots": [
+        {
+          "slot": "FOR_17_01",
+          "name": "손전등",
+          "note": "캡 닫힘/열림, 꺼짐/켜짐",
+          "file": "Assets/_Game/Sprite/Forest/FOR_17/FOR_17_01.png"
+        },
+        {
+          "slot": "FOR_17_02",
+          "name": "캡",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Forest/FOR_17/FOR_17_02.png"
+        },
+        {
+          "slot": "FOR_17_03",
+          "name": "오래된 배터리",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Forest/FOR_17/FOR_17_03.png"
+        },
+        {
+          "slot": "FOR_17_04",
+          "name": "새 배터리",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Forest/FOR_17/FOR_17_04.png"
+        }
+      ],
+      "sprite_folder": "Assets/_Game/Sprite/Forest/FOR_17/"
+    },
+    {
+      "id": "FOR_18",
+      "theme": "숲",
+      "theme_en": "Forest",
+      "index": 18,
+      "name": "마시멜로를 꼬치에 꽂아라",
+      "command": "꽂아라!",
+      "end_condition": "빨리깨기",
+      "succeed_on_time_up": false,
+      "mechanics": [
+        "G"
+      ],
+      "mechanics_raw": "G 드래그",
+      "how_to_play": "마시멜로 3개를 끌어다 꼬치에 꽂아라.",
+      "assets_raw": "마시멜로, 꼬치, 모닥불",
+      "asset_slots": [
+        {
+          "slot": "FOR_18_01",
+          "name": "마시멜로",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Forest/FOR_18/FOR_18_01.png"
+        },
+        {
+          "slot": "FOR_18_02",
+          "name": "꼬치",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Forest/FOR_18/FOR_18_02.png"
+        },
+        {
+          "slot": "FOR_18_03",
+          "name": "모닥불",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Forest/FOR_18/FOR_18_03.png"
+        }
+      ],
+      "sprite_folder": "Assets/_Game/Sprite/Forest/FOR_18/"
+    },
+    {
+      "id": "FOR_19",
+      "theme": "숲",
+      "theme_en": "Forest",
+      "index": 19,
+      "name": "발전기를 돌려라",
+      "command": "돌려라!",
+      "end_condition": "빨리깨기",
+      "succeed_on_time_up": false,
+      "mechanics": [
+        "G"
+      ],
+      "mechanics_raw": "G 드래그",
+      "how_to_play": "발전기 손잡이를 원을 그리듯 돌려서 전구에 불이 들어올 때까지 전기를 만들어라.",
+      "assets_raw": "발전기(손잡이), 전구(꺼짐/켜짐), 전력 게이지",
+      "asset_slots": [
+        {
+          "slot": "FOR_19_01",
+          "name": "발전기",
+          "note": "손잡이",
+          "file": "Assets/_Game/Sprite/Forest/FOR_19/FOR_19_01.png"
+        },
+        {
+          "slot": "FOR_19_02",
+          "name": "전구",
+          "note": "꺼짐/켜짐",
+          "file": "Assets/_Game/Sprite/Forest/FOR_19/FOR_19_02.png"
+        },
+        {
+          "slot": "FOR_19_03",
+          "name": "전력 게이지",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Forest/FOR_19/FOR_19_03.png"
+        }
+      ],
+      "sprite_folder": "Assets/_Game/Sprite/Forest/FOR_19/"
+    },
+    {
+      "id": "FOR_20",
+      "theme": "숲",
+      "theme_en": "Forest",
+      "index": 20,
+      "name": "머리 위에 있는 낙엽을 털어라",
+      "command": "털어라!",
+      "end_condition": "빨리깨기",
+      "succeed_on_time_up": false,
+      "mechanics": [
+        "F"
+      ],
+      "mechanics_raw": "F 스와이프",
+      "how_to_play": "캐릭터 머리 위에 쌓인 낙엽을 좌우로 스와이프해서 모두 털어내라.",
+      "assets_raw": "캐릭터(머리에 낙엽 쌓임/깨끗함), 낙엽",
+      "asset_slots": [
+        {
+          "slot": "FOR_20_01",
+          "name": "캐릭터",
+          "note": "머리에 낙엽 쌓임/깨끗함",
+          "file": "Assets/_Game/Sprite/Forest/FOR_20/FOR_20_01.png"
+        },
+        {
+          "slot": "FOR_20_02",
+          "name": "낙엽",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Forest/FOR_20/FOR_20_02.png"
+        }
+      ],
+      "sprite_folder": "Assets/_Game/Sprite/Forest/FOR_20/"
+    },
+    {
+      "id": "LAB_01",
+      "theme": "연구소",
+      "theme_en": "Laboratory",
+      "index": 1,
+      "name": "출입 카드를 긁어라",
+      "command": "긁어라!",
+      "end_condition": "빨리깨기",
+      "succeed_on_time_up": false,
+      "mechanics": [
+        "F"
+      ],
+      "mechanics_raw": "F 스와이프",
+      "how_to_play": "카드를 적당한 속도로 한 번에 긁어라. 너무 빠르거나 느리면 다시 긁어라. (참고: 어몽어스 카드 긁기)",
+      "assets_raw": "출입 카드, 카드 리더기, 속도 표시(빠름/느림)",
+      "asset_slots": [
+        {
+          "slot": "LAB_01_01",
+          "name": "출입 카드",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Laboratory/LAB_01/LAB_01_01.png"
+        },
+        {
+          "slot": "LAB_01_02",
+          "name": "카드 리더기",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Laboratory/LAB_01/LAB_01_02.png"
+        },
+        {
+          "slot": "LAB_01_03",
+          "name": "속도 표시",
+          "note": "빠름/느림",
+          "file": "Assets/_Game/Sprite/Laboratory/LAB_01/LAB_01_03.png"
+        }
+      ],
+      "sprite_folder": "Assets/_Game/Sprite/Laboratory/LAB_01/"
+    },
+    {
+      "id": "LAB_02",
+      "theme": "연구소",
+      "theme_en": "Laboratory",
+      "index": 2,
+      "name": "샘플을 번호순으로 넣어라",
+      "command": "넣어라!",
+      "end_condition": "빨리깨기",
+      "succeed_on_time_up": false,
+      "mechanics": [
+        "I"
+      ],
+      "mechanics_raw": "I 순서대로 누르기",
+      "how_to_play": "시험관을 1부터 5까지 순서대로 누르면 분석기에 들어간다. 틀리면 처음부터",
+      "assets_raw": "시험관 5개(번호), 분석기 투입구",
+      "asset_slots": [
+        {
+          "slot": "LAB_02_01",
+          "name": "시험관 5개",
+          "note": "번호",
+          "file": "Assets/_Game/Sprite/Laboratory/LAB_02/LAB_02_01.png"
+        },
+        {
+          "slot": "LAB_02_02",
+          "name": "분석기 투입구",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Laboratory/LAB_02/LAB_02_02.png"
+        }
+      ],
+      "sprite_folder": "Assets/_Game/Sprite/Laboratory/LAB_02/"
+    },
+    {
+      "id": "LAB_03",
+      "theme": "연구소",
+      "theme_en": "Laboratory",
+      "index": 3,
+      "name": "보안 패턴을 입력해라",
+      "command": "입력해라!",
+      "end_condition": "빨리깨기",
+      "succeed_on_time_up": false,
+      "mechanics": [
+        "I"
+      ],
+      "mechanics_raw": "I 순서대로 누르기",
+      "how_to_play": "숫자가 위에 4개가 랜덤해서 생성되고, 거기에 맞는 비밀번호를 입력하면 된다.",
+      "assets_raw": "3×3 보안 패드, 실험실 문",
+      "asset_slots": [
+        {
+          "slot": "LAB_03_01",
+          "name": "3×3 보안 패드",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Laboratory/LAB_03/LAB_03_01.png"
+        },
+        {
+          "slot": "LAB_03_02",
+          "name": "실험실 문",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Laboratory/LAB_03/LAB_03_02.png"
+        }
+      ],
+      "sprite_folder": "Assets/_Game/Sprite/Laboratory/LAB_03/"
+    },
+    {
+      "id": "LAB_04",
+      "theme": "연구소",
+      "theme_en": "Laboratory",
+      "index": 4,
+      "name": "깨진 유물을 복원해라",
+      "command": "붙여라!",
+      "end_condition": "빨리깨기",
+      "succeed_on_time_up": false,
+      "mechanics": [
+        "G"
+      ],
+      "mechanics_raw": "G 드래그",
+      "how_to_play": "항아리의 빈 자리에 조각 3개를 끌어다 맞춘다",
+      "assets_raw": "깨진 항아리, 조각 3개, 작업대",
+      "asset_slots": [
+        {
+          "slot": "LAB_04_01",
+          "name": "깨진 항아리",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Laboratory/LAB_04/LAB_04_01.png"
+        },
+        {
+          "slot": "LAB_04_02",
+          "name": "조각 3개",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Laboratory/LAB_04/LAB_04_02.png"
+        },
+        {
+          "slot": "LAB_04_03",
+          "name": "작업대",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Laboratory/LAB_04/LAB_04_03.png"
+        }
+      ],
+      "sprite_folder": "Assets/_Game/Sprite/Laboratory/LAB_04/"
+    },
+    {
+      "id": "LAB_05",
+      "theme": "연구소",
+      "theme_en": "Laboratory",
+      "index": 5,
+      "name": "액체를 섞어라",
+      "command": "섞어라!",
+      "end_condition": "빨리깨기",
+      "succeed_on_time_up": false,
+      "mechanics": [
+        "F"
+      ],
+      "mechanics_raw": "F 스와이프",
+      "how_to_play": "두 액체가 섞이도록 시험관을 좌우로 흔들어 섞어라",
+      "assets_raw": "시험관, 시험관을 잡고 라텍스 장갑을 낀 손",
+      "asset_slots": [
+        {
+          "slot": "LAB_05_01",
+          "name": "시험관",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Laboratory/LAB_05/LAB_05_01.png"
+        },
+        {
+          "slot": "LAB_05_02",
+          "name": "시험관을 잡고 라텍스 장갑을 낀 손",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Laboratory/LAB_05/LAB_05_02.png"
+        }
+      ],
+      "sprite_folder": "Assets/_Game/Sprite/Laboratory/LAB_05/"
+    },
+    {
+      "id": "LAB_06",
+      "theme": "연구소",
+      "theme_en": "Laboratory",
+      "index": 6,
+      "name": "냉동 보관고 온도를 지켜라",
+      "command": "식혀라!",
+      "end_condition": "버티기",
+      "succeed_on_time_up": true,
+      "mechanics": [
+        "E"
+      ],
+      "mechanics_raw": "E 홀드",
+      "how_to_play": "누르면 냉각, 떼면 온도가 올라간다. 게이지를 초록 구간 안에 끝까지 유지하면 성공",
+      "assets_raw": "냉동고, 온도계, 표본",
+      "asset_slots": [
+        {
+          "slot": "LAB_06_01",
+          "name": "냉동고",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Laboratory/LAB_06/LAB_06_01.png"
+        },
+        {
+          "slot": "LAB_06_02",
+          "name": "온도계",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Laboratory/LAB_06/LAB_06_02.png"
+        },
+        {
+          "slot": "LAB_06_03",
+          "name": "표본",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Laboratory/LAB_06/LAB_06_03.png"
+        }
+      ],
+      "sprite_folder": "Assets/_Game/Sprite/Laboratory/LAB_06/"
+    },
+    {
+      "id": "LAB_07",
+      "theme": "연구소",
+      "theme_en": "Laboratory",
+      "index": 7,
+      "name": "분석기 전선을 연결해라",
+      "command": "연결해라!",
+      "end_condition": "빨리깨기",
+      "succeed_on_time_up": false,
+      "mechanics": [
+        "G"
+      ],
+      "mechanics_raw": "G 드래그",
+      "how_to_play": "양쪽 단자의 같은 색 전선 4쌍을 모두 이으면 분석기가 켜진다",
+      "assets_raw": "색 전선 4종, 분석기 단자판",
+      "asset_slots": [
+        {
+          "slot": "LAB_07_01",
+          "name": "색 전선 4종",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Laboratory/LAB_07/LAB_07_01.png"
+        },
+        {
+          "slot": "LAB_07_02",
+          "name": "분석기 단자판",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Laboratory/LAB_07/LAB_07_02.png"
+        }
+      ],
+      "sprite_folder": "Assets/_Game/Sprite/Laboratory/LAB_07/"
+    },
+    {
+      "id": "LAB_08",
+      "theme": "연구소",
+      "theme_en": "Laboratory",
+      "index": 8,
+      "name": "현미경 초점을 맞춰라",
+      "command": "선명하게!",
+      "end_condition": "빨리깨기",
+      "succeed_on_time_up": false,
+      "mechanics": [
+        "G"
+      ],
+      "mechanics_raw": "G 드래그",
+      "how_to_play": "슬라이더를 끌어 화면이 선명해지는 위치에 놓는다",
+      "assets_raw": "현미경 화면(흐림/선명), 식물 표본",
+      "asset_slots": [
+        {
+          "slot": "LAB_08_01",
+          "name": "현미경 화면",
+          "note": "흐림/선명",
+          "file": "Assets/_Game/Sprite/Laboratory/LAB_08/LAB_08_01.png"
+        },
+        {
+          "slot": "LAB_08_02",
+          "name": "식물 표본",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Laboratory/LAB_08/LAB_08_02.png"
+        }
+      ],
+      "sprite_folder": "Assets/_Game/Sprite/Laboratory/LAB_08/"
+    },
+    {
+      "id": "LAB_09",
+      "theme": "연구소",
+      "theme_en": "Laboratory",
+      "index": 9,
+      "name": "DNA 사슬을 복원해라",
+      "command": "다른것은?",
+      "end_condition": "빨리깨기",
+      "succeed_on_time_up": false,
+      "mechanics": [
+        "H"
+      ],
+      "mechanics_raw": "H 틀린그림 찾기",
+      "how_to_play": "DNA예시를 보고 다른 부분을 찾아라 (다른부분 총 3개)",
+      "assets_raw": "DNA의 막대기의 색상 랜덤한게 총 4개",
+      "asset_slots": [
+        {
+          "slot": "LAB_09_01",
+          "name": "DNA의 막대기의 색상 랜덤한게 총 4개",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Laboratory/LAB_09/LAB_09_01.png"
+        }
+      ],
+      "sprite_folder": "Assets/_Game/Sprite/Laboratory/LAB_09/"
+    },
+    {
+      "id": "LAB_10",
+      "theme": "연구소",
+      "theme_en": "Laboratory",
+      "index": 10,
+      "name": "비커에 액체를 채워라",
+      "command": "채워라!",
+      "end_condition": "빨리깨기",
+      "succeed_on_time_up": false,
+      "mechanics": [
+        "A",
+        "D"
+      ],
+      "mechanics_raw": "A 연타, D 타이밍 탭",
+      "how_to_play": "비커에 스포이드로 액체를 채워라. (랜덤, ±1 허용)횟수를 넘기면 실패.",
+      "assets_raw": "비커, 스포이드, 스포이드를 누르는 손(누름/안누름)",
+      "asset_slots": [
+        {
+          "slot": "LAB_10_01",
+          "name": "비커",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Laboratory/LAB_10/LAB_10_01.png"
+        },
+        {
+          "slot": "LAB_10_02",
+          "name": "스포이드",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Laboratory/LAB_10/LAB_10_02.png"
+        },
+        {
+          "slot": "LAB_10_03",
+          "name": "스포이드를 누르는 손",
+          "note": "누름/안누름",
+          "file": "Assets/_Game/Sprite/Laboratory/LAB_10/LAB_10_03.png"
+        }
+      ],
+      "sprite_folder": "Assets/_Game/Sprite/Laboratory/LAB_10/"
+    },
+    {
+      "id": "LAB_11",
+      "theme": "연구소",
+      "theme_en": "Laboratory",
+      "index": 11,
+      "name": "탈출한 박쥐를 잡아라",
+      "command": "잡아라!",
+      "end_condition": "빨리깨기",
+      "succeed_on_time_up": false,
+      "mechanics": [
+        "G"
+      ],
+      "mechanics_raw": "G 드래그",
+      "how_to_play": "날라다니는 박쥐 주변으로 드래그해서 잡아라",
+      "assets_raw": "날개짓하는 박쥐 스프라이트 2개, 새 철장",
+      "asset_slots": [
+        {
+          "slot": "LAB_11_01",
+          "name": "날개짓하는 박쥐 스프라이트 2개",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Laboratory/LAB_11/LAB_11_01.png"
+        },
+        {
+          "slot": "LAB_11_02",
+          "name": "새 철장",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Laboratory/LAB_11/LAB_11_02.png"
+        }
+      ],
+      "sprite_folder": "Assets/_Game/Sprite/Laboratory/LAB_11/"
+    },
+    {
+      "id": "LAB_12",
+      "theme": "연구소",
+      "theme_en": "Laboratory",
+      "index": 12,
+      "name": "올바른 선을 찾아 버튼을 눌러라",
+      "command": "작동 버튼은?",
+      "end_condition": "빨리깨기",
+      "succeed_on_time_up": false,
+      "mechanics": [
+        "C"
+      ],
+      "mechanics_raw": "C 대상 탭",
+      "how_to_play": "버튼 3개에서 나온 선이 얽혀 있다. 선을 눈으로 따라가서 기계와 이어진 버튼 하나를 찾아 탭해라. 다른 버튼을 누르면 실패.",
+      "assets_raw": "기계(꺼짐/작동), 버튼 3개(눌림/안 눌림), 얽힌 선 패턴, 실패 이펙트(스파크)",
+      "asset_slots": [
+        {
+          "slot": "LAB_12_01",
+          "name": "기계",
+          "note": "꺼짐/작동",
+          "file": "Assets/_Game/Sprite/Laboratory/LAB_12/LAB_12_01.png"
+        },
+        {
+          "slot": "LAB_12_02",
+          "name": "버튼 3개",
+          "note": "눌림/안 눌림",
+          "file": "Assets/_Game/Sprite/Laboratory/LAB_12/LAB_12_02.png"
+        },
+        {
+          "slot": "LAB_12_03",
+          "name": "얽힌 선 패턴",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Laboratory/LAB_12/LAB_12_03.png"
+        },
+        {
+          "slot": "LAB_12_04",
+          "name": "실패 이펙트",
+          "note": "스파크",
+          "file": "Assets/_Game/Sprite/Laboratory/LAB_12/LAB_12_04.png"
+        }
+      ],
+      "sprite_folder": "Assets/_Game/Sprite/Laboratory/LAB_12/"
+    },
+    {
+      "id": "LAB_13",
+      "theme": "연구소",
+      "theme_en": "Laboratory",
+      "index": 13,
+      "name": "금 간 비커만 치워라",
+      "command": "치워라!",
+      "end_condition": "빨리깨기",
+      "succeed_on_time_up": false,
+      "mechanics": [
+        "C"
+      ],
+      "mechanics_raw": "C 대상 탭",
+      "how_to_play": "비커 5개 중 금 간 비커만 모두 탭해서 치워라. 멀쩡한 비커를 탭하면 실패.",
+      "assets_raw": "비커(멀쩡함/금 감), 실험대",
+      "asset_slots": [
+        {
+          "slot": "LAB_13_01",
+          "name": "비커",
+          "note": "멀쩡함/금 감",
+          "file": "Assets/_Game/Sprite/Laboratory/LAB_13/LAB_13_01.png"
+        },
+        {
+          "slot": "LAB_13_02",
+          "name": "실험대",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Laboratory/LAB_13/LAB_13_02.png"
+        }
+      ],
+      "sprite_folder": "Assets/_Game/Sprite/Laboratory/LAB_13/"
+    },
+    {
+      "id": "LAB_14",
+      "theme": "연구소",
+      "theme_en": "Laboratory",
+      "index": 14,
+      "name": "전리품을 진열장에 정리해라",
+      "command": "정리해라!",
+      "end_condition": "빨리깨기",
+      "succeed_on_time_up": false,
+      "mechanics": [
+        "G"
+      ],
+      "mechanics_raw": "G 드래그",
+      "how_to_play": "스테이지 이름이 붙은 진열장이 랜덤한 순서로 놓여 있고, 아래에 각 스테이지의 전리품 4개가 무작위로 있다. 지금 진열장에 맞는 전리품을 끌어다 넣으면 오른쪽 진열장으로 넘어간다. 진열장을 모두 채우면 성공, 틀린 전리품을 넣으면 실패.",
+      "assets_raw": "진열장(스테이지 이름표 5종), 스테이지별 전리품 5종(사막·정글·동굴·절벽·숲 중 4개 랜덤)",
+      "asset_slots": [
+        {
+          "slot": "LAB_14_01",
+          "name": "진열장",
+          "note": "스테이지 이름표 5종",
+          "file": "Assets/_Game/Sprite/Laboratory/LAB_14/LAB_14_01.png"
+        },
+        {
+          "slot": "LAB_14_02",
+          "name": "스테이지별 전리품 5종",
+          "note": "사막·정글·동굴·절벽·숲 중 4개 랜덤",
+          "file": "Assets/_Game/Sprite/Laboratory/LAB_14/LAB_14_02.png"
+        }
+      ],
+      "sprite_folder": "Assets/_Game/Sprite/Laboratory/LAB_14/"
+    },
+    {
+      "id": "LAB_15",
+      "theme": "연구소",
+      "theme_en": "Laboratory",
+      "index": 15,
+      "name": "칠판의 수식을 지워라",
+      "command": "지워라!",
+      "end_condition": "빨리깨기",
+      "succeed_on_time_up": false,
+      "mechanics": [
+        "F"
+      ],
+      "mechanics_raw": "F 스와이프",
+      "how_to_play": "칠판에 가득 적힌 복잡한 수식을 좌우로 스와이프해서 모두 지워라.",
+      "assets_raw": "칠판(수식/깨끗함), 지우개",
+      "asset_slots": [
+        {
+          "slot": "LAB_15_01",
+          "name": "칠판",
+          "note": "수식/깨끗함",
+          "file": "Assets/_Game/Sprite/Laboratory/LAB_15/LAB_15_01.png"
+        },
+        {
+          "slot": "LAB_15_02",
+          "name": "지우개",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Laboratory/LAB_15/LAB_15_02.png"
+        }
+      ],
+      "sprite_folder": "Assets/_Game/Sprite/Laboratory/LAB_15/"
+    },
+    {
+      "id": "LAB_16",
+      "theme": "연구소",
+      "theme_en": "Laboratory",
+      "index": 16,
+      "name": "경보등을 모두 꺼라",
+      "command": "꺼라!",
+      "end_condition": "빨리깨기",
+      "succeed_on_time_up": false,
+      "mechanics": [
+        "C"
+      ],
+      "mechanics_raw": "C 대상 탭",
+      "how_to_play": "깜빡이는 빨간 경보등 4개를 모두 탭해서 꺼라.",
+      "assets_raw": "경보등(켜짐/꺼짐), 연구소 벽",
+      "asset_slots": [
+        {
+          "slot": "LAB_16_01",
+          "name": "경보등",
+          "note": "켜짐/꺼짐",
+          "file": "Assets/_Game/Sprite/Laboratory/LAB_16/LAB_16_01.png"
+        },
+        {
+          "slot": "LAB_16_02",
+          "name": "연구소 벽",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Laboratory/LAB_16/LAB_16_02.png"
+        }
+      ],
+      "sprite_folder": "Assets/_Game/Sprite/Laboratory/LAB_16/"
+    },
+    {
+      "id": "LAB_17",
+      "theme": "연구소",
+      "theme_en": "Laboratory",
+      "index": 17,
+      "name": "현미경에 슬라이드를 밀어 넣어라",
+      "command": "밀어 넣어라!",
+      "end_condition": "빨리깨기",
+      "succeed_on_time_up": false,
+      "mechanics": [
+        "C"
+      ],
+      "mechanics_raw": "C 대상 탭",
+      "how_to_play": "현미경 받침대 좌우에 슬라이드가 하나씩 있다. 표본이 든 슬라이드가 있는 쪽을 탭해서 밀어 넣어라. 3번 연속으로 맞히면 성공, 빈 슬라이드를 넣으면 실패. (매번 좌우 위치 랜덤)",
+      "assets_raw": "현미경, 표본 슬라이드, 빈 슬라이드",
+      "asset_slots": [
+        {
+          "slot": "LAB_17_01",
+          "name": "현미경",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Laboratory/LAB_17/LAB_17_01.png"
+        },
+        {
+          "slot": "LAB_17_02",
+          "name": "표본 슬라이드",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Laboratory/LAB_17/LAB_17_02.png"
+        },
+        {
+          "slot": "LAB_17_03",
+          "name": "빈 슬라이드",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Laboratory/LAB_17/LAB_17_03.png"
+        }
+      ],
+      "sprite_folder": "Assets/_Game/Sprite/Laboratory/LAB_17/"
+    },
+    {
+      "id": "LAB_18",
+      "theme": "연구소",
+      "theme_en": "Laboratory",
+      "index": 18,
+      "name": "고장 난 기계를 두드려라",
+      "command": "두드려라!",
+      "end_condition": "빨리깨기",
+      "succeed_on_time_up": false,
+      "mechanics": [
+        "A"
+      ],
+      "mechanics_raw": "A 연타",
+      "how_to_play": "덜컹거리는 기계를 연타로 두드려서 다시 작동시켜라.",
+      "assets_raw": "기계(고장/작동), 연기 이펙트, 스패너",
+      "asset_slots": [
+        {
+          "slot": "LAB_18_01",
+          "name": "기계",
+          "note": "고장/작동",
+          "file": "Assets/_Game/Sprite/Laboratory/LAB_18/LAB_18_01.png"
+        },
+        {
+          "slot": "LAB_18_02",
+          "name": "연기 이펙트",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Laboratory/LAB_18/LAB_18_02.png"
+        },
+        {
+          "slot": "LAB_18_03",
+          "name": "스패너",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Laboratory/LAB_18/LAB_18_03.png"
+        }
+      ],
+      "sprite_folder": "Assets/_Game/Sprite/Laboratory/LAB_18/"
+    },
+    {
+      "id": "LAB_19",
+      "theme": "연구소",
+      "theme_en": "Laboratory",
+      "index": 19,
+      "name": "타자기로 보고서를 작성해라",
+      "command": "작성해라!",
+      "end_condition": "빨리깨기",
+      "succeed_on_time_up": false,
+      "mechanics": [
+        "A"
+      ],
+      "mechanics_raw": "A 연타",
+      "how_to_play": "타자기를 연타해서 연구 보고서 한 장을 끝까지 채워라.",
+      "assets_raw": "타자기, 보고서 종이(단계별 글자 채워짐)",
+      "asset_slots": [
+        {
+          "slot": "LAB_19_01",
+          "name": "타자기",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Laboratory/LAB_19/LAB_19_01.png"
+        },
+        {
+          "slot": "LAB_19_02",
+          "name": "보고서 종이",
+          "note": "단계별 글자 채워짐",
+          "file": "Assets/_Game/Sprite/Laboratory/LAB_19/LAB_19_02.png"
+        }
+      ],
+      "sprite_folder": "Assets/_Game/Sprite/Laboratory/LAB_19/"
+    },
+    {
+      "id": "LAB_20",
+      "theme": "연구소",
+      "theme_en": "Laboratory",
+      "index": 20,
+      "name": "쏟아진 시약을 닦아라",
+      "command": "닦아라!",
+      "end_condition": "빨리깨기",
+      "succeed_on_time_up": false,
+      "mechanics": [
+        "F",
+        "C"
+      ],
+      "mechanics_raw": "F 스와이프, C 대상 탭",
+      "how_to_play": "실험대에 흩어진 깨진 유리 조각은 탭해서 버리고, 쏟아진 시약은 좌우로 스와이프해서 닦아내라. 유리 조각을 모두 버리고 시약을 다 닦으면 성공.",
+      "assets_raw": "실험대(시약 쏟아짐/깨끗함), 깨진 유리 조각, 걸레, 쓰레기통",
+      "asset_slots": [
+        {
+          "slot": "LAB_20_01",
+          "name": "실험대",
+          "note": "시약 쏟아짐/깨끗함",
+          "file": "Assets/_Game/Sprite/Laboratory/LAB_20/LAB_20_01.png"
+        },
+        {
+          "slot": "LAB_20_02",
+          "name": "깨진 유리 조각",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Laboratory/LAB_20/LAB_20_02.png"
+        },
+        {
+          "slot": "LAB_20_03",
+          "name": "걸레",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Laboratory/LAB_20/LAB_20_03.png"
+        },
+        {
+          "slot": "LAB_20_04",
+          "name": "쓰레기통",
+          "note": "",
+          "file": "Assets/_Game/Sprite/Laboratory/LAB_20/LAB_20_04.png"
+        }
+      ],
+      "sprite_folder": "Assets/_Game/Sprite/Laboratory/LAB_20/"
+    }
+  ]
+}

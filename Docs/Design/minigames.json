@@ -1,9 +1,12 @@
 {
-  "source": "구글 시트 '스테이지별 미니게임 배치' > 스테이지 배치 탭 (2026-11-20 기준)",
+  "source": "구글 시트 '스테이지별 미니게임 배치' (2026-11-21 기준): 우선제작 / 후순위 / 전체 탭",
   "count": 120,
+  "priority_count": 30,
+  "note": "status=priority 인 30개만 지금 만든다. deferred 90개는 만들지 않는다(참고용).",
   "minigames": [
     {
       "id": "DES_01",
+      "status": "priority",
       "theme": "사막",
       "theme_en": "Desert",
       "index": 1,
@@ -38,10 +41,30 @@
           "file": "Assets/_Game/Sprite/Desert/DES_01/DES_01_03.png"
         }
       ],
-      "sprite_folder": "Assets/_Game/Sprite/Desert/DES_01/"
+      "sprite_folder": "Assets/_Game/Sprite/Desert/DES_01/",
+      "template": "장애물 피하기",
+      "context_doc": "Docs/Design/Priority/DES_01.md",
+      "params": [
+        {
+          "name": "함정 바닥 칸 수",
+          "default": "6",
+          "note": "출구까지 경로 위에 배치"
+        },
+        {
+          "name": "창 주기(초)",
+          "default": "1.0",
+          "note": "튀어나왔다 들어가는 반복 주기, 칸마다 시작 시점 다르게"
+        },
+        {
+          "name": "캐릭터 이동 방식",
+          "default": "손가락 위치 따라가기",
+          "note": "드래그한 위치로 바로 이동하지 않고 일정 속도로 따라감"
+        }
+      ]
     },
     {
       "id": "DES_02",
+      "status": "deferred",
       "theme": "사막",
       "theme_en": "Desert",
       "index": 2,
@@ -73,6 +96,7 @@
     },
     {
       "id": "DES_03",
+      "status": "priority",
       "theme": "사막",
       "theme_en": "Desert",
       "index": 3,
@@ -84,7 +108,7 @@
         "C"
       ],
       "mechanics_raw": "C 대상 탭",
-      "how_to_play": "랜덤한 위치에서 나오는 전갈을 탭해서 모두 잡아라. (총 10마리)",
+      "how_to_play": "랜덤한 위치에서 나오는 전갈을 탭해서 모두 잡아라. (총 5마리)",
       "assets_raw": "전갈(움직임/잡힘: 눈 X)",
       "asset_slots": [
         {
@@ -94,10 +118,30 @@
           "file": "Assets/_Game/Sprite/Desert/DES_03/DES_03_01.png"
         }
       ],
-      "sprite_folder": "Assets/_Game/Sprite/Desert/DES_03/"
+      "sprite_folder": "Assets/_Game/Sprite/Desert/DES_03/",
+      "template": "정답 탭",
+      "context_doc": "Docs/Design/Priority/DES_03.md",
+      "params": [
+        {
+          "name": "전갈 수",
+          "default": "5",
+          "note": "우선제작 시트 기준 (전체 시트는 10)"
+        },
+        {
+          "name": "이동 속도",
+          "default": "느림",
+          "note": "화면 안을 천천히 돌아다님"
+        },
+        {
+          "name": "등장 방식",
+          "default": "시작 시 모두 등장",
+          "note": "방향: 처음부터 모두 화면에 있음"
+        }
+      ]
     },
     {
       "id": "DES_04",
+      "status": "priority",
       "theme": "사막",
       "theme_en": "Desert",
       "index": 4,
@@ -110,19 +154,39 @@
       ],
       "mechanics_raw": "H 틀린그림 찾기",
       "how_to_play": "원본 벽화와 비교해서 틀린 부분 3곳을 모두 찾아 탭해라.",
-      "assets_raw": "벽화 4종(원본/틀린 그림, 틀린 부분 각 3곳)",
+      "assets_raw": "벽화 4종(원본/틀린 그림, 틀린 부분 각 1곳)",
       "asset_slots": [
         {
           "slot": "DES_04_01",
           "name": "벽화 4종",
-          "note": "원본/틀린 그림, 틀린 부분 각 3곳",
+          "note": "원본/틀린 그림, 틀린 부분 각 1곳",
           "file": "Assets/_Game/Sprite/Desert/DES_04/DES_04_01.png"
         }
       ],
-      "sprite_folder": "Assets/_Game/Sprite/Desert/DES_04/"
+      "sprite_folder": "Assets/_Game/Sprite/Desert/DES_04/",
+      "template": "틀린그림",
+      "context_doc": "Docs/Design/Priority/DES_04.md",
+      "params": [
+        {
+          "name": "벽화 세트 수",
+          "default": "4",
+          "note": "매번 1세트 랜덤"
+        },
+        {
+          "name": "틀린 부분 수",
+          "default": "1",
+          "note": "에셋 기준 '각 1곳'. 플레이 방법 문구는 '3곳'이라 확인 필요"
+        },
+        {
+          "name": "오답 탭",
+          "default": "무시",
+          "note": "틀린 곳이 아닌 곳을 탭해도 실패 아님 (제안)"
+        }
+      ]
     },
     {
       "id": "DES_05",
+      "status": "deferred",
       "theme": "사막",
       "theme_en": "Desert",
       "index": 5,
@@ -160,6 +224,7 @@
     },
     {
       "id": "DES_06",
+      "status": "deferred",
       "theme": "사막",
       "theme_en": "Desert",
       "index": 6,
@@ -191,6 +256,7 @@
     },
     {
       "id": "DES_07",
+      "status": "deferred",
       "theme": "사막",
       "theme_en": "Desert",
       "index": 7,
@@ -229,6 +295,7 @@
     },
     {
       "id": "DES_08",
+      "status": "deferred",
       "theme": "사막",
       "theme_en": "Desert",
       "index": 8,
@@ -262,6 +329,7 @@
     },
     {
       "id": "DES_09",
+      "status": "deferred",
       "theme": "사막",
       "theme_en": "Desert",
       "index": 9,
@@ -299,6 +367,7 @@
     },
     {
       "id": "DES_10",
+      "status": "priority",
       "theme": "사막",
       "theme_en": "Desert",
       "index": 10,
@@ -332,10 +401,25 @@
           "file": "Assets/_Game/Sprite/Desert/DES_10/DES_10_03.png"
         }
       ],
-      "sprite_folder": "Assets/_Game/Sprite/Desert/DES_10/"
+      "sprite_folder": "Assets/_Game/Sprite/Desert/DES_10/",
+      "template": "회전 손잡이",
+      "context_doc": "Docs/Design/Priority/DES_10.md",
+      "params": [
+        {
+          "name": "필요 회전 수",
+          "default": "3바퀴",
+          "note": "문 열림 게이지 100%까지"
+        },
+        {
+          "name": "되감기 속도",
+          "default": "초당 20%",
+          "note": "돌리지 않으면 문이 다시 닫힘"
+        }
+      ]
     },
     {
       "id": "DES_11",
+      "status": "deferred",
       "theme": "사막",
       "theme_en": "Desert",
       "index": 11,
@@ -367,6 +451,7 @@
     },
     {
       "id": "DES_12",
+      "status": "deferred",
       "theme": "사막",
       "theme_en": "Desert",
       "index": 12,
@@ -404,6 +489,7 @@
     },
     {
       "id": "DES_13",
+      "status": "deferred",
       "theme": "사막",
       "theme_en": "Desert",
       "index": 13,
@@ -453,6 +539,7 @@
     },
     {
       "id": "DES_14",
+      "status": "deferred",
       "theme": "사막",
       "theme_en": "Desert",
       "index": 14,
@@ -497,6 +584,7 @@
     },
     {
       "id": "DES_15",
+      "status": "priority",
       "theme": "사막",
       "theme_en": "Desert",
       "index": 15,
@@ -524,10 +612,25 @@
           "file": "Assets/_Game/Sprite/Desert/DES_15/DES_15_02.png"
         }
       ],
-      "sprite_folder": "Assets/_Game/Sprite/Desert/DES_15/"
+      "sprite_folder": "Assets/_Game/Sprite/Desert/DES_15/",
+      "template": "움직이는 대상에 놓기",
+      "context_doc": "Docs/Design/Priority/DES_15.md",
+      "params": [
+        {
+          "name": "박쥐 수",
+          "default": "1",
+          "note": "시트에 수가 없어 1로 둠"
+        },
+        {
+          "name": "박쥐 이동",
+          "default": "화면 안에서 지그재그 비행",
+          "note": "너무 빠르지 않게"
+        }
+      ]
     },
     {
       "id": "DES_16",
+      "status": "deferred",
       "theme": "사막",
       "theme_en": "Desert",
       "index": 16,
@@ -565,6 +668,7 @@
     },
     {
       "id": "DES_17",
+      "status": "deferred",
       "theme": "사막",
       "theme_en": "Desert",
       "index": 17,
@@ -590,6 +694,7 @@
     },
     {
       "id": "DES_18",
+      "status": "deferred",
       "theme": "사막",
       "theme_en": "Desert",
       "index": 18,
@@ -627,6 +732,7 @@
     },
     {
       "id": "DES_19",
+      "status": "deferred",
       "theme": "사막",
       "theme_en": "Desert",
       "index": 19,
@@ -659,6 +765,7 @@
     },
     {
       "id": "DES_20",
+      "status": "deferred",
       "theme": "사막",
       "theme_en": "Desert",
       "index": 20,
@@ -690,6 +797,7 @@
     },
     {
       "id": "JUN_01",
+      "status": "deferred",
       "theme": "정글",
       "theme_en": "Jungle",
       "index": 1,
@@ -721,6 +829,7 @@
     },
     {
       "id": "JUN_02",
+      "status": "deferred",
       "theme": "정글",
       "theme_en": "Jungle",
       "index": 2,
@@ -758,6 +867,7 @@
     },
     {
       "id": "JUN_03",
+      "status": "deferred",
       "theme": "정글",
       "theme_en": "Jungle",
       "index": 3,
@@ -768,7 +878,7 @@
       "mechanics": [
         "B"
       ],
-      "mechanics_raw": "B 좌우 회피",
+      "mechanics_raw": "B 좌우 터치",
       "how_to_play": "좌·중·우 중 피라냐가 오지 않는 칸을 골라 캐릭터를 옮기고, 보트 위로 달려드는 피라냐를 끝까지 피해라. 부딪히면 실패.",
       "assets_raw": "보트 탄 캐릭터(좌/중/우 위치), 피라냐(점프)",
       "asset_slots": [
@@ -789,6 +899,7 @@
     },
     {
       "id": "JUN_04",
+      "status": "priority",
       "theme": "정글",
       "theme_en": "Jungle",
       "index": 4,
@@ -822,10 +933,30 @@
           "file": "Assets/_Game/Sprite/Jungle/JUN_04/JUN_04_03.png"
         }
       ],
-      "sprite_folder": "Assets/_Game/Sprite/Jungle/JUN_04/"
+      "sprite_folder": "Assets/_Game/Sprite/Jungle/JUN_04/",
+      "template": "받기",
+      "context_doc": "Docs/Design/Priority/JUN_04.md",
+      "params": [
+        {
+          "name": "떨어지는 바나나 수",
+          "default": "4",
+          "note": "제한시간 동안"
+        },
+        {
+          "name": "낙하 속도",
+          "default": "보통",
+          "note": ""
+        },
+        {
+          "name": "바구니 이동",
+          "default": "좌우만",
+          "note": "드래그로 X축 이동"
+        }
+      ]
     },
     {
       "id": "JUN_05",
+      "status": "deferred",
       "theme": "정글",
       "theme_en": "Jungle",
       "index": 5,
@@ -863,6 +994,7 @@
     },
     {
       "id": "JUN_06",
+      "status": "priority",
       "theme": "정글",
       "theme_en": "Jungle",
       "index": 6,
@@ -902,10 +1034,25 @@
           "file": "Assets/_Game/Sprite/Jungle/JUN_06/JUN_06_04.png"
         }
       ],
-      "sprite_folder": "Assets/_Game/Sprite/Jungle/JUN_06/"
+      "sprite_folder": "Assets/_Game/Sprite/Jungle/JUN_06/",
+      "template": "하나 고르기",
+      "context_doc": "Docs/Design/Priority/JUN_06.md",
+      "params": [
+        {
+          "name": "보기 수",
+          "default": "4",
+          "note": "희귀 식물 1 + 다른 식물 3"
+        },
+        {
+          "name": "배치",
+          "default": "수풀 속 랜덤 위치",
+          "note": ""
+        }
+      ]
     },
     {
       "id": "JUN_07",
+      "status": "deferred",
       "theme": "정글",
       "theme_en": "Jungle",
       "index": 7,
@@ -943,6 +1090,7 @@
     },
     {
       "id": "JUN_08",
+      "status": "priority",
       "theme": "정글",
       "theme_en": "Jungle",
       "index": 8,
@@ -970,15 +1118,25 @@
           "file": "Assets/_Game/Sprite/Jungle/JUN_08/JUN_08_02.png"
         }
       ],
-      "sprite_folder": "Assets/_Game/Sprite/Jungle/JUN_08/"
+      "sprite_folder": "Assets/_Game/Sprite/Jungle/JUN_08/",
+      "template": "연타 게이지",
+      "context_doc": "Docs/Design/Priority/JUN_08.md",
+      "params": [
+        {
+          "name": "목표 탭 수",
+          "default": "12",
+          "note": "4초 안에 여유 있게"
+        }
+      ]
     },
     {
       "id": "JUN_09",
+      "status": "priority",
       "theme": "정글",
       "theme_en": "Jungle",
       "index": 9,
       "name": "과일의 개수를 맞춰라",
-      "command": "(과일 이름)에 수는?",
+      "command": "(과일 이름)의 수는?",
       "end_condition": "빨리깨기",
       "succeed_on_time_up": false,
       "mechanics": [
@@ -995,10 +1153,35 @@
           "file": "Assets/_Game/Sprite/Jungle/JUN_09/JUN_09_01.png"
         }
       ],
-      "sprite_folder": "Assets/_Game/Sprite/Jungle/JUN_09/"
+      "sprite_folder": "Assets/_Game/Sprite/Jungle/JUN_09/",
+      "template": "하나 고르기",
+      "context_doc": "Docs/Design/Priority/JUN_09.md",
+      "params": [
+        {
+          "name": "과일 종류",
+          "default": "3 (바나나·두리안·파인애플)",
+          "note": ""
+        },
+        {
+          "name": "화면의 과일 총 수",
+          "default": "6~9",
+          "note": "랜덤"
+        },
+        {
+          "name": "지정 과일 수",
+          "default": "2~4",
+          "note": "랜덤"
+        },
+        {
+          "name": "답 입력",
+          "default": "숫자 버튼 3개",
+          "note": "정답 1 + 오답 2 (제안)"
+        }
+      ]
     },
     {
       "id": "JUN_10",
+      "status": "deferred",
       "theme": "정글",
       "theme_en": "Jungle",
       "index": 10,
@@ -1024,6 +1207,7 @@
     },
     {
       "id": "JUN_11",
+      "status": "priority",
       "theme": "정글",
       "theme_en": "Jungle",
       "index": 11,
@@ -1057,10 +1241,25 @@
           "file": "Assets/_Game/Sprite/Jungle/JUN_11/JUN_11_03.png"
         }
       ],
-      "sprite_folder": "Assets/_Game/Sprite/Jungle/JUN_11/"
+      "sprite_folder": "Assets/_Game/Sprite/Jungle/JUN_11/",
+      "template": "좌우 스와이프 게이지",
+      "context_doc": "Docs/Design/Priority/JUN_11.md",
+      "params": [
+        {
+          "name": "필요 이동량",
+          "default": "화면 너비 × 6",
+          "note": "좌우 왕복 약 3번"
+        },
+        {
+          "name": "단계",
+          "default": "3",
+          "note": "이끼 낀 정도 단계별 스프라이트(선택)"
+        }
+      ]
     },
     {
       "id": "JUN_12",
+      "status": "deferred",
       "theme": "정글",
       "theme_en": "Jungle",
       "index": 12,
@@ -1098,6 +1297,7 @@
     },
     {
       "id": "JUN_13",
+      "status": "deferred",
       "theme": "정글",
       "theme_en": "Jungle",
       "index": 13,
@@ -1129,6 +1329,7 @@
     },
     {
       "id": "JUN_14",
+      "status": "deferred",
       "theme": "정글",
       "theme_en": "Jungle",
       "index": 14,
@@ -1166,6 +1367,7 @@
     },
     {
       "id": "JUN_15",
+      "status": "deferred",
       "theme": "정글",
       "theme_en": "Jungle",
       "index": 15,
@@ -1203,6 +1405,7 @@
     },
     {
       "id": "JUN_16",
+      "status": "deferred",
       "theme": "정글",
       "theme_en": "Jungle",
       "index": 16,
@@ -1234,6 +1437,7 @@
     },
     {
       "id": "JUN_17",
+      "status": "deferred",
       "theme": "정글",
       "theme_en": "Jungle",
       "index": 17,
@@ -1259,6 +1463,7 @@
     },
     {
       "id": "JUN_18",
+      "status": "deferred",
       "theme": "정글",
       "theme_en": "Jungle",
       "index": 18,
@@ -1302,6 +1507,7 @@
     },
     {
       "id": "JUN_19",
+      "status": "deferred",
       "theme": "정글",
       "theme_en": "Jungle",
       "index": 19,
@@ -1339,6 +1545,7 @@
     },
     {
       "id": "JUN_20",
+      "status": "deferred",
       "theme": "정글",
       "theme_en": "Jungle",
       "index": 20,
@@ -1383,6 +1590,7 @@
     },
     {
       "id": "CAV_01",
+      "status": "priority",
       "theme": "동굴",
       "theme_en": "Cave",
       "index": 1,
@@ -1416,10 +1624,30 @@
           "file": "Assets/_Game/Sprite/Cave/CAV_01/CAV_01_03.png"
         }
       ],
-      "sprite_folder": "Assets/_Game/Sprite/Cave/CAV_01/"
+      "sprite_folder": "Assets/_Game/Sprite/Cave/CAV_01/",
+      "template": "속도 제한 긁기",
+      "context_doc": "Docs/Design/Priority/CAV_01.md",
+      "params": [
+        {
+          "name": "필요 긁기 횟수",
+          "default": "3",
+          "note": ""
+        },
+        {
+          "name": "최대 속도",
+          "default": "화면 너비/0.15초",
+          "note": "이보다 빠르면 실패"
+        },
+        {
+          "name": "최소 길이",
+          "default": "부싯돌 길이의 70%",
+          "note": "짧게 긁으면 횟수에 넣지 않음"
+        }
+      ]
     },
     {
       "id": "CAV_02",
+      "status": "deferred",
       "theme": "동굴",
       "theme_en": "Cave",
       "index": 2,
@@ -1451,6 +1679,7 @@
     },
     {
       "id": "CAV_03",
+      "status": "priority",
       "theme": "동굴",
       "theme_en": "Cave",
       "index": 3,
@@ -1484,10 +1713,25 @@
           "file": "Assets/_Game/Sprite/Cave/CAV_03/CAV_03_03.png"
         }
       ],
-      "sprite_folder": "Assets/_Game/Sprite/Cave/CAV_03/"
+      "sprite_folder": "Assets/_Game/Sprite/Cave/CAV_03/",
+      "template": "손전등 비추기",
+      "context_doc": "Docs/Design/Priority/CAV_03.md",
+      "params": [
+        {
+          "name": "빛 반경",
+          "default": "화면 너비의 25%",
+          "note": ""
+        },
+        {
+          "name": "출구 위치",
+          "default": "랜덤",
+          "note": ""
+        }
+      ]
     },
     {
       "id": "CAV_04",
+      "status": "deferred",
       "theme": "동굴",
       "theme_en": "Cave",
       "index": 4,
@@ -1525,6 +1769,7 @@
     },
     {
       "id": "CAV_05",
+      "status": "deferred",
       "theme": "동굴",
       "theme_en": "Cave",
       "index": 5,
@@ -1562,6 +1807,7 @@
     },
     {
       "id": "CAV_06",
+      "status": "deferred",
       "theme": "동굴",
       "theme_en": "Cave",
       "index": 6,
@@ -1594,6 +1840,7 @@
     },
     {
       "id": "CAV_07",
+      "status": "deferred",
       "theme": "동굴",
       "theme_en": "Cave",
       "index": 7,
@@ -1649,6 +1896,7 @@
     },
     {
       "id": "CAV_08",
+      "status": "priority",
       "theme": "동굴",
       "theme_en": "Cave",
       "index": 8,
@@ -1677,10 +1925,30 @@
           "file": "Assets/_Game/Sprite/Cave/CAV_08/CAV_08_02.png"
         }
       ],
-      "sprite_folder": "Assets/_Game/Sprite/Cave/CAV_08/"
+      "sprite_folder": "Assets/_Game/Sprite/Cave/CAV_08/",
+      "template": "연타 후 멈추기",
+      "context_doc": "Docs/Design/Priority/CAV_08.md",
+      "params": [
+        {
+          "name": "목표 횟수 N",
+          "default": "랜덤 4~7",
+          "note": ""
+        },
+        {
+          "name": "허용 범위",
+          "default": "N-1 ~ N+1",
+          "note": ""
+        },
+        {
+          "name": "멈춤 판정",
+          "default": "0.5초 동안 탭 없음",
+          "note": ""
+        }
+      ]
     },
     {
       "id": "CAV_09",
+      "status": "priority",
       "theme": "동굴",
       "theme_en": "Cave",
       "index": 9,
@@ -1708,10 +1976,30 @@
           "file": "Assets/_Game/Sprite/Cave/CAV_09/CAV_09_02.png"
         }
       ],
-      "sprite_folder": "Assets/_Game/Sprite/Cave/CAV_09/"
+      "sprite_folder": "Assets/_Game/Sprite/Cave/CAV_09/",
+      "template": "장애물 피하기",
+      "context_doc": "Docs/Design/Priority/CAV_09.md",
+      "params": [
+        {
+          "name": "이동 방식",
+          "default": "좌우 스와이프로 캐릭터 이동",
+          "note": "F: 좌우만"
+        },
+        {
+          "name": "굴러오는 돌 수",
+          "default": "3",
+          "note": ""
+        },
+        {
+          "name": "돌 속도",
+          "default": "보통",
+          "note": ""
+        }
+      ]
     },
     {
       "id": "CAV_10",
+      "status": "deferred",
       "theme": "동굴",
       "theme_en": "Cave",
       "index": 10,
@@ -1749,6 +2037,7 @@
     },
     {
       "id": "CAV_11",
+      "status": "deferred",
       "theme": "동굴",
       "theme_en": "Cave",
       "index": 11,
@@ -1786,6 +2075,7 @@
     },
     {
       "id": "CAV_12",
+      "status": "deferred",
       "theme": "동굴",
       "theme_en": "Cave",
       "index": 12,
@@ -1823,6 +2113,7 @@
     },
     {
       "id": "CAV_13",
+      "status": "deferred",
       "theme": "동굴",
       "theme_en": "Cave",
       "index": 13,
@@ -1860,6 +2151,7 @@
     },
     {
       "id": "CAV_14",
+      "status": "deferred",
       "theme": "동굴",
       "theme_en": "Cave",
       "index": 14,
@@ -1897,6 +2189,7 @@
     },
     {
       "id": "CAV_15",
+      "status": "priority",
       "theme": "동굴",
       "theme_en": "Cave",
       "index": 15,
@@ -1924,10 +2217,20 @@
           "file": "Assets/_Game/Sprite/Cave/CAV_15/CAV_15_02.png"
         }
       ],
-      "sprite_folder": "Assets/_Game/Sprite/Cave/CAV_15/"
+      "sprite_folder": "Assets/_Game/Sprite/Cave/CAV_15/",
+      "template": "정답 탭",
+      "context_doc": "Docs/Design/Priority/CAV_15.md",
+      "params": [
+        {
+          "name": "횃불 수",
+          "default": "4",
+          "note": ""
+        }
+      ]
     },
     {
       "id": "CAV_16",
+      "status": "deferred",
       "theme": "동굴",
       "theme_en": "Cave",
       "index": 16,
@@ -1959,6 +2262,7 @@
     },
     {
       "id": "CAV_17",
+      "status": "deferred",
       "theme": "동굴",
       "theme_en": "Cave",
       "index": 17,
@@ -2002,6 +2306,7 @@
     },
     {
       "id": "CAV_18",
+      "status": "deferred",
       "theme": "동굴",
       "theme_en": "Cave",
       "index": 18,
@@ -2039,6 +2344,7 @@
     },
     {
       "id": "CAV_19",
+      "status": "deferred",
       "theme": "동굴",
       "theme_en": "Cave",
       "index": 19,
@@ -2070,6 +2376,7 @@
     },
     {
       "id": "CAV_20",
+      "status": "deferred",
       "theme": "동굴",
       "theme_en": "Cave",
       "index": 20,
@@ -2101,6 +2408,7 @@
     },
     {
       "id": "PRE_01",
+      "status": "deferred",
       "theme": "절벽",
       "theme_en": "Precipice",
       "index": 1,
@@ -2132,6 +2440,7 @@
     },
     {
       "id": "PRE_02",
+      "status": "priority",
       "theme": "절벽",
       "theme_en": "Precipice",
       "index": 2,
@@ -2165,14 +2474,34 @@
           "file": "Assets/_Game/Sprite/Precipice/PRE_02/PRE_02_03.png"
         }
       ],
-      "sprite_folder": "Assets/_Game/Sprite/Precipice/PRE_02/"
+      "sprite_folder": "Assets/_Game/Sprite/Precipice/PRE_02/",
+      "template": "초점 슬라이더",
+      "context_doc": "Docs/Design/Priority/PRE_02.md",
+      "params": [
+        {
+          "name": "정답 위치",
+          "default": "랜덤 20~80%",
+          "note": ""
+        },
+        {
+          "name": "허용 오차",
+          "default": "±8%",
+          "note": ""
+        },
+        {
+          "name": "흐림 표현",
+          "default": "정답과의 거리에 비례해 블러",
+          "note": ""
+        }
+      ]
     },
     {
       "id": "PRE_03",
+      "status": "priority",
       "theme": "절벽",
       "theme_en": "Precipice",
       "index": 3,
-      "name": "암모나이트 화석(묻힘/발굴/부서짐), 곡괭이",
+      "name": "암모나이트 화석을 발굴해라",
       "command": "두드려라!",
       "end_condition": "빨리깨기",
       "succeed_on_time_up": false,
@@ -2196,10 +2525,30 @@
           "file": "Assets/_Game/Sprite/Precipice/PRE_03/PRE_03_02.png"
         }
       ],
-      "sprite_folder": "Assets/_Game/Sprite/Precipice/PRE_03/"
+      "sprite_folder": "Assets/_Game/Sprite/Precipice/PRE_03/",
+      "template": "연타 후 멈추기",
+      "context_doc": "Docs/Design/Priority/PRE_03.md",
+      "params": [
+        {
+          "name": "목표 횟수 N",
+          "default": "랜덤 4~7",
+          "note": ""
+        },
+        {
+          "name": "허용 범위",
+          "default": "N-1 ~ N+1",
+          "note": ""
+        },
+        {
+          "name": "멈춤 판정",
+          "default": "0.5초 동안 탭 없음",
+          "note": ""
+        }
+      ]
     },
     {
       "id": "PRE_04",
+      "status": "deferred",
       "theme": "절벽",
       "theme_en": "Precipice",
       "index": 4,
@@ -2231,6 +2580,7 @@
     },
     {
       "id": "PRE_05",
+      "status": "deferred",
       "theme": "절벽",
       "theme_en": "Precipice",
       "index": 5,
@@ -2268,6 +2618,7 @@
     },
     {
       "id": "PRE_06",
+      "status": "deferred",
       "theme": "절벽",
       "theme_en": "Precipice",
       "index": 6,
@@ -2305,6 +2656,7 @@
     },
     {
       "id": "PRE_07",
+      "status": "deferred",
       "theme": "절벽",
       "theme_en": "Precipice",
       "index": 7,
@@ -2349,6 +2701,7 @@
     },
     {
       "id": "PRE_08",
+      "status": "deferred",
       "theme": "절벽",
       "theme_en": "Precipice",
       "index": 8,
@@ -2380,6 +2733,7 @@
     },
     {
       "id": "PRE_09",
+      "status": "deferred",
       "theme": "절벽",
       "theme_en": "Precipice",
       "index": 9,
@@ -2417,6 +2771,7 @@
     },
     {
       "id": "PRE_10",
+      "status": "priority",
       "theme": "절벽",
       "theme_en": "Precipice",
       "index": 10,
@@ -2444,10 +2799,20 @@
           "file": "Assets/_Game/Sprite/Precipice/PRE_10/PRE_10_02.png"
         }
       ],
-      "sprite_folder": "Assets/_Game/Sprite/Precipice/PRE_10/"
+      "sprite_folder": "Assets/_Game/Sprite/Precipice/PRE_10/",
+      "template": "좌우 스와이프 게이지",
+      "context_doc": "Docs/Design/Priority/PRE_10.md",
+      "params": [
+        {
+          "name": "필요 이동량",
+          "default": "화면 너비 × 6",
+          "note": ""
+        }
+      ]
     },
     {
       "id": "PRE_11",
+      "status": "deferred",
       "theme": "절벽",
       "theme_en": "Precipice",
       "index": 11,
@@ -2485,6 +2850,7 @@
     },
     {
       "id": "PRE_12",
+      "status": "deferred",
       "theme": "절벽",
       "theme_en": "Precipice",
       "index": 12,
@@ -2522,6 +2888,7 @@
     },
     {
       "id": "PRE_13",
+      "status": "deferred",
       "theme": "절벽",
       "theme_en": "Precipice",
       "index": 13,
@@ -2553,6 +2920,7 @@
     },
     {
       "id": "PRE_14",
+      "status": "deferred",
       "theme": "절벽",
       "theme_en": "Precipice",
       "index": 14,
@@ -2597,6 +2965,7 @@
     },
     {
       "id": "PRE_15",
+      "status": "priority",
       "theme": "절벽",
       "theme_en": "Precipice",
       "index": 15,
@@ -2637,10 +3006,25 @@
           "file": "Assets/_Game/Sprite/Precipice/PRE_15/PRE_15_04.png"
         }
       ],
-      "sprite_folder": "Assets/_Game/Sprite/Precipice/PRE_15/"
+      "sprite_folder": "Assets/_Game/Sprite/Precipice/PRE_15/",
+      "template": "순서 탭",
+      "context_doc": "Docs/Design/Priority/PRE_15.md",
+      "params": [
+        {
+          "name": "판자 수",
+          "default": "10",
+          "note": "4초 안에 빠듯하면 8로"
+        },
+        {
+          "name": "부서진 판자 수",
+          "default": "2~3",
+          "note": "2개 연속 금지, 첫·마지막 판자는 항상 멀쩡 (제안)"
+        }
+      ]
     },
     {
       "id": "PRE_16",
+      "status": "priority",
       "theme": "절벽",
       "theme_en": "Precipice",
       "index": 16,
@@ -2668,10 +3052,20 @@
           "file": "Assets/_Game/Sprite/Precipice/PRE_16/PRE_16_02.png"
         }
       ],
-      "sprite_folder": "Assets/_Game/Sprite/Precipice/PRE_16/"
+      "sprite_folder": "Assets/_Game/Sprite/Precipice/PRE_16/",
+      "template": "좌우 스와이프 게이지",
+      "context_doc": "Docs/Design/Priority/PRE_16.md",
+      "params": [
+        {
+          "name": "필요 이동량",
+          "default": "화면 너비 × 5",
+          "note": ""
+        }
+      ]
     },
     {
       "id": "PRE_17",
+      "status": "deferred",
       "theme": "절벽",
       "theme_en": "Precipice",
       "index": 17,
@@ -2703,6 +3097,7 @@
     },
     {
       "id": "PRE_18",
+      "status": "deferred",
       "theme": "절벽",
       "theme_en": "Precipice",
       "index": 18,
@@ -2734,6 +3129,7 @@
     },
     {
       "id": "PRE_19",
+      "status": "deferred",
       "theme": "절벽",
       "theme_en": "Precipice",
       "index": 19,
@@ -2771,6 +3167,7 @@
     },
     {
       "id": "PRE_20",
+      "status": "deferred",
       "theme": "절벽",
       "theme_en": "Precipice",
       "index": 20,
@@ -2809,6 +3206,7 @@
     },
     {
       "id": "FOR_01",
+      "status": "priority",
       "theme": "숲",
       "theme_en": "Forest",
       "index": 1,
@@ -2842,10 +3240,25 @@
           "file": "Assets/_Game/Sprite/Forest/FOR_01/FOR_01_03.png"
         }
       ],
-      "sprite_folder": "Assets/_Game/Sprite/Forest/FOR_01/"
+      "sprite_folder": "Assets/_Game/Sprite/Forest/FOR_01/",
+      "template": "연타 게이지",
+      "context_doc": "Docs/Design/Priority/FOR_01.md",
+      "params": [
+        {
+          "name": "목표 탭 수",
+          "default": "10",
+          "note": ""
+        },
+        {
+          "name": "단계",
+          "default": "3~4",
+          "note": "못 박힘 단계 스프라이트"
+        }
+      ]
     },
     {
       "id": "FOR_02",
+      "status": "deferred",
       "theme": "숲",
       "theme_en": "Forest",
       "index": 2,
@@ -2883,6 +3296,7 @@
     },
     {
       "id": "FOR_03",
+      "status": "deferred",
       "theme": "숲",
       "theme_en": "Forest",
       "index": 3,
@@ -2914,6 +3328,7 @@
     },
     {
       "id": "FOR_04",
+      "status": "deferred",
       "theme": "숲",
       "theme_en": "Forest",
       "index": 4,
@@ -2945,6 +3360,7 @@
     },
     {
       "id": "FOR_05",
+      "status": "deferred",
       "theme": "숲",
       "theme_en": "Forest",
       "index": 5,
@@ -2976,6 +3392,7 @@
     },
     {
       "id": "FOR_06",
+      "status": "deferred",
       "theme": "숲",
       "theme_en": "Forest",
       "index": 6,
@@ -3007,6 +3424,7 @@
     },
     {
       "id": "FOR_07",
+      "status": "priority",
       "theme": "숲",
       "theme_en": "Forest",
       "index": 7,
@@ -3047,10 +3465,25 @@
           "file": "Assets/_Game/Sprite/Forest/FOR_07/FOR_07_04.png"
         }
       ],
-      "sprite_folder": "Assets/_Game/Sprite/Forest/FOR_07/"
+      "sprite_folder": "Assets/_Game/Sprite/Forest/FOR_07/",
+      "template": "카메라 촬영(덕 헌트)",
+      "context_doc": "Docs/Design/Priority/FOR_07.md",
+      "params": [
+        {
+          "name": "찍을 동물 수",
+          "default": "3",
+          "note": "4종 중 3마리 랜덤 배치"
+        },
+        {
+          "name": "촬영 판정",
+          "default": "프레임 중심과 동물이 겹치면",
+          "note": "빈 곳을 찍어도 실패 아님"
+        }
+      ]
     },
     {
       "id": "FOR_08",
+      "status": "deferred",
       "theme": "숲",
       "theme_en": "Forest",
       "index": 8,
@@ -3082,6 +3515,7 @@
     },
     {
       "id": "FOR_09",
+      "status": "deferred",
       "theme": "숲",
       "theme_en": "Forest",
       "index": 9,
@@ -3119,6 +3553,7 @@
     },
     {
       "id": "FOR_10",
+      "status": "deferred",
       "theme": "숲",
       "theme_en": "Forest",
       "index": 10,
@@ -3150,6 +3585,7 @@
     },
     {
       "id": "FOR_11",
+      "status": "deferred",
       "theme": "숲",
       "theme_en": "Forest",
       "index": 11,
@@ -3187,6 +3623,7 @@
     },
     {
       "id": "FOR_12",
+      "status": "deferred",
       "theme": "숲",
       "theme_en": "Forest",
       "index": 12,
@@ -3230,6 +3667,7 @@
     },
     {
       "id": "FOR_13",
+      "status": "priority",
       "theme": "숲",
       "theme_en": "Forest",
       "index": 13,
@@ -3263,10 +3701,20 @@
           "file": "Assets/_Game/Sprite/Forest/FOR_13/FOR_13_03.png"
         }
       ],
-      "sprite_folder": "Assets/_Game/Sprite/Forest/FOR_13/"
+      "sprite_folder": "Assets/_Game/Sprite/Forest/FOR_13/",
+      "template": "좌우 스와이프 게이지",
+      "context_doc": "Docs/Design/Priority/FOR_13.md",
+      "params": [
+        {
+          "name": "필요 이동량",
+          "default": "화면 너비 × 6",
+          "note": ""
+        }
+      ]
     },
     {
       "id": "FOR_14",
+      "status": "priority",
       "theme": "숲",
       "theme_en": "Forest",
       "index": 14,
@@ -3306,10 +3754,25 @@
           "file": "Assets/_Game/Sprite/Forest/FOR_14/FOR_14_04.png"
         }
       ],
-      "sprite_folder": "Assets/_Game/Sprite/Forest/FOR_14/"
+      "sprite_folder": "Assets/_Game/Sprite/Forest/FOR_14/",
+      "template": "회전 손잡이",
+      "context_doc": "Docs/Design/Priority/FOR_14.md",
+      "params": [
+        {
+          "name": "적정 속도",
+          "default": "초당 0.8~2바퀴",
+          "note": ""
+        },
+        {
+          "name": "허용 시간",
+          "default": "0.6초",
+          "note": "범위 밖이 이 시간보다 오래 이어지면 실패"
+        }
+      ]
     },
     {
       "id": "FOR_15",
+      "status": "deferred",
       "theme": "숲",
       "theme_en": "Forest",
       "index": 15,
@@ -3341,6 +3804,7 @@
     },
     {
       "id": "FOR_16",
+      "status": "deferred",
       "theme": "숲",
       "theme_en": "Forest",
       "index": 16,
@@ -3372,6 +3836,7 @@
     },
     {
       "id": "FOR_17",
+      "status": "deferred",
       "theme": "숲",
       "theme_en": "Forest",
       "index": 17,
@@ -3415,6 +3880,7 @@
     },
     {
       "id": "FOR_18",
+      "status": "deferred",
       "theme": "숲",
       "theme_en": "Forest",
       "index": 18,
@@ -3452,6 +3918,7 @@
     },
     {
       "id": "FOR_19",
+      "status": "priority",
       "theme": "숲",
       "theme_en": "Forest",
       "index": 19,
@@ -3485,10 +3952,25 @@
           "file": "Assets/_Game/Sprite/Forest/FOR_19/FOR_19_03.png"
         }
       ],
-      "sprite_folder": "Assets/_Game/Sprite/Forest/FOR_19/"
+      "sprite_folder": "Assets/_Game/Sprite/Forest/FOR_19/",
+      "template": "회전 손잡이",
+      "context_doc": "Docs/Design/Priority/FOR_19.md",
+      "params": [
+        {
+          "name": "필요 회전 수",
+          "default": "3바퀴",
+          "note": ""
+        },
+        {
+          "name": "되감기 속도",
+          "default": "초당 15%",
+          "note": ""
+        }
+      ]
     },
     {
       "id": "FOR_20",
+      "status": "deferred",
       "theme": "숲",
       "theme_en": "Forest",
       "index": 20,
@@ -3520,6 +4002,7 @@
     },
     {
       "id": "LAB_01",
+      "status": "priority",
       "theme": "연구소",
       "theme_en": "Laboratory",
       "index": 1,
@@ -3553,10 +4036,25 @@
           "file": "Assets/_Game/Sprite/Laboratory/LAB_01/LAB_01_03.png"
         }
       ],
-      "sprite_folder": "Assets/_Game/Sprite/Laboratory/LAB_01/"
+      "sprite_folder": "Assets/_Game/Sprite/Laboratory/LAB_01/",
+      "template": "속도 제한 긁기",
+      "context_doc": "Docs/Design/Priority/LAB_01.md",
+      "params": [
+        {
+          "name": "허용 속도",
+          "default": "화면 너비/0.2~0.6초",
+          "note": ""
+        },
+        {
+          "name": "최소 길이",
+          "default": "리더기 길이의 80%",
+          "note": ""
+        }
+      ]
     },
     {
       "id": "LAB_02",
+      "status": "deferred",
       "theme": "연구소",
       "theme_en": "Laboratory",
       "index": 2,
@@ -3588,6 +4086,7 @@
     },
     {
       "id": "LAB_03",
+      "status": "deferred",
       "theme": "연구소",
       "theme_en": "Laboratory",
       "index": 3,
@@ -3619,6 +4118,7 @@
     },
     {
       "id": "LAB_04",
+      "status": "deferred",
       "theme": "연구소",
       "theme_en": "Laboratory",
       "index": 4,
@@ -3656,6 +4156,7 @@
     },
     {
       "id": "LAB_05",
+      "status": "deferred",
       "theme": "연구소",
       "theme_en": "Laboratory",
       "index": 5,
@@ -3687,6 +4188,7 @@
     },
     {
       "id": "LAB_06",
+      "status": "deferred",
       "theme": "연구소",
       "theme_en": "Laboratory",
       "index": 6,
@@ -3724,6 +4226,7 @@
     },
     {
       "id": "LAB_07",
+      "status": "deferred",
       "theme": "연구소",
       "theme_en": "Laboratory",
       "index": 7,
@@ -3755,6 +4258,7 @@
     },
     {
       "id": "LAB_08",
+      "status": "priority",
       "theme": "연구소",
       "theme_en": "Laboratory",
       "index": 8,
@@ -3782,10 +4286,25 @@
           "file": "Assets/_Game/Sprite/Laboratory/LAB_08/LAB_08_02.png"
         }
       ],
-      "sprite_folder": "Assets/_Game/Sprite/Laboratory/LAB_08/"
+      "sprite_folder": "Assets/_Game/Sprite/Laboratory/LAB_08/",
+      "template": "초점 슬라이더",
+      "context_doc": "Docs/Design/Priority/LAB_08.md",
+      "params": [
+        {
+          "name": "정답 위치",
+          "default": "랜덤 20~80%",
+          "note": ""
+        },
+        {
+          "name": "허용 오차",
+          "default": "±8%",
+          "note": ""
+        }
+      ]
     },
     {
       "id": "LAB_09",
+      "status": "deferred",
       "theme": "연구소",
       "theme_en": "Laboratory",
       "index": 9,
@@ -3811,6 +4330,7 @@
     },
     {
       "id": "LAB_10",
+      "status": "deferred",
       "theme": "연구소",
       "theme_en": "Laboratory",
       "index": 10,
@@ -3849,6 +4369,7 @@
     },
     {
       "id": "LAB_11",
+      "status": "deferred",
       "theme": "연구소",
       "theme_en": "Laboratory",
       "index": 11,
@@ -3880,6 +4401,7 @@
     },
     {
       "id": "LAB_12",
+      "status": "priority",
       "theme": "연구소",
       "theme_en": "Laboratory",
       "index": 12,
@@ -3919,10 +4441,30 @@
           "file": "Assets/_Game/Sprite/Laboratory/LAB_12/LAB_12_04.png"
         }
       ],
-      "sprite_folder": "Assets/_Game/Sprite/Laboratory/LAB_12/"
+      "sprite_folder": "Assets/_Game/Sprite/Laboratory/LAB_12/",
+      "template": "하나 고르기",
+      "context_doc": "Docs/Design/Priority/LAB_12.md",
+      "params": [
+        {
+          "name": "버튼 수",
+          "default": "3",
+          "note": ""
+        },
+        {
+          "name": "선 패턴",
+          "default": "3~5장",
+          "note": "아트가 그린 이미지, 패턴마다 정답 버튼 데이터"
+        },
+        {
+          "name": "좌우 반전",
+          "default": "랜덤",
+          "note": "경우의 수 2배"
+        }
+      ]
     },
     {
       "id": "LAB_13",
+      "status": "deferred",
       "theme": "연구소",
       "theme_en": "Laboratory",
       "index": 13,
@@ -3954,6 +4496,7 @@
     },
     {
       "id": "LAB_14",
+      "status": "deferred",
       "theme": "연구소",
       "theme_en": "Laboratory",
       "index": 14,
@@ -3985,6 +4528,7 @@
     },
     {
       "id": "LAB_15",
+      "status": "priority",
       "theme": "연구소",
       "theme_en": "Laboratory",
       "index": 15,
@@ -4012,10 +4556,20 @@
           "file": "Assets/_Game/Sprite/Laboratory/LAB_15/LAB_15_02.png"
         }
       ],
-      "sprite_folder": "Assets/_Game/Sprite/Laboratory/LAB_15/"
+      "sprite_folder": "Assets/_Game/Sprite/Laboratory/LAB_15/",
+      "template": "좌우 스와이프 게이지",
+      "context_doc": "Docs/Design/Priority/LAB_15.md",
+      "params": [
+        {
+          "name": "필요 이동량",
+          "default": "화면 너비 × 6",
+          "note": ""
+        }
+      ]
     },
     {
       "id": "LAB_16",
+      "status": "deferred",
       "theme": "연구소",
       "theme_en": "Laboratory",
       "index": 16,
@@ -4047,6 +4601,7 @@
     },
     {
       "id": "LAB_17",
+      "status": "deferred",
       "theme": "연구소",
       "theme_en": "Laboratory",
       "index": 17,
@@ -4084,6 +4639,7 @@
     },
     {
       "id": "LAB_18",
+      "status": "deferred",
       "theme": "연구소",
       "theme_en": "Laboratory",
       "index": 18,
@@ -4121,6 +4677,7 @@
     },
     {
       "id": "LAB_19",
+      "status": "priority",
       "theme": "연구소",
       "theme_en": "Laboratory",
       "index": 19,
@@ -4148,10 +4705,25 @@
           "file": "Assets/_Game/Sprite/Laboratory/LAB_19/LAB_19_02.png"
         }
       ],
-      "sprite_folder": "Assets/_Game/Sprite/Laboratory/LAB_19/"
+      "sprite_folder": "Assets/_Game/Sprite/Laboratory/LAB_19/",
+      "template": "연타 게이지",
+      "context_doc": "Docs/Design/Priority/LAB_19.md",
+      "params": [
+        {
+          "name": "목표 탭 수",
+          "default": "14",
+          "note": ""
+        },
+        {
+          "name": "단계",
+          "default": "4",
+          "note": "글자 채워짐 단계 스프라이트"
+        }
+      ]
     },
     {
       "id": "LAB_20",
+      "status": "deferred",
       "theme": "연구소",
       "theme_en": "Laboratory",
       "index": 20,

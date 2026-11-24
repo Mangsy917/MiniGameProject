@@ -307,6 +307,10 @@ PrefabInstance:
       propertyPath: m_sharedMaterial
       value: 
       objectReference: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+    - target: {fileID: 5970466073897506512, guid: e664be108e774dc4a910f460762d5c29, type: 3}
+      propertyPath: m_AdditionalShaderChannelsFlag
+      value: 25
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -339,6 +343,30 @@ PrefabInstance:
       propertyPath: StageNumber
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 1674631101401930034, guid: baf3976d5ef8e3e46894d321597c8362, type: 3}
+      propertyPath: NormalGames.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1674631101401930034, guid: baf3976d5ef8e3e46894d321597c8362, type: 3}
+      propertyPath: 'NormalGames.Array.data[0]'
+      value: 
+      objectReference: {fileID: 251194880647422468, guid: 6c6688b77323ed1479710cbf4f832a6d, type: 3}
+    - target: {fileID: 1674631101401930034, guid: baf3976d5ef8e3e46894d321597c8362, type: 3}
+      propertyPath: 'NormalGames.Array.data[1]'
+      value: 
+      objectReference: {fileID: 6559925819316501802, guid: 0826d18cd43b8a0478401b6191dc3a63, type: 3}
+    - target: {fileID: 1674631101401930034, guid: baf3976d5ef8e3e46894d321597c8362, type: 3}
+      propertyPath: 'NormalGames.Array.data[2]'
+      value: 
+      objectReference: {fileID: 6932681808694996745, guid: 187119b467976e347b7eb215894cc8ae, type: 3}
+    - target: {fileID: 1674631101401930034, guid: baf3976d5ef8e3e46894d321597c8362, type: 3}
+      propertyPath: 'NormalGames.Array.data[3]'
+      value: 
+      objectReference: {fileID: 5380263888435828880, guid: e2e9ca797455af84c928b7a59a460eb4, type: 3}
+    - target: {fileID: 1674631101401930034, guid: baf3976d5ef8e3e46894d321597c8362, type: 3}
+      propertyPath: 'NormalGames.Array.data[4]'
+      value: 
+      objectReference: {fileID: 6842319442685079945, guid: c032b5d1aba89c241a0999c16509fbca, type: 3}
     - target: {fileID: 4143840701146708396, guid: baf3976d5ef8e3e46894d321597c8362, type: 3}
       propertyPath: m_Name
       value: StageFlowUI

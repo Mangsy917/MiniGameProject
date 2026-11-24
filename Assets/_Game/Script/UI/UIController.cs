@@ -1,6 +1,5 @@
 using System.Collections;
 using UnityEngine;
-using UnityEngine.EventSystems;
 
 public class UIController : MonoBehaviour
 {
@@ -122,12 +121,10 @@ public class UIController : MonoBehaviour
         InfinityModeBT.localScale = buttonScale;
     }
 
-    // interactable을 끄면 버튼이 비활성 색으로 바뀌므로, 클릭과 키보드/패드 입력만 막는다
+    // interactable을 끄면 버튼이 비활성 색으로 바뀌므로, 터치만 막는다 (키보드/패드 입력은 MobileInputSetup에서 항상 꺼 둔다)
     void SetMenuInteractable(bool interactable)
     {
         MenuGroup.blocksRaycasts = interactable;
-        if (EventSystem.current != null)
-            EventSystem.current.sendNavigationEvents = interactable;
     }
 
     public void PressStartBT()

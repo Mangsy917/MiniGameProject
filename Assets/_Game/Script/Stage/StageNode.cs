@@ -1,6 +1,6 @@
 using UnityEngine;
 
-// 스테이지 선택 맵에 배치되는 스테이지 오브젝트. 클릭 판정용 Collider2D가 필요하다.
+// 스테이지 선택 맵에 배치되는 스테이지 오브젝트. 터치 판정용 Collider2D가 필요하다.
 [RequireComponent(typeof(Collider2D))]
 public class StageNode : MonoBehaviour
 {
@@ -71,14 +71,7 @@ public class StageNode : MonoBehaviour
             normalMaterial = IconSR.sharedMaterial;
     }
 
-    // 마우스를 올렸을 때 아이콘 확대 (잠긴 스테이지는 반응하지 않음)
-    public void SetHovered(bool hovered)
-    {
-        if (iconPop != null && !lockedVisual)
-            iconPop.SetHovered(hovered);
-    }
-
-    // 클릭/터치한 순간 아이콘이 톡 커진다 (잠긴 스테이지는 반응하지 않음)
+    // 터치한 순간 아이콘이 톡 커진다 (잠긴 스테이지는 반응하지 않음)
     public void PressIcon()
     {
         if (iconPop != null && !lockedVisual)

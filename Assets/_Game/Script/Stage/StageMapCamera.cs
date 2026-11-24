@@ -5,23 +5,23 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 
-// 스테이지 맵 카메라. 드래그로 맵 이동(PC: 마우스 좌클릭, 모바일: 터치), 탭으로 스테이지 선택, 스테이지 확대/복귀.
+// 스테이지 맵 카메라. 터치(에디터에서는 마우스 좌클릭) 드래그로 맵 이동, 탭으로 스테이지 선택, 핀치로 확대/축소.
 [RequireComponent(typeof(Camera))]
 public class StageMapCamera : MonoBehaviour
 {
     public SpriteRenderer MapBoundsSR;   // 카메라가 벗어나지 않을 맵 영역
 
-    public float DragThreshold = 15f;    // 픽셀. 이보다 적게 움직이고 떼면 클릭으로 처리
+    public float DragThreshold = 15f;    // 픽셀. 이보다 적게 움직이고 떼면 탭으로 처리 (고해상도 화면에서는 dpi에 맞춰 커진다)
     public float InertiaDamping = 6f;    // 드래그 후 미끄러짐이 멈추는 속도
     public float MaxInertiaSpeed = 30f;  // 프레임이 튀었을 때 맵이 날아가지 않도록 관성 속도 제한
 
     public float ZoomSize = 2.2f;        // 스테이지 확대 시 orthographicSize
     public float ZoomTime = 0.45f;
 
-    // 휠(PC) / 핀치(모바일) 확대 축소 범위. MaxSize는 맵 전체가 화면에 들어오는 크기를 넘지 않는다
+    // 핀치 확대 축소 범위. MaxSize는 맵 전체가 화면에 들어오는 크기를 넘지 않는다
     public float MinSize = 3f;
     public float MaxSize = 9f;
-    public float ScrollZoomStep = 0.1f;  // 휠 한 칸당 확대/축소 비율
+    public float ScrollZoomStep = 0.1f;  // 에디터 테스트용 휠 한 칸당 확대/축소 비율
 
     public bool InputEnabled = true;
 
@@ -67,15 +67,14 @@ public class StageMapCamera : MonoBehaviour
             return;
         }
 
+#if UNITY_EDITOR
         HandleScrollZoom();
+#endif
 
         // 두 손가락 핀치 중에는 드래그/탭 처리를 하지 않는다
         if (!HandlePinchZoom())
         {
-            // Pointer.current는 마우스와 터치스크린을 모두 포함한다
-            Pointer pointer = Pointer.current;
-            if (pointer != null)
-                HandlePointer(pointer);
+            HandleTouch();
         }
 
         // 손을 뗀 뒤 관성 이동
@@ -87,11 +86,20 @@ public class StageMapCamera : MonoBehaviour
         }
     }
 
-    void HandlePointer(Pointer pointer)
+    void HandleTouch()
     {
-        Vector2 screenPos = pointer.position.ReadValue();
+        IReadOnlyList<TouchPoint> points = TouchInput.Points;
+        if (points.Count == 0)
+        {
+            // 앱 전환 등으로 손을 뗀 프레임을 받지 못한 경우
+            pressing = false;
+            return;
+        }
 
-        if (pointer.press.wasPressedThisFrame)
+        TouchPoint point = points[0];
+        Vector2 screenPos = point.Position;
+
+        if (point.Began)
         {
             // UI 버튼 위에서 누른 경우 맵 조작 무시
             if (IsOverUI(screenPos))
@@ -107,9 +115,9 @@ public class StageMapCamera : MonoBehaviour
         if (!pressing)
             return;
 
-        if (pointer.press.isPressed)
+        if (point.Held)
         {
-            if (!dragging && (screenPos - pressPos).magnitude > DragThreshold)
+            if (!dragging && (screenPos - pressPos).magnitude > MobileInputSetup.TapSlopPixels(DragThreshold))
                 dragging = true;
 
             if (dragging)
@@ -126,7 +134,7 @@ public class StageMapCamera : MonoBehaviour
         }
         else
         {
-            // 빠른 탭은 누름과 뗌이 같은 프레임에 들어올 수 있으므로 isPressed가 풀린 시점에 처리
+            // 빠른 탭은 누름과 뗌이 같은 프레임에 들어올 수 있으므로 Held가 풀린 시점에 처리
             pressing = false;
             if (!dragging)
             {
@@ -136,6 +144,8 @@ public class StageMapCamera : MonoBehaviour
         }
     }
 
+#if UNITY_EDITOR
+    // 마우스로는 핀치를 할 수 없어서 에디터에서만 휠로 대신한다
     void HandleScrollZoom()
     {
         Mouse mouse = Mouse.current;
@@ -153,6 +163,7 @@ public class StageMapCamera : MonoBehaviour
 
         ZoomAt(scroll > 0f ? 1f - ScrollZoomStep : 1f + ScrollZoomStep, screenPos);
     }
+#endif
 
     bool HandlePinchZoom()
     {

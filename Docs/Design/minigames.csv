@@ -1,20 +1,20 @@
 ﻿id,status,theme,theme_en,name,command,end_condition,succeed_on_time_up,mechanics,how_to_play,assets,sprite_folder
-DES_01,priority,사막,Desert,피라미드의 함정을 피해라,피해라!,버티기,true,F|G,캐릭터를 드래그해서 창이 튀어나오는 바닥을 피해 출구까지 가라. 창에 찔리면 실패. (참고: 감옥탈출),"캐릭터, 함정 바닥(평상/창 튀어나옴), 출구",Assets/_Game/Sprite/Desert/DES_01/
+DES_01,priority,사막,Desert,피라미드의 함정을 피해라,피해라!,빨리깨기,false,G,"위에서 내려다본 미로에서 캐릭터를 드래그해, 창이 튀어나오는 바닥과 특정 구간을 왕복하는 적을 피해 출구까지 가라. 창에 찔리거나 적에 닿으면 실패.","캐릭터, 함정 바닥(평상/창 튀어나옴), 출구, 적",Assets/_Game/Sprite/Desert/DES_01/
 DES_02,deferred,사막,Desert,피라미드의 문이 닫히기 전에 들어가라,들어가라!,빨리깨기,false,A,"연타해서 캐릭터를 달리게 하고, 문이 닫히기 전에 출구까지 가라.","달리는 캐릭터, 문(열림/닫힘)",Assets/_Game/Sprite/Desert/DES_02/
-DES_03,priority,사막,Desert,전갈을 잡아라,잡아라!,빨리깨기,false,C,랜덤한 위치에서 나오는 전갈을 탭해서 모두 잡아라. (총 5마리),전갈(움직임/잡힘: 눈 X),Assets/_Game/Sprite/Desert/DES_03/
-DES_04,priority,사막,Desert,벽화의 틀린 부분을 찾아라,찾아라!,빨리깨기,false,H,원본 벽화와 비교해서 틀린 부분 3곳을 모두 찾아 탭해라.,"벽화 4종(원본/틀린 그림, 틀린 부분 각 1곳)",Assets/_Game/Sprite/Desert/DES_04/
+DES_03,priority,사막,Desert,전갈을 잡아라,잡아라!,빨리깨기,false,C,랜덤한 위치에서 돌아다니는 전갈을 탭해서 모두 잡아라. (총 5마리) 제한시간이 짧을수록 전갈이 빨라진다.,전갈(움직임/잡힘: 눈 X),Assets/_Game/Sprite/Desert/DES_03/
+DES_04,priority,사막,Desert,벽화의 틀린 부분을 찾아라,찾아라!,빨리깨기,false,H,"왼쪽 원본 벽화와 비교해서 오른쪽 벽화의 틀린 부분 1곳을 탭해라. 탭한 자리에 빨간 원이 생기고, 원 안에 틀린 부분이 겹치면 성공.",벽화 3종(원본1/틀림1/원본2/틀림2/원본3/틀림3 (틀린 부분 각 1곳)),Assets/_Game/Sprite/Desert/DES_04/
 DES_05,deferred,사막,Desert,유물 위의 모래를 털어내라,털어라!,빨리깨기,false,G,"모종삽을 이용해, 유물이 부서지지 않도록 모래를 걷어내라","모종삽, 모래, 항아리",Assets/_Game/Sprite/Desert/DES_05/
 DES_06,deferred,사막,Desert,버튼을 순서에 맞게 눌러라,순서대로!,빨리깨기,false,I,"문을 열기 위해, 옆에 있는 버튼을 벽화에 적혀있는 문양 순서대로 눌러라","문양 4종류, 버튼",Assets/_Game/Sprite/Desert/DES_06/
 DES_07,deferred,사막,Desert,오아시스에서 물통을 채워라,채워라!,빨리깨기,false,D|E,누르고 있으면 물통에 물이 차오른다. 물이 눈금선에 닿았을 때 손을 떼라. 넘치거나 모자라면 실패.,"물통(눈금선), 차오르는 물, 오아시스",Assets/_Game/Sprite/Desert/DES_07/
 DES_08,deferred,사막,Desert,벽화의 그림을 순서대로 눌러라,같은 그림!,빨리깨기,false,C|D|I,"랜덤으로 그림이 주어지고, 주어진 그림에 해당되는 버튼을 연속으로 3번 누르면 성공","벽화 그림 5종, 버튼",Assets/_Game/Sprite/Desert/DES_08/
 DES_09,deferred,사막,Desert,관의 먼지를 털어내라,닦아라!,빨리깨기,false,F,좌우로 스와이프하여 관에 기스없이 먼지를 털어내면 성공,"파라오 관, 먼지, 발굴용 붓",Assets/_Game/Sprite/Desert/DES_09/
-DES_10,priority,사막,Desert,레버를 돌려라,돌려라!,빨리깨기,false,G,레버를 돌려서 문을 열면 성공(레버를 안돌리면 문이 닫힘),"횃불, 레버(커피 그라인더같은 돌리는형식의 레버), 좌우로 열리는 문(벽화가 그려져있으면 됨)",Assets/_Game/Sprite/Desert/DES_10/
+DES_10,priority,사막,Desert,레버를 돌려라,돌려라!,빨리깨기,false,G,원형 레버를 돌려서 문을 끝까지 열면 성공. 레버를 안 돌리면 문이 다시 닫힌다.,"횃불, 레버(돌리는 원형 레버), 좌우로 열리는 문(왼쪽/오른쪽)",Assets/_Game/Sprite/Desert/DES_10/
 DES_11,deferred,사막,Desert,야자수에서 코코넛을 따라,흔들어라!,빨리깨기,false,A,야자수를 연타해 좌우로 흔들어 코코넛을 떨어뜨려라,"야자수, 코코넛",Assets/_Game/Sprite/Desert/DES_11/
 DES_12,deferred,사막,Desert,오아시스에서 물을 담아라,담아라!,빨리깨기,false,G,오아시스에서 물을 퍼서 통에 일정 이상의 물을 담아라,"오아시스(이겜 쉬워요 짤처럼 옆에서 본 오아시스), 물을 담을 통, 물을 풀 통",Assets/_Game/Sprite/Desert/DES_12/
 DES_13,deferred,사막,Desert,동물의 수를 맞춰라,세어라!,빨리깨기,false,C,화면의 3종의 동물 중 1종의 동물의 수를 맞춰라,"오아시스 배경, 낙타, 사막여우, 미어캣, 프레리독",Assets/_Game/Sprite/Desert/DES_13/
 DES_14,deferred,사막,Desert,밤의 뱀을 피해 나무위에서 버텨라,버텨라!,버티기,true,A|E,"밑의 방울뱀을 피해 야자수 위에서 홀드를 눌러 천천히 떨어지고, 연타로 올라가라
 일정수치 위로 올라가거나 일정수치 밑으로 내려가면 떨어짐","야자수, 달, 방울뱀, 위에서 버티는 캐릭터",Assets/_Game/Sprite/Desert/DES_14/
-DES_15,priority,사막,Desert,박쥐를 잡아라,가둬라!,빨리깨기,false,G,날라다니는 박쥐 주변으로 드래그해서 잡아라,"날개짓하는 박쥐 스프라이트 2개, 새 철장",Assets/_Game/Sprite/Desert/DES_15/
+DES_15,priority,사막,Desert,박쥐를 잡아라,가둬라!,빨리깨기,false,G,"날아다니는 박쥐 주변에 선을 그어 감싸라. 완벽한 원이 아니어도, 선의 양끝이 조금 떨어져 있어도 박쥐를 감싸면 성공. 그을 수 있는 선의 길이는 정해져 있다.","날갯짓하는 박쥐(날개 2프레임), 새 철장(잡은 박쥐 위에 나타남)",Assets/_Game/Sprite/Desert/DES_15/
 DES_16,deferred,사막,Desert,미라한테 들키지 마라,숨어라!,버티기,true,J,기둥 뒤에 숨어서 돌아다니는 미라를 피해라,"돌아다니는 미라, 기둥, 기둥뒤에 숨은 캐릭터",Assets/_Game/Sprite/Desert/DES_16/
 DES_17,deferred,사막,Desert,용과를 잘라라,잘라라!,빨리깨기,false,G,용과에 있는 점선을 깔끔하게 드래그해서 6등분 해라,"용과(안잘린 윗부분, 6등분되서 접시에 담긴 모습)",Assets/_Game/Sprite/Desert/DES_17/
 DES_18,deferred,사막,Desert,사막여우를 쓰다듬어라,쓰다듬어라!,빨리깨기,false,F,사막여우의 배를 쓰다듬어서 만족 시켜라,"배까고 있는 사막여우(기본 & 만족한 얼굴), 얼굴, 하트",Assets/_Game/Sprite/Desert/DES_18/
@@ -23,14 +23,14 @@ DES_20,deferred,사막,Desert,미라로부터 도망쳐라,도망쳐라!,버티�
 JUN_01,deferred,정글,Jungle,덩굴을 잘라내라,잘라라!,빨리깨기,false,F,화면의 덩굴을 스와이프해서 모두 잘라라.,"덩굴(정상/잘림), 마체테",Assets/_Game/Sprite/Jungle/JUN_01/
 JUN_02,deferred,정글,Jungle,보트를 타고 악어로부터 도망쳐라,저어라!,버티기,true,A,"연타해서 노를 젓고, 악어에게 잡히지 않게 끝까지 도망쳐라. 잡히면 실패.","보트 탄 캐릭터, 노, 악어(추격)",Assets/_Game/Sprite/Jungle/JUN_02/
 JUN_03,deferred,정글,Jungle,보트로 달려드는 피라냐를 피해라,피해라!,버티기,true,B,"좌·중·우 중 피라냐가 오지 않는 칸을 골라 캐릭터를 옮기고, 보트 위로 달려드는 피라냐를 끝까지 피해라. 부딪히면 실패.","보트 탄 캐릭터(좌/중/우 위치), 피라냐(점프)",Assets/_Game/Sprite/Jungle/JUN_03/
-JUN_04,priority,정글,Jungle,떨어지는 코코넛을 잡아라,받아라!,버티기,true,G,바구니를 드래그해서 떨어지는 바나나를 끝까지 받아라. 놓치면 실패.,"바구니, 바나나, 바나나 나무",Assets/_Game/Sprite/Jungle/JUN_04/
+JUN_04,priority,정글,Jungle,떨어지는 바나나를 잡아라,받아라!,버티기,true,G,바구니를 좌우로 드래그해서 랜덤하게 떨어지는 바나나를 모두 받아라. 하나라도 놓치면 실패. 다 받으면 바로 성공.,"바구니, 바나나, 바나나 나무",Assets/_Game/Sprite/Jungle/JUN_04/
 JUN_05,deferred,정글,Jungle,앵무새가 보여주는 순서대로 눌러라,순서에 맞게 눌러라!,빨리깨기,false,I,앵무새가 문양 4개를 한 번에 계속 보여준다. 아래에 섞여 있는 문양 버튼을 앵무새가 보여주는 순서대로 탭해라. 순서가 틀리면 실패.,"앵무새, 문양 4종(앵무새 말풍선용), 문양 버튼 4개(위치 랜덤)",Assets/_Game/Sprite/Jungle/JUN_05/
-JUN_06,priority,정글,Jungle,희귀 식물을 채집해라,채집해라!,빨리깨기,false,C,도감에 보이는 식물을 수풀 속에서 찾아 탭해라. 다른 식물을 탭하면 실패.,"도감 카드, 희귀 식물, 다른 식물 3종, 채집통",Assets/_Game/Sprite/Jungle/JUN_06/
+JUN_06,priority,정글,Jungle,희귀 식물을 채집해라,채집해라!,빨리깨기,false,C,화면 왼쪽 위에 보이는 희귀 식물을 화면 곳곳의 식물 중에서 찾아 탭해라. 다른 식물을 탭하면 실패.,"도감 카드(화면 왼쪽 위 모서리에 붙음), 희귀 식물 3종(1/2/3), 일반 식물 3종(1/2/3)",Assets/_Game/Sprite/Jungle/JUN_06/
 JUN_07,deferred,정글,Jungle,나무를 피해서 달려라,달려라!,버티기,true,B,좌·중·우 세 길 중 나무가 없는 길을 선택해 달려가라,"나무, 달리는 캐릭터, 세 갈래 길",Assets/_Game/Sprite/Jungle/JUN_07/
-JUN_08,priority,정글,Jungle,물고기를 낚아라,낚아라!,빨리깨기,false,A,연타해서 낚싯대로 물고기를 낚아라,"낚싯대, 찌를물고있는 물고기",Assets/_Game/Sprite/Jungle/JUN_08/
-JUN_09,priority,정글,Jungle,과일의 개수를 맞춰라,(과일 이름)의 수는?,빨리깨기,false,C,랜덤한 숫자의 과일들이 무작위로 움직이는걸 보고 특정 과일의 개수를 맞춰라,"과일 3종류(바나나, 두리안, 파인애플)",Assets/_Game/Sprite/Jungle/JUN_09/
+JUN_08,priority,정글,Jungle,물고기를 낚아라,낚아라!,빨리깨기,false,G,오른쪽의 낚싯대 릴을 돌려서 물고기를 위로 끌어올려라. 멈추면 다시 내려간다.,"낚싯대(오른쪽 아래에서 왼쪽 위로, 끝이 멀어지는 입체감), 찌를 물고 있는 물고기, 릴(본체/손잡이)",Assets/_Game/Sprite/Jungle/JUN_08/
+JUN_09,priority,정글,Jungle,과일의 개수를 맞춰라,(과일 이름)의 수는?,빨리깨기,false,C,통통 튀며 움직이는 과일들을 보고 지정된 과일의 개수를 숫자 버튼 3개 중에서 골라라.,과일 3종류(바나나/두리안/파인애플),Assets/_Game/Sprite/Jungle/JUN_09/
 JUN_10,deferred,정글,Jungle,파인애플을 썰어라,썰어라!,빨리깨기,false,G,파인애플에 그려진 점선을 따라 드래그해서 깔끔하게 잘라라.,파인애플(통째/썰어서 접시에 담긴 모습),Assets/_Game/Sprite/Jungle/JUN_10/
-JUN_11,priority,정글,Jungle,석상의 이끼를 닦아라,닦아라!,빨리깨기,false,F,정글 유적 석상에 낀 이끼를 좌우로 스와이프해서 닦아내라.,"석상(이끼 낀 모습/깨끗한 모습), 이끼, 솔",Assets/_Game/Sprite/Jungle/JUN_11/
+JUN_11,priority,정글,Jungle,석상의 이끼를 닦아라,닦아라!,빨리깨기,false,F,정글 유적 석상에 낀 이끼를 좌우로 스와이프해서 닦아내라. 일정 수치를 넘을 때마다 이끼가 한 번에 줄어든다.,"석상(이끼 낀 모습/깨끗한 모습), 이끼, 솔",Assets/_Game/Sprite/Jungle/JUN_11/
 JUN_12,deferred,정글,Jungle,정글 사원의 문을 열기 위해 도르래를 돌려라,돌려라!,빨리깨기,false,G,도르래 손잡이를 돌려서 정글 사원의 문을 끝까지 열어라. 멈추면 문이 다시 닫힌다.,"도르래(돌리는 손잡이), 사원 문(닫힘/열림), 정글 사원",Assets/_Game/Sprite/Jungle/JUN_12/
 JUN_13,deferred,정글,Jungle,원숭이에게 바나나를 나눠줘라,나눠줘라!,빨리깨기,false,G,바나나를 끌어다 원숭이 3마리 손에 하나씩 쥐여 줘라.,"원숭이(기다림/기뻐함), 바나나 송이",Assets/_Game/Sprite/Jungle/JUN_13/
 JUN_14,deferred,정글,Jungle,보트의 구멍을 막아라,막아라!,빨리깨기,false,C,보트에 난 구멍 3개를 모두 탭해서 막아라.,"보트(구멍 3개), 마개, 물 새는 이펙트",Assets/_Game/Sprite/Jungle/JUN_14/
@@ -40,85 +40,85 @@ JUN_17,deferred,정글,Jungle,지도를 맞춰라,맞춰라!,빨리깨기,false,
 JUN_18,deferred,정글,Jungle,보트에 시동을 걸어라,당겨라!,빨리깨기,false,G,보트 엔진의 시동 줄을 빠른 속도로 잡아당겨라. 시동이 걸릴 때까지 반복해라.,"보트 엔진(꺼짐/시동 걸림), 시동 줄(손잡이), 손, 연기 이펙트",Assets/_Game/Sprite/Jungle/JUN_18/
 JUN_19,deferred,정글,Jungle,밤에 야생동물이 오지 못하게 막아라,쫓아내라!,버티기,true,G,어둠 속에서 빛나는 눈이 보이면 횃불을 그쪽으로 드래그해서 끝까지 쫓아내라. 야생동물이 다가오면 실패.,"야생동물 눈(어둠 속 빛남), 횃불, 밤 배경",Assets/_Game/Sprite/Jungle/JUN_19/
 JUN_20,deferred,정글,Jungle,정글 동물을 촬영해라,찍어라!,빨리깨기,false,G|C,"카메라 프레임을 드래그해서 동물에 맞추고, 촬영 버튼을 눌러 찍어라. 동물 3마리를 모두 찍으면 성공. (참고: 덕 헌트)","동물 4종(원숭이, 앵무새, 나무늘보, 투칸), 카메라 프레임, 촬영 버튼, 플래시 이펙트",Assets/_Game/Sprite/Jungle/JUN_20/
-CAV_01,priority,동굴,Cave,부싯돌로 불을 붙여라,불을 붙여라!,빨리깨기,false,G,부싯돌을 적당한 속도로 드래그해서 장작에 불을 붙여라. 너무 빨리 긁으면 부싯돌이 부서져 실패. (참고: 어몽어스 카드 긁기),"부싯돌(정상/부서짐), 장작(꺼짐/불붙음), 불꽃 이펙트",Assets/_Game/Sprite/Cave/CAV_01/
+CAV_01,priority,동굴,Cave,부싯돌로 불을 붙여라,불을 붙여라!,빨리깨기,false,G,"화면 정중앙의 장작 위에서, 고정된 부싯돌에 손에 든 부싯돌을 위아래로 여러 번 비벼 불을 붙여라. 너무 빨리 비비면 부싯돌이 부서져 실패.","부싯돌(정상/부서짐), 장작(꺼짐/불붙음), 불꽃 이펙트",Assets/_Game/Sprite/Cave/CAV_01/
 CAV_02,deferred,동굴,Cave,박쥐를 쫓아내라,휘둘러라!,빨리깨기,false,G,횃불을 드래그해서 달려드는 박쥐들을 모두 쫓아내라.,"박쥐, 횃불",Assets/_Game/Sprite/Cave/CAV_02/
-CAV_03,priority,동굴,Cave,동굴의 출구를 찾아라,비춰라!,빨리깨기,false,G,"횃불을 드래그해서 어두운 동굴을 비추고, 출구를 찾아 탭해라.","횃불, 어둠 마스크, 동굴 출구",Assets/_Game/Sprite/Cave/CAV_03/
+CAV_03,priority,동굴,Cave,동굴의 출구를 찾아라,비춰라!,빨리깨기,false,G|C,"횃불을 드래그해서 어두운 동굴을 비추고, 출구를 찾아 탭해라.","횃불, 어둠 마스크(정사각형 그림, 가운데에 반지름이 그림 너비의 25%인 구멍), 동굴 출구",Assets/_Game/Sprite/Cave/CAV_03/
 CAV_04,deferred,동굴,Cave,횃불이 꺼지지 않게 버텨라,막아라!,버티기,true,G,횃불을 향해 바라오는 바람을 손으로 막아서 꺼지지 않게 해라,"횃불, 바람 이펙트, 손",Assets/_Game/Sprite/Cave/CAV_04/
 CAV_05,deferred,동굴,Cave,진짜 통로를 찾아라,골라라!,빨리깨기,false,H,"문양 2개가 플레이어에게 랜덤으로 주어지고, 2개의 통로에 랜덤한 2개의 문양이 주어진다.
 그중 플레이어에게 주어진 랜덤 문양 2개와 순서가 동일한 문양이 있는 통로를 선택하면 된다","문양, 동굴 입구, 지도",Assets/_Game/Sprite/Cave/CAV_05/
 CAV_06,deferred,동굴,Cave,보물상자를 찾아라,찾아라!,빨리깨기,false,G|C,"어둠속에서 손전등을 비춰, 숨겨진 보물상자를 찾아라","동굴 뒷배경, 보물상자(닫힘, 열림)",Assets/_Game/Sprite/Cave/CAV_06/
 CAV_07,deferred,동굴,Cave,레일 앞의 바위를 부셔라,터뜨려라!,버티기,true,C,"레일을 달리는 카트 앞을 막고 있는 바위를 터치해 폭파시켜라
 너무 빨리 터치하면 레일이 터진다","레일, 카트, 카트를 타고있는 캐릭터, 바위, 폭발 이펙트, 끊어진 레일",Assets/_Game/Sprite/Cave/CAV_07/
-CAV_08,priority,동굴,Cave,화석을 발굴해라,캐내라!,빨리깨기,false,A|D,"벽에 박힌 화석을 탭해서 정해진 횟수(랜덤, ±1 허용)만큼 두드려 꺼내라. 횟수를 넘기면 화석이 부서져 실패.","뼈 화석(묻힘/발굴/부서짐), 곡괭이",Assets/_Game/Sprite/Cave/CAV_08/
-CAV_09,priority,동굴,Cave,굴러오는 돌들을 피해라,피해라!,버티기,true,F,좌우로 스와이프해서 위에서 굴러오는 돌을 끝까지 피해라. 부딪히면 실패.,"바위(구르기), 도망치는 캐릭터",Assets/_Game/Sprite/Cave/CAV_09/
+CAV_08,priority,동굴,Cave,다이아를 발굴해라,발굴해라!,빨리깨기,false,A|D,"벽에 박힌 다이아를 탭해서 정해진 횟수(랜덤, ±1 허용)만큼 두드려 꺼내라. 횟수를 넘기면 다이아가 부서져 실패.","다이아(묻힘/발굴/부서짐), 곡괭이(비스듬히, 자루 아래쪽을 축으로 회전)",Assets/_Game/Sprite/Cave/CAV_08/
+CAV_09,priority,동굴,Cave,굴러오는 돌들을 피해라,피해라!,버티기,true,F,좌우로 스와이프해서 화면 위쪽 밖에서 굴러오는 돌을 끝까지 피해라. 부딪히면 실패. 제한시간이 짧을수록 돌이 빨라진다.,"바위(구르기), 도망치는 캐릭터",Assets/_Game/Sprite/Cave/CAV_09/
 CAV_10,deferred,동굴,Cave,종유석 사이로 빠져나가라,빠져나가라!,빨리깨기,false,G,캐릭터를 드래그해서 종유석에 닿지 않게 출구까지 데려가라. 닿으면 실패.,"캐릭터, 종유석, 동굴 출구",Assets/_Game/Sprite/Cave/CAV_10/
 CAV_11,deferred,동굴,Cave,랜턴에 기름을 부어라,부어라!,빨리깨기,false,G,기름통을 끌어다 기울여서 랜턴에 눈금까지 기름을 채워라.,"기름통, 랜턴(눈금), 기름",Assets/_Game/Sprite/Cave/CAV_11/
 CAV_12,deferred,동굴,Cave,흙을 파서 보물을 꺼내라,파내라!,빨리깨기,false,F,좌우로 스와이프해서 흙을 파내고 묻힌 보물을 드러내라.,"흙더미(단계별), 삽, 보물상자",Assets/_Game/Sprite/Cave/CAV_12/
 CAV_13,deferred,동굴,Cave,얇은 벽을 부숴라,부숴라!,빨리깨기,false,A,금 간 벽을 연타해서 부수고 숨은 방을 열어라.,"금 간 벽(단계별), 곡괭이, 숨은 방",Assets/_Game/Sprite/Cave/CAV_13/
 CAV_14,deferred,동굴,Cave,광부에게 도구를 찾아줘라,찾아줘라!,빨리깨기,false,C,광부 말풍선에 그려진 도구를 바닥에 흩어진 도구 4개 중에서 탭해라. 틀리면 실패.,"광부(기다림/기뻐함), 말풍선, 도구 4종(곡괭이·삽·랜턴·로프)",Assets/_Game/Sprite/Cave/CAV_14/
-CAV_15,priority,동굴,Cave,횃불에 불을 붙여라,밝혀라!,빨리깨기,false,C,동굴 벽에 걸린 꺼진 횃불 4개를 모두 탭해서 불을 붙여라.,"횃불(꺼짐/켜짐), 동굴 벽",Assets/_Game/Sprite/Cave/CAV_15/
+CAV_15,priority,동굴,Cave,횃불에 불을 붙여라,밝혀라!,빨리깨기,false,E,일자로 늘어선 꺼진 횃불 4개를 하나씩 누르고 있어 모두 불을 붙여라.,"횃불(꺼짐/켜짐), 동굴 벽",Assets/_Game/Sprite/Cave/CAV_15/
 CAV_16,deferred,동굴,Cave,펌프로 물을 퍼내라,퍼내라!,빨리깨기,false,A,물이 찬 통로를 펌프 연타로 퍼내서 길을 열어라.,"펌프, 물 찬 통로(단계별 수위)",Assets/_Game/Sprite/Cave/CAV_16/
 CAV_17,deferred,동굴,Cave,지하 호수에서 뗏목을 저어라,저어라!,빨리깨기,false,A,연타해서 노를 저어 지하 호수 건너편 출구까지 가라.,"뗏목 탄 캐릭터, 노, 지하 호수, 출구",Assets/_Game/Sprite/Cave/CAV_17/
 CAV_18,deferred,동굴,Cave,부서지지 않은 레일로 광차를 몰아라,꺾어라!,빨리깨기,false,F,광차를 타고 달리다 두 갈래로 나뉘는 레일에서 좌우로 스와이프해서 부서지지 않은 쪽으로 가라. 선택하지 않으면 두 레일 중 랜덤한 쪽으로 간다. 부서진 레일로 가면 실패. (참고: 템플런2 광차),"광차 탄 캐릭터, 갈림길 레일(정상/부서짐), 충돌 이펙트",Assets/_Game/Sprite/Cave/CAV_18/
 CAV_19,deferred,동굴,Cave,야광 버섯을 빛나게 해라,빛나라!,빨리깨기,false,C,동굴 바닥의 야광 버섯 4개를 모두 탭해서 빛나게 해라.,"야광 버섯(어두움/빛남), 동굴 바닥",Assets/_Game/Sprite/Cave/CAV_19/
 CAV_20,deferred,동굴,Cave,녹슨 레버를 계속 당겨서 열어라,당겨라!,빨리깨기,false,G,레버가 녹슬어서 한 번에 열리지 않는다. 레버가 완전히 젖혀질 때까지 계속 당겨라.,"녹슨 레버(단계별 젖혀짐), 광산 문(닫힘/열림)",Assets/_Game/Sprite/Cave/CAV_20/
 PRE_01,deferred,절벽,Precipice,로프를 고리에 걸어라,걸어라!,빨리깨기,false,G,흔들리는 고리에 로프 끝을 끌어다 놓는다,"로프, 흔들리는 바위 고리",Assets/_Game/Sprite/Precipice/PRE_01/
-PRE_02,priority,절벽,Precipice,쌍안경 초점을 맞춰라,맞춰라!,빨리깨기,false,G,슬라이더를 끌어 화면이 선명해지는 위치에 놓는다,"쌍안경 프레임, 초점 슬라이더, 둥지(흐림/선명)",Assets/_Game/Sprite/Precipice/PRE_02/
-PRE_03,priority,절벽,Precipice,암모나이트 화석을 발굴해라,두드려라!,빨리깨기,false,C,"벽에 박힌 화석을 탭해서 정해진 횟수(랜덤, ±1 허용)만큼 두드려 꺼내라. 횟수를 넘기면 화석이 부서져 실패.","화석(묻힘/발굴/부서짐), 곡괭이",Assets/_Game/Sprite/Precipice/PRE_03/
+PRE_02,priority,절벽,Precipice,쌍안경 초점을 맞춰라,초점을 맞춰라!,빨리깨기,false,G,오른쪽의 세로 슬라이더를 끌어 화면이 선명해지는 위치에 놓아라.,"쌍안경 프레임, 초점 슬라이더, 둥지(흐림/선명)",Assets/_Game/Sprite/Precipice/PRE_02/
+PRE_03,priority,절벽,Precipice,암모나이트 화석을 발굴해라,발굴해라!,빨리깨기,false,A|D,"벽에 박힌 화석을 탭해서 정해진 횟수(랜덤, ±1 허용)만큼 두드려 꺼내라. 횟수를 넘기면 화석이 부서져 실패.","화석(묻힘/발굴/부서짐), 곡괭이(비스듬히, 자루 아래쪽을 축으로 회전)",Assets/_Game/Sprite/Precipice/PRE_03/
 PRE_04,deferred,절벽,Precipice,로프를 잘라라,잘라라!,빨리깨기,false,A,몸에 묶여있는 로프를 연타해서 칼로 잘라라,"로프, 칼",Assets/_Game/Sprite/Precipice/PRE_04/
 PRE_05,deferred,절벽,Precipice,번호 순서대로 잡고 올라라,올라라!,빨리깨기,false,I,암벽 손잡이 1~4를 순서대로 탭해서 정상까지 올라라. 틀리면 실패.,"암벽, 번호 손잡이 4개, 등반 캐릭터",Assets/_Game/Sprite/Precipice/PRE_05/
 PRE_06,deferred,절벽,Precipice,떨어진 새알을 둥지로 옮겨라,옮겨라!,빨리깨기,false,G,바위 틈의 새알을 드래그해서 둥지까지 옮겨라. 바위에 부딪히면 깨져 실패.,"새알(정상/깨짐), 둥지, 바위 장애물",Assets/_Game/Sprite/Precipice/PRE_06/
 PRE_07,deferred,절벽,Precipice,절벽의 새를 촬영해라,찍어라!,빨리깨기,false,G|C,카메라 프레임을 드래그해서 새에 맞추고 촬영 버튼을 눌러 찍어라. 새 3마리를 모두 찍으면 성공. (참고: 덕 헌트),"절벽 새 3~4종(갈매기·매·퍼핀 등), 카메라 프레임, 촬영 버튼, 플래시 이펙트",Assets/_Game/Sprite/Precipice/PRE_07/
 PRE_08,deferred,절벽,Precipice,피켈을 박아라,박아라!,빨리깨기,false,A,바위 틈에 꽂힌 피켈을 연타해서 끝까지 박아라.,"피켈(단계별 박힘), 바위 틈",Assets/_Game/Sprite/Precipice/PRE_08/
 PRE_09,deferred,절벽,Precipice,아기 새에게 먹이를 줘라,먹여라!,빨리깨기,false,G,먹이를 끌어다 둥지 속 아기 새 3마리 입에 하나씩 넣어라.,"아기 새(입 벌림/만족), 둥지, 먹이",Assets/_Game/Sprite/Precipice/PRE_09/
-PRE_10,priority,절벽,Precipice,망원경 렌즈를 닦아라,닦아라!,빨리깨기,false,F,뿌옇게 된 망원경 렌즈를 좌우로 스와이프해서 닦아라.,"망원경 렌즈(뿌연 모습/깨끗한 모습), 천",Assets/_Game/Sprite/Precipice/PRE_10/
+PRE_10,priority,절벽,Precipice,망원경 렌즈를 닦아라,닦아라!,빨리깨기,false,F,뿌옇게 된 망원경 렌즈를 좌우로 스와이프해서 닦아라. 일정 수치를 넘을 때마다 때가 한 번에 줄어든다.,"망원경 렌즈(뿌연 모습/깨끗한 모습), 천",Assets/_Game/Sprite/Precipice/PRE_10/
 PRE_11,deferred,절벽,Precipice,등반 장비를 챙겨라,챙겨라!,빨리깨기,false,C,바닥에 흩어진 등반 장비 4개(헬멧·로프·카라비너·장갑)만 모두 탭해서 챙겨라. 돌멩이를 탭하면 실패.,"등반 장비 4종, 돌멩이, 배낭",Assets/_Game/Sprite/Precipice/PRE_11/
 PRE_12,deferred,절벽,Precipice,도르래로 짐을 끌어올려라,끌어올려라!,빨리깨기,false,A,연타해서 도르래를 돌려 절벽 아래의 짐을 끝까지 끌어올려라.,"도르래, 로프, 짐 상자",Assets/_Game/Sprite/Precipice/PRE_12/
 PRE_13,deferred,절벽,Precipice,안전벨트 버클을 잠가라,잠가라!,빨리깨기,false,I,안전벨트 버클에 적힌 번호 1~3을 순서대로 탭해서 잠가라. 틀리면 실패.,"안전벨트(버클 3개, 번호, 풀림/잠김), 등반가",Assets/_Game/Sprite/Precipice/PRE_13/
 PRE_14,deferred,절벽,Precipice,청기 백기로 신호를 보내라,신호해라!,빨리깨기,false,I|G,"신호 카드에 적힌 지시 3개(예: 청기 올려 → 백기 올려 → 청기 내려)를 순서대로 따라 해라. 왼쪽 청기, 오른쪽 백기를 위아래로 드래그해서 올리고 내려라. 틀리면 실패. (참고: 청기백기)","청기, 백기, 깃발 든 등반가(청기·백기 각각 올림/내림), 신호 카드",Assets/_Game/Sprite/Precipice/PRE_14/
-PRE_15,priority,절벽,Precipice,흔들다리를 건너라,건너라!,빨리깨기,false,C|I,"흔들다리의 판자 10개 중 멀쩡한 판자만 앞에서부터 순서대로 탭해서 밟고, 부서진 판자는 건너뛰어라. 부서진 판자를 밟으면 떨어져 실패. 부서진 판자는 2개 연속으로 나오지 않는다.","흔들다리(판자 10칸), 판자(멀쩡함/부서짐), 걷는 캐릭터, 추락 이펙트",Assets/_Game/Sprite/Precipice/PRE_15/
-PRE_16,priority,절벽,Precipice,손을 비벼 초크를 발라라,비벼라!,빨리깨기,false,F,초크 가루가 묻은 두 손을 좌우로 스와이프해서 비벼라. 손에 초크가 고루 발리면 성공.,"등반가 두 손(맨손/초크 바름), 초크 가루 이펙트",Assets/_Game/Sprite/Precipice/PRE_16/
+PRE_15,priority,절벽,Precipice,흔들다리를 건너라,건너라!,빨리깨기,false,C|I,캐릭터의 시야(1인칭)에서 앞에 놓인 판자 10개 중 멀쩡한 판자만 순서대로 탭해서 앞으로 건너라. 부서진 판자를 밟으면 떨어져 실패. 부서진 판자는 2개 연속으로 나오지 않는다.,"흔들다리(앞으로 뻗은 다리), 판자(멀쩡함/부서짐), 발(1인칭 시야의 발), 추락 이펙트",Assets/_Game/Sprite/Precipice/PRE_15/
+PRE_16,priority,절벽,Precipice,손에 묻은 초크가루를 털어내라,털어라!,빨리깨기,false,A,탭하면 박수를 친다. 박수를 칠 때마다 초크가루가 털린다. 빠르게 모두 털어내라.,"손(왼손/오른손), 손에 묻은 초크가루(많음/중간/적음), 날리는 가루",Assets/_Game/Sprite/Precipice/PRE_16/
 PRE_17,deferred,절벽,Precipice,바람에 날리는 지도 조각을 잡아라,잡아라!,빨리깨기,false,C,바람에 흩날리는 지도 조각 4개를 모두 탭해서 잡아라.,"지도 조각 4개, 바람 이펙트",Assets/_Game/Sprite/Precipice/PRE_17/
 PRE_18,deferred,절벽,Precipice,멀쩡한 헬멧을 골라 써라,써라!,빨리깨기,false,C,헬멧 4개 중 금 가지 않은 헬멧 하나를 탭해서 써라. 금 간 헬멧을 고르면 실패.,"헬멧(멀쩡함/금 감), 등반가",Assets/_Game/Sprite/Precipice/PRE_18/
 PRE_19,deferred,절벽,Precipice,구조 헬기 로프를 연결해라,연결해라!,빨리깨기,false,G,헬기에서 내려온 로프 고리를 끌어다 등반가의 벨트에 걸어라.,"구조 헬기, 로프 고리, 등반가(벨트)",Assets/_Game/Sprite/Precipice/PRE_19/
 PRE_20,deferred,절벽,Precipice,초록 손잡이만 밟고 올라라,초록만!,빨리깨기,false,C|I,여러 색 손잡이 중 초록색 손잡이만 아래에서부터 순서대로 탭해서 올라라. 다른 색을 탭하면 실패.,"손잡이 3색, 암벽, 등반 캐릭터",Assets/_Game/Sprite/Precipice/PRE_20/
-FOR_01,priority,숲,Forest,텐트의 못을 박아라,못을 박아라!,빨리깨기,false,A,망치를 연타해서 텐트 지주못을 끝까지 박아라.,"지주못(박힘 단계), 망치, 텐트",Assets/_Game/Sprite/Forest/FOR_01/
+FOR_01,priority,숲,Forest,텐트의 못을 박아라,못을 박아라!,빨리깨기,false,A,"비스듬히 내려다본 화면 가운데의 못을 연타해서 박아라. 한 개를 다 박으면 옆으로 넘어가 다음 못이 나온다. 못은 총 4개이고, 다음 못으로 완전히 넘어가야 박을 수 있다.","지주못(박힘 단계 1/2/3/4. 세로로 그림 (아래쪽부터 땅에 가려짐)), 망치(오른쪽 아래에 손잡이)",Assets/_Game/Sprite/Forest/FOR_01/
 FOR_02,deferred,숲,Forest,벌레를 잡아라,뿌려라!,빨리깨기,false,C,움직이는 벌레를 스프레이로 탭해서 모두 잡아라. (총 10마리),"날파리, 모기, 스프레이",Assets/_Game/Sprite/Forest/FOR_02/
 FOR_03,deferred,숲,Forest,텐트 주변에 가루를 뿌려라,뿌려라!,빨리깨기,false,G,텐트 주변을 드래그해서 야생동물 퇴치 가루를 빈틈없이 뿌려라.,"텐트, 퇴치 가루(뿌린 자국)",Assets/_Game/Sprite/Forest/FOR_03/
 FOR_04,deferred,숲,Forest,발자국의 주인을 찾아라,발자국의 주인은?,빨리깨기,false,C,"바닥에 랜덤한 동물의 발자국이 있고, 그중 해당되는 발자국의 주인을 찾아라(동물 4개)","발자국 스프라이트4개, 동물 4개(곰, 사슴, 토끼, 늑대)",Assets/_Game/Sprite/Forest/FOR_04/
 FOR_05,deferred,숲,Forest,곰앞에서 죽은척 해라,숨을 참아라!,버티기,true,E,"곰이 냄새를 맡는 동안 화면을 건드리지 마라. 터치하면 실패, 곰이 떠나면 성공.","곰(킁킁/떠남), 누운 캐릭터",Assets/_Game/Sprite/Forest/FOR_05/
 FOR_06,deferred,숲,Forest,보석을 찾아라,깨라!,빨리깨기,false,A,"돌을 연타해서 깨고, 안에 든 호박 보석을 꺼내라.","호박(보석), 돌(깨짐 단계)",Assets/_Game/Sprite/Forest/FOR_06/
-FOR_07,priority,숲,Forest,숲 동물을 촬영해라,찍어라!,빨리깨기,false,G|C,카메라 프레임을 드래그해서 동물에 맞추고 촬영 버튼을 눌러 찍어라. 동물 3마리를 모두 찍으면 성공. (참고: 덕 헌트),"숲 동물 4종(사슴·토끼·부엉이·다람쥐), 카메라 프레임, 촬영 버튼, 플래시 이펙트",Assets/_Game/Sprite/Forest/FOR_07/
+FOR_07,priority,숲,Forest,숲 동물을 촬영해라,찍어라!,빨리깨기,false,G|C,카메라 프레임을 드래그해서 동물에 맞추고 촬영 버튼을 눌러 찍어라. 왼쪽 위 리스트의 동물 3마리를 모두 찍으면 성공. (참고: 덕 헌트),"숲 동물 4종(사슴/토끼/부엉이/다람쥐), 카메라 프레임, 촬영 버튼, 플래시 이펙트, 체크표시(찍은 동물 표시)",Assets/_Game/Sprite/Forest/FOR_07/
 FOR_08,deferred,숲,Forest,쓰러진 나무를 톱질해라,톱질해라!,빨리깨기,false,F,길을 막은 통나무를 좌우로 스와이프해서 톱질해 잘라라.,"통나무(단계별 잘림), 톱",Assets/_Game/Sprite/Forest/FOR_08/
 FOR_09,deferred,숲,Forest,도끼로 장작을 패라,패라!,빨리깨기,false,A,그루터기 위 장작을 연타해서 반으로 쪼개라.,"장작(통째/쪼개짐), 도끼, 그루터기",Assets/_Game/Sprite/Forest/FOR_09/
 FOR_10,deferred,숲,Forest,텐트를 쳐라,펼쳐라!,빨리깨기,false,G,텐트 천의 모서리 4곳을 끌어다 말뚝에 걸어서 텐트를 펼쳐라.,"텐트 천(접힘/펼쳐짐), 말뚝 4개",Assets/_Game/Sprite/Forest/FOR_10/
 FOR_11,deferred,숲,Forest,사과를 따라,따라!,빨리깨기,false,C,나무에 달린 사과 5개를 모두 탭해서 바구니에 떨어뜨려라.,"사과나무, 사과(달림/떨어짐), 바구니",Assets/_Game/Sprite/Forest/FOR_11/
 FOR_12,deferred,숲,Forest,밤에 숨어있는 부엉이들을 찾아라,찾아라!,빨리깨기,false,G,어두운 숲에서 깜빡이는 눈빛을 보고 손전등을 드래그해서 비춰라. 손전등에 비친 부엉이 3마리를 모두 찾으면 성공.,"점멸하는 눈빛, 손전등 빛, 손전등을 비추면 보이는 부엉이, 밤 숲 배경",Assets/_Game/Sprite/Forest/FOR_12/
-FOR_13,priority,숲,Forest,낙엽을 쓸어라,쓸어라!,빨리깨기,false,F,텐트 앞에 쌓인 낙엽을 좌우로 스와이프해서 모두 쓸어내라.,"낙엽 더미(단계별), 빗자루, 텐트",Assets/_Game/Sprite/Forest/FOR_13/
-FOR_14,priority,숲,Forest,냄비가 눌어붙지 않게 저어라,저어라!,버티기,true,G,"국자를 원을 그리듯 드래그해서 끝까지 계속 저어라. 너무 느리면 냄비가 눌어붙고, 너무 빠르면 넘쳐서 실패. 적정 속도를 유지해라.","냄비, 국자, 음식(정상/눌어붙음/넘침), 적정 속도 게이지",Assets/_Game/Sprite/Forest/FOR_14/
+FOR_13,priority,숲,Forest,낙엽을 쓸어라,쓸어라!,빨리깨기,false,G,화면 전체를 덮은 낙엽을 빗자루로 스와이프해서 바깥으로 쓸어내라.,"낙엽 3종(1/2/3), 빗자루",Assets/_Game/Sprite/Forest/FOR_13/
+FOR_14,priority,숲,Forest,냄비가 눌어붙지 않게 저어라,저어라!,버티기,true,G,"국자를 원을 그리듯 드래그해서 끝까지 계속 저어라. 너무 느리면 눌어붙고, 너무 빠르면 넘쳐서 실패.","냄비, 국자(손가락을 따라 냄비 안을 움직임), 음식(정상/눌어붙음/넘침)",Assets/_Game/Sprite/Forest/FOR_14/
 FOR_15,deferred,숲,Forest,노란 꽃만 꺾어라,꺾어라!,빨리깨기,false,C,꽃밭에서 노란 꽃만 모두 탭해서 꺾어라. 다른 색 꽃을 탭하면 실패.,"꽃 3색, 꽃밭",Assets/_Game/Sprite/Forest/FOR_15/
 FOR_16,deferred,숲,Forest,모닥불에 부채질해라,부쳐라!,빨리깨기,false,F,부채를 좌우로 스와이프해서 꺼져 가는 모닥불을 크게 살려라.,"부채, 모닥불(단계별 불 크기)",Assets/_Game/Sprite/Forest/FOR_16/
 FOR_17,deferred,숲,Forest,손전등 배터리를 갈아라,갈아라!,빨리깨기,false,G,"손전등의 캡을 끌어서 빼고, 오래된 배터리를 꺼낸 뒤, 준비된 새 배터리를 끌어다 넣어라. 새 배터리를 넣으면 손전등이 켜지며 성공.","손전등(캡 닫힘/열림, 꺼짐/켜짐), 캡, 오래된 배터리, 새 배터리",Assets/_Game/Sprite/Forest/FOR_17/
 FOR_18,deferred,숲,Forest,마시멜로를 꼬치에 꽂아라,꽂아라!,빨리깨기,false,G,마시멜로 3개를 끌어다 꼬치에 꽂아라.,"마시멜로, 꼬치, 모닥불",Assets/_Game/Sprite/Forest/FOR_18/
-FOR_19,priority,숲,Forest,발전기를 돌려라,돌려라!,빨리깨기,false,G,발전기 손잡이를 원을 그리듯 돌려서 전구에 불이 들어올 때까지 전기를 만들어라.,"발전기(손잡이), 전구(꺼짐/켜짐), 전력 게이지",Assets/_Game/Sprite/Forest/FOR_19/
+FOR_19,priority,숲,Forest,발전기를 돌려라,돌려라!,빨리깨기,false,G,가운데 발전기의 크랭크 손잡이(커피 그라인더 느낌)를 원을 그리듯 돌려 전구를 켜라.,"발전기(본체/손잡이), 전구(꺼짐/켜짐 (왼쪽 위에 만화처럼 켜짐))",Assets/_Game/Sprite/Forest/FOR_19/
 FOR_20,deferred,숲,Forest,머리 위에 있는 낙엽을 털어라,털어라!,빨리깨기,false,F,캐릭터 머리 위에 쌓인 낙엽을 좌우로 스와이프해서 모두 털어내라.,"캐릭터(머리에 낙엽 쌓임/깨끗함), 낙엽",Assets/_Game/Sprite/Forest/FOR_20/
-LAB_01,priority,연구소,Laboratory,출입 카드를 긁어라,긁어라!,빨리깨기,false,F,카드를 적당한 속도로 한 번에 긁어라. 너무 빠르거나 느리면 다시 긁어라. (참고: 어몽어스 카드 긁기),"출입 카드, 카드 리더기, 속도 표시(빠름/느림)",Assets/_Game/Sprite/Laboratory/LAB_01/
+LAB_01,priority,연구소,Laboratory,출입 카드를 긁어라,긁어라!,빨리깨기,false,G,세로로 놓인 리더기에 카드를 위에서 아래로 적당한 속도로 한 번에 긁어라. 너무 빠르거나 느리면 다시 긁어라.,"출입 카드, 카드 리더기(세로), 속도 표시(빠름/느림)",Assets/_Game/Sprite/Laboratory/LAB_01/
 LAB_02,deferred,연구소,Laboratory,샘플을 번호순으로 넣어라,넣어라!,빨리깨기,false,I,시험관을 1부터 5까지 순서대로 누르면 분석기에 들어간다. 틀리면 처음부터,"시험관 5개(번호), 분석기 투입구",Assets/_Game/Sprite/Laboratory/LAB_02/
 LAB_03,deferred,연구소,Laboratory,보안 패턴을 입력해라,입력해라!,빨리깨기,false,I,"숫자가 위에 4개가 랜덤해서 생성되고, 거기에 맞는 비밀번호를 입력하면 된다.","3×3 보안 패드, 실험실 문",Assets/_Game/Sprite/Laboratory/LAB_03/
 LAB_04,deferred,연구소,Laboratory,깨진 유물을 복원해라,붙여라!,빨리깨기,false,G,항아리의 빈 자리에 조각 3개를 끌어다 맞춘다,"깨진 항아리, 조각 3개, 작업대",Assets/_Game/Sprite/Laboratory/LAB_04/
 LAB_05,deferred,연구소,Laboratory,액체를 섞어라,섞어라!,빨리깨기,false,F,두 액체가 섞이도록 시험관을 좌우로 흔들어 섞어라,"시험관, 시험관을 잡고 라텍스 장갑을 낀 손",Assets/_Game/Sprite/Laboratory/LAB_05/
 LAB_06,deferred,연구소,Laboratory,냉동 보관고 온도를 지켜라,식혀라!,버티기,true,E,"누르면 냉각, 떼면 온도가 올라간다. 게이지를 초록 구간 안에 끝까지 유지하면 성공","냉동고, 온도계, 표본",Assets/_Game/Sprite/Laboratory/LAB_06/
 LAB_07,deferred,연구소,Laboratory,분석기 전선을 연결해라,연결해라!,빨리깨기,false,G,양쪽 단자의 같은 색 전선 4쌍을 모두 이으면 분석기가 켜진다,"색 전선 4종, 분석기 단자판",Assets/_Game/Sprite/Laboratory/LAB_07/
-LAB_08,priority,연구소,Laboratory,현미경 초점을 맞춰라,선명하게!,빨리깨기,false,G,슬라이더를 끌어 화면이 선명해지는 위치에 놓는다,"현미경 화면(흐림/선명), 식물 표본",Assets/_Game/Sprite/Laboratory/LAB_08/
+LAB_08,priority,연구소,Laboratory,현미경 초점을 맞춰라,선명하게!,빨리깨기,false,G,오른쪽의 세로 슬라이더를 끌어 화면이 선명해지는 위치에 놓아라.,"현미경 화면(흐림/선명), 식물 표본",Assets/_Game/Sprite/Laboratory/LAB_08/
 LAB_09,deferred,연구소,Laboratory,DNA 사슬을 복원해라,다른것은?,빨리깨기,false,H,DNA예시를 보고 다른 부분을 찾아라 (다른부분 총 3개),DNA의 막대기의 색상 랜덤한게 총 4개,Assets/_Game/Sprite/Laboratory/LAB_09/
 LAB_10,deferred,연구소,Laboratory,비커에 액체를 채워라,채워라!,빨리깨기,false,A|D,"비커에 스포이드로 액체를 채워라. (랜덤, ±1 허용)횟수를 넘기면 실패.","비커, 스포이드, 스포이드를 누르는 손(누름/안누름)",Assets/_Game/Sprite/Laboratory/LAB_10/
 LAB_11,deferred,연구소,Laboratory,탈출한 박쥐를 잡아라,잡아라!,빨리깨기,false,G,날라다니는 박쥐 주변으로 드래그해서 잡아라,"날개짓하는 박쥐 스프라이트 2개, 새 철장",Assets/_Game/Sprite/Laboratory/LAB_11/
-LAB_12,priority,연구소,Laboratory,올바른 선을 찾아 버튼을 눌러라,작동 버튼은?,빨리깨기,false,C,버튼 3개에서 나온 선이 얽혀 있다. 선을 눈으로 따라가서 기계와 이어진 버튼 하나를 찾아 탭해라. 다른 버튼을 누르면 실패.,"기계(꺼짐/작동), 버튼 3개(눌림/안 눌림), 얽힌 선 패턴, 실패 이펙트(스파크)",Assets/_Game/Sprite/Laboratory/LAB_12/
+LAB_12,priority,연구소,Laboratory,올바른 선을 찾아 버튼을 눌러라,작동 버튼은?,빨리깨기,false,C,버튼 3개에서 나온 선이 얽혀 있다. 선을 눈으로 따라가서 가운데 기계와 이어진 버튼 하나를 찾아 탭해라. 다른 버튼을 누르면 실패.,"기계(꺼짐/작동. 항상 가운데), 버튼(안 눌림/눌림), 얽힌 선 패턴 3종(패턴별 1장, 가운데 위가 기계), 실패 이펙트(스파크)",Assets/_Game/Sprite/Laboratory/LAB_12/
 LAB_13,deferred,연구소,Laboratory,금 간 비커만 치워라,치워라!,빨리깨기,false,C,비커 5개 중 금 간 비커만 모두 탭해서 치워라. 멀쩡한 비커를 탭하면 실패.,"비커(멀쩡함/금 감), 실험대",Assets/_Game/Sprite/Laboratory/LAB_13/
 LAB_14,deferred,연구소,Laboratory,전리품을 진열장에 정리해라,정리해라!,빨리깨기,false,G,"스테이지 이름이 붙은 진열장이 랜덤한 순서로 놓여 있고, 아래에 각 스테이지의 전리품 4개가 무작위로 있다. 지금 진열장에 맞는 전리품을 끌어다 넣으면 오른쪽 진열장으로 넘어간다. 진열장을 모두 채우면 성공, 틀린 전리품을 넣으면 실패.","진열장(스테이지 이름표 5종), 스테이지별 전리품 5종(사막·정글·동굴·절벽·숲 중 4개 랜덤)",Assets/_Game/Sprite/Laboratory/LAB_14/
-LAB_15,priority,연구소,Laboratory,칠판의 수식을 지워라,지워라!,빨리깨기,false,F,칠판에 가득 적힌 복잡한 수식을 좌우로 스와이프해서 모두 지워라.,"칠판(수식/깨끗함), 지우개",Assets/_Game/Sprite/Laboratory/LAB_15/
+LAB_15,priority,연구소,Laboratory,칠판의 수식을 지워라,지워라!,빨리깨기,false,G,칠판에 가득 적힌 복잡한 수식을 지우개로 문질러 모두 지워라. 지우개가 지나간 곳만 지워진다.,"칠판(수식/깨끗함), 지우개",Assets/_Game/Sprite/Laboratory/LAB_15/
 LAB_16,deferred,연구소,Laboratory,경보등을 모두 꺼라,꺼라!,빨리깨기,false,C,깜빡이는 빨간 경보등 4개를 모두 탭해서 꺼라.,"경보등(켜짐/꺼짐), 연구소 벽",Assets/_Game/Sprite/Laboratory/LAB_16/
 LAB_17,deferred,연구소,Laboratory,현미경에 슬라이드를 밀어 넣어라,밀어 넣어라!,빨리깨기,false,C,"현미경 받침대 좌우에 슬라이드가 하나씩 있다. 표본이 든 슬라이드가 있는 쪽을 탭해서 밀어 넣어라. 3번 연속으로 맞히면 성공, 빈 슬라이드를 넣으면 실패. (매번 좌우 위치 랜덤)","현미경, 표본 슬라이드, 빈 슬라이드",Assets/_Game/Sprite/Laboratory/LAB_17/
 LAB_18,deferred,연구소,Laboratory,고장 난 기계를 두드려라,두드려라!,빨리깨기,false,A,덜컹거리는 기계를 연타로 두드려서 다시 작동시켜라.,"기계(고장/작동), 연기 이펙트, 스패너",Assets/_Game/Sprite/Laboratory/LAB_18/
-LAB_19,priority,연구소,Laboratory,타자기로 보고서를 작성해라,작성해라!,빨리깨기,false,A,타자기를 연타해서 연구 보고서 한 장을 끝까지 채워라.,"타자기, 보고서 종이(단계별 글자 채워짐)",Assets/_Game/Sprite/Laboratory/LAB_19/
+LAB_19,priority,연구소,Laboratory,타자기로 보고서를 작성해라,작성해라!,빨리깨기,false,A,컴퓨터 문서 작성 프로그램 화면에서 연타해 연구 보고서 한 장을 끝까지 채워라.,"문서 프로그램 창, 보고서(글자 채워짐 1/2/3/4)",Assets/_Game/Sprite/Laboratory/LAB_19/
 LAB_20,deferred,연구소,Laboratory,쏟아진 시약을 닦아라,닦아라!,빨리깨기,false,F|C,"실험대에 흩어진 깨진 유리 조각은 탭해서 버리고, 쏟아진 시약은 좌우로 스와이프해서 닦아내라. 유리 조각을 모두 버리고 시약을 다 닦으면 성공.","실험대(시약 쏟아짐/깨끗함), 깨진 유리 조각, 걸레, 쓰레기통",Assets/_Game/Sprite/Laboratory/LAB_20/

@@ -3,8 +3,9 @@
 모바일(터치, 세로/가로 미정) 2D Unity 게임. 4~5초짜리 미니게임을 연속으로 하는 메이드 인 와리오 형식이다.
 학부 졸업작품 팀(기획 1, 프로그래머 1, 아트 6)이 만들고 있고, 이 저장소에서 미니게임 코드를 Claude Code로 구현한다.
 
-## 지금 만드는 범위 (2026-11-21)
+## 지금 만드는 범위 (2026-11-25)
 
+- **우선제작 30개는 모두 구현되어 있다.** 문서(`Docs/Design/`)는 구현 기준으로 맞춰져 있고, 구글 시트의 우선제작·전체 탭에도 반영되어 있다 (2026-11-25).
 - **우선제작 미니게임 30개(스테이지별 5개)만 만든다.** 목록과 구현용 컨텍스트: `Docs/Design/Priority/`
 - 나머지 90개는 후순위라 **만들지 않는다.** `minigames.json`에서 `status: "deferred"`로 표시되어 있고, 스프라이트 폴더 README에도 "후순위"라고 적혀 있다. 기획 참고용으로만 남겨 둔다.
 
@@ -31,6 +32,10 @@
   - 제한 시간은 `StageFlowController`가 재고, 시간이 끝나면 `TimeUp()`이 불린다.
   - **버티기형**은 프리팹에서 `SucceedOnTimeUp = true` (끝까지 버티면 성공), **빨리깨기형**은 `false` (시간 초과면 실패).
   - `Title` 필드에는 명세의 **지시문**을 넣는다 (예: "썰어라!").
+- `Assets/_Game/Script/MiniGame/Common/TouchMiniGame.cs`: 터치 미니게임의 공통 부모. 놀이 영역(800 × 500), 터치 전달, 에셋 자리(`Slots`), 제한시간에 따른 속도 배율(`SpeedScale`)
+- `Assets/_Game/Script/Input/TouchInput.cs`: 터치 입력 창구 (에디터에서는 마우스 좌클릭 = 손가락 하나). 새 입력은 여기를 쓴다
+- `Assets/_Game/Script/Editor/MiniGameSpriteLinker.cs`: 메뉴 MiniGame > 스프라이트 자동 연결
+- `Assets/Scenes/Test/MiniGameTest.unity`: 미니게임을 하나씩 골라 테스트하는 씬
 - `Assets/_Game/Script/MiniGame/TestButtonMiniGame.cs`: 테스트용 예시
 - `Assets/_Game/Script/Stage/StageFlowController.cs`: 스테이지 진행. `NormalGames` 배열에 미니게임 프리팹을 등록하면 랜덤으로 나온다 (직전과 같은 미니게임은 연속으로 안 나옴).
 - 스테이지 씬: `Assets/Scenes/Stage/{Desert,Jungle,Cave,Precipice,Forest,Laboratory}.unity`
@@ -38,7 +43,7 @@
 ## 미니게임을 만들 때 규칙
 
 1. **명세를 그대로 구현한다.** 명세와 다르게 해야 할 이유가 있으면 바꾸지 말고 먼저 알린다.
-2. **공통 템플릿을 먼저 만들고 재사용한다.** 프로그래머가 1명이라 미니게임마다 새 로직을 짜지 않는다. 우선제작 30개는 15개 템플릿으로 묶인다 (`Priority/README.md`의 "템플릿별 묶음"). 여러 개가 쓰는 템플릿부터 만든다.
+2. **공통 템플릿을 먼저 만들고 재사용한다.** 프로그래머가 1명이라 미니게임마다 새 로직을 짜지 않는다. 우선제작 30개는 20개 방식으로 구현되어 있다 (`02_플레이방식_템플릿.md`, `Priority/README.md`의 "템플릿별 묶음"). 여러 개가 쓰는 템플릿부터 만든다.
 3. **수치는 인스펙터에 노출한다.** 대상 개수, 연타 횟수, 속도 기준 등은 `[SerializeField]`로 빼고, 명세에 적힌 값을 기본값으로 쓴다. 4초 안에 끝나는 분량이어야 한다.
 4. **후순위 미니게임은 만들지 않는다.** 템플릿을 만들 때 후순위 미니게임을 위해 기능을 미리 넣지 않는다.
 5. **아트는 만들지 않는다.** 이미지는 아트팀이 `Assets/_Game/Sprite/{Theme}/{ID}/`에 넣는다. 코드는 스프라이트를 `[SerializeField] Sprite` 필드로 받고, 그림이 없는 동안은 `Assets/_Game/Art/Placeholder/`(Circle, Square, GridTile)를 색만 바꿔 쓴다. 각 폴더의 `README.md`에 필요한 파일 목록이 있다.

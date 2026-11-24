@@ -339,6 +339,30 @@ PrefabInstance:
       propertyPath: StageNumber
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 1674631101401930034, guid: baf3976d5ef8e3e46894d321597c8362, type: 3}
+      propertyPath: NormalGames.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1674631101401930034, guid: baf3976d5ef8e3e46894d321597c8362, type: 3}
+      propertyPath: 'NormalGames.Array.data[0]'
+      value: 
+      objectReference: {fileID: 142114931568527971, guid: 16851718c54a68b4abf101e108abd93a, type: 3}
+    - target: {fileID: 1674631101401930034, guid: baf3976d5ef8e3e46894d321597c8362, type: 3}
+      propertyPath: 'NormalGames.Array.data[1]'
+      value: 
+      objectReference: {fileID: 8203050558888853844, guid: 8ca594bd4ec423a4697176a0fc401fb8, type: 3}
+    - target: {fileID: 1674631101401930034, guid: baf3976d5ef8e3e46894d321597c8362, type: 3}
+      propertyPath: 'NormalGames.Array.data[2]'
+      value: 
+      objectReference: {fileID: 7827146834984496116, guid: d6a3c4308f768cc4f8643071bc7844b1, type: 3}
+    - target: {fileID: 1674631101401930034, guid: baf3976d5ef8e3e46894d321597c8362, type: 3}
+      propertyPath: 'NormalGames.Array.data[3]'
+      value: 
+      objectReference: {fileID: 4104404378247956081, guid: 0356778ba5bd53a4481a94b270596305, type: 3}
+    - target: {fileID: 1674631101401930034, guid: baf3976d5ef8e3e46894d321597c8362, type: 3}
+      propertyPath: 'NormalGames.Array.data[4]'
+      value: 
+      objectReference: {fileID: 5173272717151236533, guid: a161f186e637b0040b3c88c5341314a6, type: 3}
     - target: {fileID: 4143840701146708396, guid: baf3976d5ef8e3e46894d321597c8362, type: 3}
       propertyPath: m_Name
       value: StageFlowUI

@@ -1,7 +1,6 @@
 using System.Collections;
 using TMPro;
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 public class StageSelectController : MonoBehaviour
 {
@@ -37,7 +36,6 @@ public class StageSelectController : MonoBehaviour
     public float UnlockHoldTime = 0.6f;   // 연출이 끝나고 맵으로 돌아가기 전까지
 
     StageNode selectedStage;
-    StageNode hoveredStage;
     bool labelsVisible = true;
 
     void Start()
@@ -73,35 +71,15 @@ public class StageSelectController : MonoBehaviour
         HandleDetailOutsideClick();
     }
 
-    // 아이콘 위에 마우스를 올리면 확대, 클릭/터치하면 순간적으로 더 커진다
+    // 아이콘을 터치하면 순간적으로 커진다
     void UpdateIconFeedback()
     {
         // 맵을 조작할 수 있거나 스테이지 설명이 열려 있을 때만 (클리어 연출, 카메라 이동 중에는 반응하지 않음)
-        bool active = MapCamera.InputEnabled || DetailUI.activeSelf;
-        Pointer pointer = Pointer.current;
-
-        StageNode hover = null;
-        if (active && pointer is Mouse)
-        {
-            Vector2 mousePos = pointer.position.ReadValue();
-            if (!MapCamera.IsOverUI(mousePos))
-                hover = MapCamera.GetStageAt(mousePos);
-        }
-
-        if (hover != hoveredStage)
-        {
-            if (hoveredStage != null)
-                hoveredStage.SetHovered(false);
-            if (hover != null)
-                hover.SetHovered(true);
-            hoveredStage = hover;
-        }
-
-        if (!active || pointer == null || !pointer.press.wasPressedThisFrame)
+        if (!MapCamera.InputEnabled && !DetailUI.activeSelf)
             return;
 
-        Vector2 pressPos = pointer.position.ReadValue();
-        if (MapCamera.IsOverUI(pressPos))
+        Vector2 pressPos;
+        if (!TouchInput.TryGetPress(out pressPos) || MapCamera.IsOverUI(pressPos))
             return;
 
         StageNode pressed = MapCamera.GetStageAt(pressPos);
@@ -126,11 +104,10 @@ public class StageSelectController : MonoBehaviour
         if (!DetailUI.activeSelf)
             return;
 
-        Pointer pointer = Pointer.current;
-        if (pointer == null || !pointer.press.wasPressedThisFrame)
+        Vector2 screenPos;
+        if (!TouchInput.TryGetPress(out screenPos))
             return;
 
-        Vector2 screenPos = pointer.position.ReadValue();
         if (MapCamera.IsOverUI(screenPos))
             return;
 

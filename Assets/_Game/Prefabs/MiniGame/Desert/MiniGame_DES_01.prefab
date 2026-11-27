@@ -304,7 +304,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\uD53C\uD574\uB77C!"
+  m_Text: "\uD0C8\uCD9C\uAD6C\uB85C \uAC00\uB77C!"
 --- !u!114 &2265493747954337907
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -430,7 +430,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -280, y: -205}
-  m_SizeDelta: {x: 50, y: 50}
+  m_SizeDelta: {x: 90, y: 90}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8410167177112696778
 CanvasRenderer:
@@ -461,81 +461,6 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_Sprite: {fileID: 21300000, guid: fd5baef28831c8e429f25df4e8c8083e, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!1 &6061341954988205792
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2248067715193322332}
-  - component: {fileID: 4474189123768613641}
-  - component: {fileID: 1040861435247656636}
-  m_Layer: 0
-  m_Name: "IMG_DES_01_02_\uD568\uC815 \uBC14\uB2E5"
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &2248067715193322332
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6061341954988205792}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 5123715418154871105}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 240, y: 56}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!222 &4474189123768613641
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6061341954988205792}
-  m_CullTransparentMesh: 1
---- !u!114 &1040861435247656636
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6061341954988205792}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
-  m_Material: {fileID: 0}
-  m_Color: {r: 0.7882353, g: 0.6509804, b: 0.41960785, a: 1}
-  m_RaycastTarget: 0
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: fbe2afdd7cd6e9f44b3be020604a0169, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -896,19 +821,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be3a1d4d852b8a24b8f5a61d49b0a41c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TrapMazeMiniGame
-  Title: "\uD53C\uD574\uB77C!"
+  Title: "\uD0C8\uCD9C\uAD6C\uB85C \uAC00\uB77C!"
   SucceedOnTimeUp: 0
   PlayArea: {fileID: 5123715418154871105}
   TitleTXT: {fileID: 3833767406247372840}
   GaugeIMG: {fileID: 0}
   TopMargin: 100
   HitPadding: 12
+  BaseTimeLimit: 5
+  SpeedUpPerSecond: 0.5
   Slots:
   - FileName: DES_01_01
     Label: "\uCE90\uB9AD\uD130"
     StateNames: []
     Sprites:
-    - {fileID: 0}
+    - {fileID: -1204919730280588396, guid: 2fb55cbf1509fdd48a876c3f986ad4de, type: 3}
     Placeholder: {fileID: 21300000, guid: fd5baef28831c8e429f25df4e8c8083e, type: 3}
     PlaceholderColors:
     - {r: 0.30980393, g: 0.7647059, b: 0.96862745, a: 1}
@@ -944,9 +871,6 @@ MonoBehaviour:
   - Image: {fileID: 411636203026894074}
     Slot: 2
     State: 0
-  - Image: {fileID: 1040861435247656636}
-    Slot: 2
-    State: 0
   - Image: {fileID: 4330519415482498585}
     Slot: 2
     State: 0
@@ -965,14 +889,14 @@ MonoBehaviour:
   PlayerIMG: {fileID: 8607104238857012534}
   MoveSpeed: 900
   RelativeSwipe: 0
-  MoveHalfSize: {x: 380, y: 230}
+  MoveHalfSize: {x: 365, y: 205}
   HitShrink: 0.75
   TrapPeriod: 1.6
   SpearRatio: 0.3
-  BodyRadius: 20
+  BodyRadius: 30
+  BodyHitRatio: 0.5
   TrapIMGs:
   - {fileID: 411636203026894074}
-  - {fileID: 1040861435247656636}
   - {fileID: 4330519415482498585}
   Walls:
   - {fileID: 2637822386413053112}
@@ -985,6 +909,13 @@ MonoBehaviour:
     Offset: {x: 180, y: 0}
     Speed: 260
   ExitIMG: {fileID: 5145809427530016571}
+  WalkDownSprites:
+  - {fileID: -1204919730280588396, guid: 2fb55cbf1509fdd48a876c3f986ad4de, type: 3}
+  - {fileID: 3644841323075316842, guid: d5060280ced260a4b9e5727874043ed8, type: 3}
+  WalkUpSprites:
+  - {fileID: -5757270841879840194, guid: bf5adcec7409c0548a981798a82b00da, type: 3}
+  - {fileID: 7390200176096297704, guid: 599460f691796af47b388dce885efee3, type: 3}
+  WalkFrameTime: 0.15
 --- !u!1 &8555019869896123978
 GameObject:
   m_ObjectHideFlags: 0
@@ -1015,7 +946,6 @@ RectTransform:
   m_Children:
   - {fileID: 4783810273918712140}
   - {fileID: 7514094982025147052}
-  - {fileID: 2248067715193322332}
   - {fileID: 9120487977361513712}
   - {fileID: 2637822386413053112}
   - {fileID: 51666013407338920}

@@ -645,6 +645,8 @@ MonoBehaviour:
   GaugeIMG: {fileID: 0}
   TopMargin: 100
   HitPadding: 12
+  BaseTimeLimit: 5
+  SpeedUpPerSecond: 0.5
   Slots:
   - FileName: DES_10_01
     Label: "\uD683\uBD88"
@@ -696,6 +698,13 @@ MonoBehaviour:
   MaxTurns: 4
   RewindPerSecond: 0.2
   IdleTime: 0.1
+  Direction: 3
+  Reverse: 0
+  ShowArrow: 1
+  ArrowRadius: 150
+  ArrowWidth: 12
+  ArrowColor: {r: 1, g: 0.95, b: 0.6, a: 1}
+  ArrowIMG: {fileID: 0}
   KnobIMG: {fileID: 0}
   LeftDoorIMG: {fileID: 6887454192763274129}
   RightDoorIMG: {fileID: 6281061194199459810}

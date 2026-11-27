@@ -79,7 +79,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\uBC1D\uD600\uB77C!"
+  m_Text: "\uBD88\uC744 \uBD99\uC5EC\uB77C!"
 --- !u!114 &9214131046630107931
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -296,13 +296,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 111ef79813273fc4ab395536f4f46ac2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TorchHoldMiniGame
-  Title: "\uBC1D\uD600\uB77C!"
+  Title: "\uBD88\uC744 \uBD99\uC5EC\uB77C!"
   SucceedOnTimeUp: 0
   PlayArea: {fileID: 2857996479693171264}
   TitleTXT: {fileID: 8703798781385656263}
   GaugeIMG: {fileID: 0}
   TopMargin: 100
   HitPadding: 12
+  BaseTimeLimit: 5
+  SpeedUpPerSecond: 0.5
   Slots:
   - FileName: CAV_15_01
     Label: "\uD683\uBD88"

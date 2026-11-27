@@ -4,8 +4,10 @@ using UnityEngine;
 using UnityEngine.UI;
 
 // 스테이지 씬의 진행을 담당한다.
-// 카운트다운 -> 대기 -> 랜덤 미니게임 -> 결과 -> (보스 등장) -> 대기 -> ... -> 최종보스 클리어
-// 라운드는 1부터 시작하며 MidBossRound에 중간보스, FinalBossRound에 최종보스 미니게임이 고정으로 나온다.
+// 카운트다운 -> 대기 -> 랜덤 미니게임 -> 결과 -> 대기 -> ... -> FinalBossRound를 마치면 클리어
+// 라운드는 1부터 시작한다. 지금은 보스 없이 모든 라운드에 일반 미니게임이 나온다 (UseBossGames = false).
+// MidBossRound가 끝나면 스피드업 연출 후 제한 시간이 줄어든다.
+// UseBossGames를 켜면 MidBossRound/FinalBossRound에 보스 미니게임이 고정으로 나오고, 최종보스는 성공해야 클리어된다.
 public class StageFlowController : MonoBehaviour
 {
     public int StageNumber;               // StageNode.StageNumber와 같은 값
@@ -30,6 +32,7 @@ public class StageFlowController : MonoBehaviour
 
     [Header("MiniGame")]
     public MiniGame[] NormalGames;   // 일반 라운드에서 랜덤으로 나오는 미니게임 프리팹
+    public bool UseBossGames = false; // 보스 라운드에 보스 미니게임을 낼지. 끄면 그 라운드도 일반 미니게임
     public MiniGame MidBossGame;
     public MiniGame FinalBossGame;
     public Transform MiniGameRoot;   // 미니게임 프리팹이 생성될 위치
@@ -82,20 +85,21 @@ public class StageFlowController : MonoBehaviour
     public TMP_Text TimerTXT;   // 남은 시간 (초, 올림)
 
     [Header("Boss Intro UI")]
+    public bool ShowBossIntro = false;     // 보스 라운드 전 "MID BOSS!" / "FINAL BOSS!" 연출을 보여 줄지 (현재 사용 안 함)
     public GameObject BossIntroUI;
     public TMP_Text BossIntroTXT;
-    public string MidBossMessage = "MID BOSS!";
-    public string FinalBossMessage = "FINAL BOSS!";
+    public string MidBossMessage = "중간 보스!";
+    public string FinalBossMessage = "최종 보스!";
     public float PopScale = 1.6f;
     public float PopTime = 0.25f;
 
     [Header("Speed Up UI")]                 // 중간보스 라운드가 끝난 뒤 (성공/실패 모두)
     public GameObject SpeedUpUI;
-    public RectTransform SpeedUpBand;      // 화면을 가로지르는 띠. 들어오고 나갈 때 좌우로 미끄러진다
+    public RectTransform SpeedUpBand;      // 글자를 담은 띠 (배경은 투명). 아래에서 올라와 가운데 멈췄다가 위로 빠져나간다
     public TMP_Text SpeedUpTXT;
-    public string SpeedUpMessage = "SPEED UP!";
+    public string SpeedUpMessage = "스피드 업!";
     public float SpeedUpTime = 2f;         // 연출 전체 시간
-    public float SpeedUpSlideTime = 0.2f;  // 띠가 들어오고 나가는 시간
+    public float SpeedUpMoveTime = 0.35f;  // 아래에서 가운데까지 올라오는 시간 (위로 나갈 때도 같은 시간)
 
     [Header("End UI")]
     public GameObject ClearUI;
@@ -105,6 +109,7 @@ public class StageFlowController : MonoBehaviour
     public int Life { get; private set; }
 
     int lastGameIndex = -1;
+    readonly System.Collections.Generic.List<int> gameBag = new System.Collections.Generic.List<int>();
 
     void Start()
     {
@@ -163,7 +168,8 @@ public class StageFlowController : MonoBehaviour
                 yield break;
             }
 
-            if (success && Round == FinalBossRound)
+            // 마지막 라운드를 마치면 클리어 (보스를 쓸 때는 최종보스를 이겨야 클리어)
+            if (Round == FinalBossRound && (success || !UseBossGames))
             {
                 // 클리어 연출은 처음 클리어했을 때만 보여준다
                 if (!StageProgress.IsCleared(StageNumber))
@@ -182,7 +188,7 @@ public class StageFlowController : MonoBehaviour
             if (passedMidBoss)
                 yield return SpeedUp();
 
-            if (IsBossRound(Round))
+            if (UseBossGames && ShowBossIntro && IsBossRound(Round))
                 yield return BossIntro();
         }
     }
@@ -370,18 +376,38 @@ public class StageFlowController : MonoBehaviour
 
     MiniGame PickGame()
     {
-        if (Round == MidBossRound && MidBossGame != null)
+        if (UseBossGames && Round == MidBossRound && MidBossGame != null)
             return MidBossGame;
-        if (Round == FinalBossRound && FinalBossGame != null)
+        if (UseBossGames && Round == FinalBossRound && FinalBossGame != null)
             return FinalBossGame;
 
-        // 같은 미니게임이 연속으로 나오지 않도록
-        int index = Random.Range(0, NormalGames.Length);
-        if (NormalGames.Length > 1 && index == lastGameIndex)
-            index = (index + Random.Range(1, NormalGames.Length)) % NormalGames.Length;
+        // 섞은 주머니에서 하나씩 꺼낸다: 등록된 미니게임이 한 바퀴에 한 번씩 골고루 나온다
+        if (gameBag.Count == 0)
+            RefillGameBag();
 
+        int index = gameBag[gameBag.Count - 1];
+        gameBag.RemoveAt(gameBag.Count - 1);
         lastGameIndex = index;
         return NormalGames[index];
+    }
+
+    // 미니게임 번호를 모두 넣고 섞는다. 새 바퀴의 첫 게임이 직전 게임과 같으면 다른 자리와 바꿔 연속으로 나오지 않게 한다
+    void RefillGameBag()
+    {
+        gameBag.Clear();
+        for (int i = 0; i < NormalGames.Length; i++)
+            gameBag.Add(i);
+
+        for (int i = gameBag.Count - 1; i > 0; i--)
+        {
+            int j = Random.Range(0, i + 1);
+            (gameBag[i], gameBag[j]) = (gameBag[j], gameBag[i]);
+        }
+
+        // 맨 뒤가 다음에 꺼낼 게임
+        int last = gameBag.Count - 1;
+        if (gameBag.Count > 1 && gameBag[last] == lastGameIndex)
+            (gameBag[last], gameBag[0]) = (gameBag[0], gameBag[last]);
     }
 
     bool IsBossRound(int round)
@@ -394,14 +420,17 @@ public class StageFlowController : MonoBehaviour
         RoundTXT.text = Round.ToString();
         ResultTXT.gameObject.SetActive(false);
         SetCharacter(CharacterIdleSprite);
+        SetWaitingWobble(true);
         RefreshLife();
     }
 
     void ShowResult(bool success)
     {
         ResultTXT.gameObject.SetActive(true);
-        ResultTXT.text = success ? "SUCCESS!" : "FAIL...";
+        ResultTXT.text = success ? "성공!" : "실패...";
         SetCharacter(success ? CharacterSuccessSprite : CharacterFailSprite);
+        // 실패하면 대기 화면의 그림(캐릭터, 체력 등)이 흔들리지 않고 멈춰 있다. 다음 대기 화면에서 다시 흔들린다
+        SetWaitingWobble(success);
         RefreshLife();
     }
 
@@ -415,6 +444,13 @@ public class StageFlowController : MonoBehaviour
             if (image != null)
                 image.sprite = sprite;
         }
+    }
+
+    // 대기 화면 안의 흔들림(IconWobble)을 모두 켜거나 끈다. 끄면 원래 각도로 돌아간다
+    void SetWaitingWobble(bool wobble)
+    {
+        foreach (IconWobble iconWobble in WaitingUI.GetComponentsInChildren<IconWobble>(true))
+            iconWobble.enabled = wobble;
     }
 
     void RefreshLife()
@@ -438,31 +474,33 @@ public class StageFlowController : MonoBehaviour
         WaitingUI.SetActive(true);
     }
 
-    // 띠가 오른쪽에서 들어와 SPEED UP! 이 튀어나오고, 끝날 때 왼쪽으로 빠져나간다
+    // 스피드 업 글자가 화면 아래에서 올라와 가운데 잠시 멈췄다가, 계속 위로 올라가 빠져나간다
     IEnumerator SpeedUp()
     {
         WaitingUI.SetActive(false);
         SpeedUpTXT.text = SpeedUpMessage;
         SpeedUpUI.SetActive(true);
 
-        float width = ((RectTransform)SpeedUpUI.transform).rect.width;
-        yield return SlideBand(width, 0f);
-        yield return PopText(SpeedUpTXT.transform, Mathf.Max(0f, SpeedUpTime - SpeedUpSlideTime * 2f));
-        yield return SlideBand(0f, -width);
+        float offY = ((RectTransform)SpeedUpUI.transform).rect.height * 0.5f + SpeedUpBand.rect.height * 0.5f;
+        yield return MoveBandY(-offY, 0f, true);
+        yield return new WaitForSecondsRealtime(Mathf.Max(0f, SpeedUpTime - SpeedUpMoveTime * 2f));
+        yield return MoveBandY(0f, offY, false);
 
         SpeedUpUI.SetActive(false);
         SpeedUpBand.anchoredPosition = Vector2.zero;
         WaitingUI.SetActive(true);
     }
 
-    IEnumerator SlideBand(float fromX, float toX)
+    // easeOut: 들어올 때 점점 느려지며 멈춤 / false: 나갈 때 점점 빨라짐
+    IEnumerator MoveBandY(float fromY, float toY, bool easeOut)
     {
         float startTime = Time.realtimeSinceStartup;
         float t = 0f;
         while (t < 1f)
         {
-            t = SpeedUpSlideTime > 0f ? Mathf.Clamp01((Time.realtimeSinceStartup - startTime) / SpeedUpSlideTime) : 1f;
-            SpeedUpBand.anchoredPosition = new Vector2(Mathf.Lerp(fromX, toX, t), 0f);
+            t = SpeedUpMoveTime > 0f ? Mathf.Clamp01((Time.realtimeSinceStartup - startTime) / SpeedUpMoveTime) : 1f;
+            float e = easeOut ? 1f - (1f - t) * (1f - t) * (1f - t) : t * t * t;
+            SpeedUpBand.anchoredPosition = new Vector2(0f, Mathf.Lerp(fromY, toY, e));
             yield return null;
         }
     }

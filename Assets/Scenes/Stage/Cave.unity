@@ -303,6 +303,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2154823051591411036, guid: e664be108e774dc4a910f460762d5c29, type: 3}
+      propertyPath: StartMessage
+      value: "\uC2DC\uC791!"
+      objectReference: {fileID: 0}
     - target: {fileID: 4416988977471310052, guid: e664be108e774dc4a910f460762d5c29, type: 3}
       propertyPath: m_sharedMaterial
       value: 
@@ -343,6 +347,18 @@ PrefabInstance:
       propertyPath: StageNumber
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 1674631101401930034, guid: baf3976d5ef8e3e46894d321597c8362, type: 3}
+      propertyPath: CharacterFailSprite
+      value: 
+      objectReference: {fileID: 5488227680042221826, guid: 485dba0872eb7214fa350d9155f3e04a, type: 3}
+    - target: {fileID: 1674631101401930034, guid: baf3976d5ef8e3e46894d321597c8362, type: 3}
+      propertyPath: CharacterIdleSprite
+      value: 
+      objectReference: {fileID: -6442928393724747414, guid: b585d3c60f89ad445b21f77a6c09921c, type: 3}
+    - target: {fileID: 1674631101401930034, guid: baf3976d5ef8e3e46894d321597c8362, type: 3}
+      propertyPath: CharacterSuccessSprite
+      value: 
+      objectReference: {fileID: -5891928842345963179, guid: ef67f797b8663804aaed97933dc21e48, type: 3}
     - target: {fileID: 1674631101401930034, guid: baf3976d5ef8e3e46894d321597c8362, type: 3}
       propertyPath: NormalGames.Array.size
       value: 5

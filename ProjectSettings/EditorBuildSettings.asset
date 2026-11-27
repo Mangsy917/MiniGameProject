@@ -32,6 +32,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Stage/Laboratory.unity
     guid: 0ee8cace22063b348935df98d42471a1
+  - enabled: 0
+    path: Assets/Scenes/Test/MiniGameTest.unity
+    guid: 3609d1469a114614aafab838f6c37e7e
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

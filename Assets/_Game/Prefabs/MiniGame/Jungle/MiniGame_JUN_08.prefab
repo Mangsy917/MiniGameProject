@@ -267,13 +267,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85d7793b40ac77741a8690314fa0067b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FishingReelMiniGame
-  Title: "\uB09A\uC544\uB77C!"
+  Title: "\uB3CC\uB824\uB77C!"
   SucceedOnTimeUp: 0
   PlayArea: {fileID: 2008997225531038624}
   TitleTXT: {fileID: 5752448224047250088}
   GaugeIMG: {fileID: 0}
   TopMargin: 100
   HitPadding: 12
+  BaseTimeLimit: 5
+  SpeedUpPerSecond: 0.5
   Slots:
   - FileName: JUN_08_01
     Label: "\uB09A\uC2EF\uB300"
@@ -322,6 +324,13 @@ MonoBehaviour:
   MaxTurns: 4
   RewindPerSecond: 0.15
   IdleTime: 0.1
+  Direction: 1
+  Reverse: 0
+  ShowArrow: 0
+  ArrowRadius: 150
+  ArrowWidth: 12
+  ArrowColor: {r: 1, g: 0.95, b: 0.6, a: 1}
+  ArrowIMG: {fileID: 0}
   KnobIMG: {fileID: 4968456370675977744}
   FishIMG: {fileID: 3440089454941308362}
   FishMove: {x: 15, y: 140}
@@ -407,7 +416,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\uB09A\uC544\uB77C!"
+  m_Text: "\uB3CC\uB824\uB77C!"
 --- !u!114 &2049195995557140153
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -133,6 +133,8 @@ MonoBehaviour:
   GaugeIMG: {fileID: 0}
   TopMargin: 100
   HitPadding: 12
+  BaseTimeLimit: 5
+  SpeedUpPerSecond: 0.5
   Slots:
   - FileName: JUN_06_01
     Label: "\uB3C4\uAC10 \uCE74\uB4DC"
@@ -149,9 +151,9 @@ MonoBehaviour:
     - 2
     - 3
     Sprites:
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
+    - {fileID: -5728843382635495928, guid: 55ef345e1a9b0a54a871b434c99f800f, type: 3}
+    - {fileID: -8642671175000202902, guid: 55ef345e1a9b0a54a871b434c99f800f, type: 3}
+    - {fileID: -1069825682435246474, guid: 55ef345e1a9b0a54a871b434c99f800f, type: 3}
     Placeholder: {fileID: 21300000, guid: fd5baef28831c8e429f25df4e8c8083e, type: 3}
     PlaceholderColors:
     - {r: 0.9254902, g: 0.2509804, b: 0.47843137, a: 1}
@@ -164,9 +166,9 @@ MonoBehaviour:
     - 2
     - 3
     Sprites:
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
+    - {fileID: 4041632164955953161, guid: 55ef345e1a9b0a54a871b434c99f800f, type: 3}
+    - {fileID: 8845585030237990217, guid: 55ef345e1a9b0a54a871b434c99f800f, type: 3}
+    - {fileID: 6394956680924866423, guid: 55ef345e1a9b0a54a871b434c99f800f, type: 3}
     Placeholder: {fileID: 21300000, guid: fd5baef28831c8e429f25df4e8c8083e, type: 3}
     PlaceholderColors:
     - {r: 0.4862745, g: 0.7019608, b: 0.25882354, a: 1}

@@ -37,14 +37,20 @@ public class SoundUISliderTXTBinding : MonoBehaviour
 
     public void AllSLDValue(float value)
     {
-        AllTXT.text = value.ToString("F2");
+        AllTXT.text = ToPercent(value);
     }
     public void EffectSLDValue(float value)
     {
-        EffectTXT.text = value.ToString("F2");
+        EffectTXT.text = ToPercent(value);
     }
     public void BGMSLDValue(float value)
     {
-        BGMTXT.text = value.ToString("F2");
+        BGMTXT.text = ToPercent(value);
+    }
+
+    // 0~1 값을 "70%"처럼 보여 준다
+    static string ToPercent(float value)
+    {
+        return Mathf.RoundToInt(value * 100f) + "%";
     }
 }

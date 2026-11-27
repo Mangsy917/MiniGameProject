@@ -162,8 +162,8 @@ MonoBehaviour:
     - "\uC6C0\uC9C1\uC784"
     - "\uC7A1\uD798(\uB208 X)"
     Sprites:
-    - {fileID: 0}
-    - {fileID: 0}
+    - {fileID: -8321102221490951993, guid: e3ae899c3993bd444a73a7f855e38c34, type: 3}
+    - {fileID: 7417498029127908629, guid: 618a724967946b5498f1a5edc2e4e4bc, type: 3}
     Placeholder: {fileID: 21300000, guid: fd5baef28831c8e429f25df4e8c8083e, type: 3}
     PlaceholderColors:
     - {r: 0.7764706, g: 0.15686275, b: 0.15686275, a: 1}
@@ -177,6 +177,11 @@ MonoBehaviour:
   Spacing: 140
   TargetIMG: {fileID: 8523805637294592873}
   TargetSlot: 1
+  CaughtMaterial: {fileID: 2100000, guid: d27abda4d263370469c56bd80298bb0a, type: 2}
+  CaughtTime: 0.8
+  CaughtRise: 80
+  CaughtWobble: 12
+  CaughtWobbleSpeed: 3
 --- !u!1 &3678239534993709745
 GameObject:
   m_ObjectHideFlags: 0

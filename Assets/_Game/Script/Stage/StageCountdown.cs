@@ -10,7 +10,7 @@ public class StageCountdown : MonoBehaviour
 
     public int CountFrom = 3;
     public float CountInterval = 1f;      // 숫자 하나가 표시되는 시간
-    public string StartMessage = "Start!";
+    public string StartMessage = "시작!";
     public float StartMessageTime = 1f;   // Start! 메시지가 떠 있는 시간
 
     // 숫자가 나타날 때 커졌다가 원래 크기로 줄어드는 연출

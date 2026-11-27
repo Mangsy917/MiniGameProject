@@ -577,9 +577,9 @@ MonoBehaviour:
     - "\uB450\uB9AC\uC548"
     - "\uD30C\uC778\uC560\uD50C"
     Sprites:
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
+    - {fileID: 5015815101302291940, guid: 55ef345e1a9b0a54a871b434c99f800f, type: 3}
+    - {fileID: 376934155870094402, guid: 55ef345e1a9b0a54a871b434c99f800f, type: 3}
+    - {fileID: -4269474888004052870, guid: 55ef345e1a9b0a54a871b434c99f800f, type: 3}
     Placeholder: {fileID: 21300000, guid: fd5baef28831c8e429f25df4e8c8083e, type: 3}
     PlaceholderColors:
     - {r: 1, g: 0.92156863, b: 0.23137255, a: 1}

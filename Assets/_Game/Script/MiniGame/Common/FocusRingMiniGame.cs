@@ -1,20 +1,23 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-// 공통 템플릿: 초점 슬라이더 (PRE_02, LAB_08)
-// 슬라이더를 정답 위치(허용 오차 안)에 놓고 손을 떼면 성공. 틀린 위치에서 떼면 다시 시도.
-public class FocusSliderMiniGame : TouchMiniGame
+// 공통 템플릿: 초점 링 (PRE_02, LAB_08)
+// 오른쪽의 초점 링을 렌즈처럼 돌려 초점을 맞춘다. 선명한 위치(허용 오차 안)에서 손을 떼면 성공. 틀린 위치에서 떼면 다시 시도.
+// 링에는 숫자나 눈금을 표시하지 않는다. 돌아가는 것이 보이도록 테두리에 손잡이 홈(Grips)만 있다.
+// 시계 방향으로 돌리면 초점 값이 커지고, 끝에 닿으면 더 돌아가지 않는다.
+public class FocusRingMiniGame : RotateMiniGame
 {
-    [Header("Focus Slider")]
+    [Header("Focus Ring")]
     [SerializeField, Range(0f, 1f)] float MinAnswer = 0.1f;     // 정답 위치는 매번 랜덤
     [SerializeField, Range(0f, 1f)] float MaxAnswer = 0.9f;
     [SerializeField] float Tolerance = 0.08f;
-    [SerializeField] float MinStartGap = 0.3f;   // 슬라이더 시작 위치(랜덤)와 정답 사이의 최소 거리
-    [SerializeField] float BlurDistance = 90f;   // 초점이 완전히 어긋났을 때 상이 갈라지는 거리
-    [SerializeField] Image TrackIMG;             // 세로 슬라이더
-    [SerializeField] Image HandleIMG;
-    [SerializeField] Image SubjectIMG;           // 초점을 맞출 대상 (선명)
-    [SerializeField] Image BlurIMG;              // 흐린 그림. 정답에 가까울수록 사라진다
+    [SerializeField] float MinStartGap = 0.3f;        // 링 시작 위치(랜덤)와 정답 사이의 최소 거리
+    [SerializeField] float TurnsForFullRange = 0.75f; // 이만큼(바퀴) 돌리면 초점이 끝에서 끝까지 바뀐다
+    [SerializeField] float GrabPadding = 60f;         // 링 바깥 이 거리 안에서 잡아도 돌릴 수 있다
+    [SerializeField] float BlurDistance = 90f;        // 초점이 완전히 어긋났을 때 상이 갈라지는 거리
+    [SerializeField] GameObject RingGrips;            // 임시 손잡이 홈. 링 그림이 들어오면 숨긴다 (선택)
+    [SerializeField] Image SubjectIMG;                // 초점을 맞출 대상 (선명)
+    [SerializeField] Image BlurIMG;                   // 흐린 그림. 정답에 가까울수록 사라진다
 
     Image ghostA, ghostB;
     float answer;
@@ -24,6 +27,8 @@ public class FocusSliderMiniGame : TouchMiniGame
     protected override void Setup()
     {
         answer = Random.Range(MinAnswer, MaxAnswer);
+        if (RingGrips != null && HandleIMG.preserveAspect)
+            RingGrips.SetActive(false);
         ghostA = Spawn(SubjectIMG, SubjectIMG.rectTransform.anchoredPosition);
         ghostB = Spawn(SubjectIMG, SubjectIMG.rectTransform.anchoredPosition);
         SetActive(SubjectIMG, true);
@@ -41,15 +46,21 @@ public class FocusSliderMiniGame : TouchMiniGame
 
     protected override void OnDragBegin(Vector2 pos)
     {
-        dragging = Hit(TrackIMG.rectTransform, pos, 50f) || Hit(HandleIMG.rectTransform, pos, 30f);
-        if (dragging)
-            Follow(pos);
+        dragging = Hit(HandleIMG.rectTransform, pos, GrabPadding);
     }
 
     protected override void OnDrag(Vector2 pos, Vector2 delta)
     {
         if (dragging)
-            Follow(pos);
+            base.OnDrag(pos, delta);
+    }
+
+    // 링의 각도는 초점 값으로 정해진다 (끝에 닿으면 멈춤)
+    protected override void TurnHandle(float angle) { }
+
+    protected override void OnRotate(float turns)
+    {
+        SetValue(Mathf.Clamp01(value - turns / Mathf.Max(0.01f, TurnsForFullRange)));
     }
 
     protected override void OnDragEnd(Vector2 pos)
@@ -62,17 +73,10 @@ public class FocusSliderMiniGame : TouchMiniGame
         dragging = false;
     }
 
-    void Follow(Vector2 pos)
-    {
-        RectTransform track = TrackIMG.rectTransform;
-        SetValue(Mathf.Clamp01((pos.y - track.anchoredPosition.y) / track.rect.height + 0.5f));
-    }
-
     void SetValue(float newValue)
     {
         value = newValue;
-        RectTransform track = TrackIMG.rectTransform;
-        HandleIMG.rectTransform.anchoredPosition = track.anchoredPosition + new Vector2(0f, (value - 0.5f) * track.rect.height);
+        HandleIMG.rectTransform.localEulerAngles = new Vector3(0f, 0f, -value * TurnsForFullRange * 360f);
 
         // 블러 대신 상이 갈라지고 흐린 그림이 덮인다. 허용 오차 안이면 완전히 선명
         float blur = Mathf.Clamp01((Mathf.Abs(value - answer) - Tolerance) / 0.6f);

@@ -391,13 +391,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c9c7600770f1d74eaab0d6737b2ea03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BatLassoMiniGame
-  Title: "\uAC00\uB46C\uB77C!"
+  Title: "\uBC15\uC950\uB97C \uC7A1\uC544\uB77C!"
   SucceedOnTimeUp: 0
   PlayArea: {fileID: 4076710671078907229}
   TitleTXT: {fileID: 7832693081925432675}
   GaugeIMG: {fileID: 389589683125144517}
   TopMargin: 100
   HitPadding: 12
+  BaseTimeLimit: 5
+  SpeedUpPerSecond: 0.5
   Slots:
   - FileName: DES_15_01
     Label: "\uBC15\uC950"
@@ -590,7 +592,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\uAC00\uB46C\uB77C!"
+  m_Text: "\uBC15\uC950\uB97C \uC7A1\uC544\uB77C!"
 --- !u!114 &5359302934326269242
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -664,7 +666,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UILine
   m_Material: {fileID: 0}
-  m_Color: {r: 0.827451, g: 0.18431373, b: 0.18431373, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1

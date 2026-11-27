@@ -629,6 +629,8 @@ MonoBehaviour:
   GaugeIMG: {fileID: 0}
   TopMargin: 100
   HitPadding: 12
+  BaseTimeLimit: 5
+  SpeedUpPerSecond: 0.5
   Slots:
   - FileName: FOR_19_01
     Label: "\uBC1C\uC804\uAE30"
@@ -670,6 +672,13 @@ MonoBehaviour:
   MaxTurns: 4
   RewindPerSecond: 0.15
   IdleTime: 0.1
+  Direction: 1
+  Reverse: 1
+  ShowArrow: 0
+  ArrowRadius: 150
+  ArrowWidth: 12
+  ArrowColor: {r: 1, g: 0.95, b: 0.6, a: 1}
+  ArrowIMG: {fileID: 0}
   KnobIMG: {fileID: 8027745146272748803}
   BulbIMG: {fileID: 2433923474728220065}
   RayIMGs:

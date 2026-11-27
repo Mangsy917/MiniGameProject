@@ -154,7 +154,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\uBE44\uCDB0\uB77C!"
+  m_Text: "\uAE38\uC744 \uCC3E\uC544\uB77C!"
 --- !u!114 &2987345707952632401
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -334,13 +334,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14f74720be953454fab46c1bc92efb80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TorchExitMiniGame
-  Title: "\uBE44\uCDB0\uB77C!"
+  Title: "\uAE38\uC744 \uCC3E\uC544\uB77C!"
   SucceedOnTimeUp: 0
   PlayArea: {fileID: 7707719032017989866}
   TitleTXT: {fileID: 4861641046245688801}
   GaugeIMG: {fileID: 0}
   TopMargin: 100
   HitPadding: 12
+  BaseTimeLimit: 5
+  SpeedUpPerSecond: 0.5
   Slots:
   - FileName: CAV_03_01
     Label: "\uD683\uBD88"

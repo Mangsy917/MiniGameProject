@@ -25,6 +25,8 @@ public class StageMapCamera : MonoBehaviour
 
     public bool InputEnabled = true;
 
+    const float ReferenceAspect = 16f / 9f;   // 맵 배치를 맞춘 기준 화면 비율
+
     public event Action<StageNode> OnStageClicked;
 
     public float Size
@@ -54,6 +56,9 @@ public class StageMapCamera : MonoBehaviour
     void Awake()
     {
         cam = GetComponent<Camera>();
+        // 16:9보다 좁은 화면(태블릿 등)에서도 처음 보이는 가로 범위가 16:9와 같도록 조금 멀리서 시작한다
+        if (cam.aspect > 0f && cam.aspect < ReferenceAspect)
+            cam.orthographicSize = Mathf.Min(cam.orthographicSize * ReferenceAspect / cam.aspect, GetMaxSize());
         defaultSize = cam.orthographicSize;
     }
 

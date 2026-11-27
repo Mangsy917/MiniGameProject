@@ -10,6 +10,12 @@ public class UILine : MaskableGraphic
 
     readonly List<Vector2> points = new List<Vector2>();
 
+    public void SetWidth(float width)
+    {
+        Width = width;
+        SetVerticesDirty();
+    }
+
     public void SetPoints(List<Vector2> newPoints)
     {
         points.Clear();

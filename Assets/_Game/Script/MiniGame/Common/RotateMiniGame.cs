@@ -24,8 +24,16 @@ public abstract class RotateMiniGame : TouchMiniGame
             return;
 
         float angle = Vector2.SignedAngle(before, now);
+        if (!CanTurn(angle))
+            return;
         TurnHandle(angle);
         OnRotate(angle / 360f);
+    }
+
+    // false면 이번 움직임은 무시한다 (손잡이도 안 돌아감). angle: 반시계 +, 시계 -
+    protected virtual bool CanTurn(float angle)
+    {
+        return true;
     }
 
     protected virtual void TurnHandle(float angle)
